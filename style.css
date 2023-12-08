@@ -1217,4 +1217,15 @@ svg {
         width: 5rem;
     }
 
+
+}
+
+@media (max-width: 376px) {
+    .grade {
+        gap: 8px;
+    }
+
+    .curso {
+        padding-right: 2px;
+    }
 }
