@@ -7,10 +7,10 @@
 <h4 align="center"><a href="https://pablo-m-santos.github.io/Portifolio/">Clique para visitar o meu projeto</a></h4>
 
 ## 🌳 Projeto
-O objetivo do portifólio é colocar meus projetos, informações sobre mim, informar meus conhecimentos, serviços e meu currículo, para a visualização das pessoas/empresas.
+O objetivo do portfólio é colocar meus projetos, informações sobre mim, informar meus conhecimentos, serviços e meu currículo, para a visualização das pessoas/empresas.
 
 ## 📃 Seções
-O portifólio é composto por 6 seções diferentes:
+O portfólio é composto por 6 seções diferentes:
 
   -  Seção Home: ** Nele temos uma breve apresentação e além disso, temos botão para baixar meu currículo;
   -  Seção Quem sou: ** Nessa seção tem uma breve descrição dizendo sobre mim;
@@ -20,14 +20,14 @@ O portifólio é composto por 6 seções diferentes:
   -  Seção Contato: ** Nele temos links de contato e informações;
 
 ## 👨🏽‍💻 Tecnologias utilizadas
-Para o desenvolvimento do portifólio usei as seguintes tecnologias:
+Para o desenvolvimento do portfólio usei as seguintes tecnologias:
   - Visual Studio Code;
   - HTML ;
   - Css;
   - JavaScript ;
 
 ## ⚙️ melhorias e atualizações
-O portifólio ainda está em desenvolvimento e as próximas atualizações serão feitas das seguintes maneiras:
+O portfólio ainda está em desenvolvimento e as próximas atualizações serão feitas das seguintes maneiras:
 
   -  [ ] Animação no site;
   -  [ ] Adicionar o tema escuro;
