@@ -150,7 +150,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
 }
 
 .home-content {
@@ -573,14 +572,14 @@ span {
     font-size: 18px;
 }
 .projetos-box{
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 7rem;
     display: flex;
 }
 
 .projetos-box img {
-    width: 550px;
-    height: 500px;
+    width: 500px;
+    height: 450px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
