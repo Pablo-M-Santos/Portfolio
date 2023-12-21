@@ -315,6 +315,7 @@ span {
     line-height: 100%;
     color: #fff;
 }
+
 .quem-sou-content>div div:nth-child(2) p {
     letter-spacing: 1px;
     line-height: 100%;
@@ -354,6 +355,7 @@ span {
     font-size: 8rem;
     color: #ffffff;
 }
+
 .grade {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -544,7 +546,8 @@ span {
     border-radius: 50%;
     margin-left: 5px;
 }
-.texto{
+
+.texto {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -552,26 +555,31 @@ span {
     margin-bottom: 40px;
     gap: 2.8rem;
     flex-direction: column;
-    align-self:flex-end ;
+    align-self: flex-end;
 }
-.nome{
-    font-size: 30px ;
-    font-weight: 600 ;
+
+.nome {
+    font-size: 30px;
+    font-weight: 600;
     letter-spacing: 4px;
     color: var(--main-color);
 }
-.detalhe{
+
+.detalhe {
     width: 680px;
     letter-spacing: 2px;
     line-height: 150%;
     font-size: 29px;
 }
-.ferramentas{
+
+.ferramentas {
+    color: rgb(178, 178, 178);
     letter-spacing: 2px;
     line-height: 150%;
     font-size: 18px;
 }
-.projetos-box{
+
+.projetos-box {
     margin-top: 50px;
     margin-bottom: 7rem;
     display: flex;
@@ -584,28 +592,40 @@ span {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
-#right{
+.projetos img:hover {
+    opacity: 0.9;
+    box-shadow: 100px rgba(0, 0, 0, 0.5);
+}
+
+#right {
     justify-content: right;
 }
-#texto{
+
+#texto {
     text-align: right;
     align-items: end;
     margin-right: 30px;
 }
-.links{
+
+.links {
     display: flex;
     align-items: center;
 }
-.links, a {
+
+.links,
+a {
     margin-right: 30px;
 }
-.links a:hover{
+
+.links a:hover {
     transition: .4s linear;
     transform: scale(1.03);
 }
-.site{
+
+.site {
     display: flex;
     font-size: 20px;
     align-items: center;
@@ -614,28 +634,32 @@ span {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 100px;
     padding: 8px 16px;
-    
+
 }
-.site:hover{
+
+.site:hover {
     color: var(--main-color);
     border: 1px solid var(--main-color);
 }
-#seta{
+
+#seta {
     font-size: 35px;
     align-items: center;
 }
 
-#seta:hover{
+#seta:hover {
     color: var(--main-color);
 }
 
-.github{
+.github {
     font-size: 50px;
     color: rgb(255, 255, 255);
 }
-.github:hover{
+
+.github:hover {
     color: var(--main-color);
 }
+
 /* serviços */
 
 #servicos {
@@ -798,9 +822,11 @@ svg {
     html {
         font-size: 55%;
     }
+
     .home-content h3 {
         width: auto;
     }
+
     .quem-sou {
         padding: 72px 20px
     }
@@ -871,6 +897,7 @@ svg {
         margin-left: 3rem;
         margin-right: 3rem;
     }
+
     #footer_social_media .footer-link {
         height: 4.5rem;
         width: 4.5rem;
@@ -924,6 +951,7 @@ svg {
         margin-left: 3rem;
         margin-right: 3rem;
     }
+
     #footer_social_media .footer-link {
         height: 5rem;
         width: 5rem;
@@ -953,6 +981,7 @@ svg {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
+
     #footer_social_media .footer-link {
         height: 4.5rem;
         width: 4.5rem;
@@ -1081,10 +1110,12 @@ svg {
     #servicos .grid-layout #services article {
         flex-basis: calc(100% - 20px);
     }
+
     #footer_social_media .footer-link {
         height: 5rem;
         width: 5rem;
     }
+
     .Text-sobre {
         text-align: center;
     }
@@ -1214,6 +1245,7 @@ svg {
         height: 400px;
         transition: 0.5s all ease;
     }
+
     #footer_social_media .footer-link {
         height: 5rem;
         width: 5rem;
