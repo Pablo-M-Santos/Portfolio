@@ -1280,3 +1280,10 @@ svg {
         padding-right: 2px;
     }
 }
+
+@media (max-width: 340px) {
+    .home-img img {
+        width: 250px;
+        height: 250px;
+    }
+}
