@@ -99,6 +99,7 @@ section {
     color: var(--text-color);
     font-weight: 600;
     cursor: pointer;
+    margin-right: 50px;
 }
 
 #logo {
@@ -109,7 +110,7 @@ section {
 }
 
 .navbar a {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: var(--text-color);
     margin-left: 4rem;
     transition: .3s;
@@ -128,42 +129,54 @@ section {
 }
 
 /* HOME */
-.home {
+.home{
+    height: 100vh;
+    background-color: #1E1E1E;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+}
+.home-container{
+    padding: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: auto;
+}
+.home-container .home-img{
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px var(--cyan1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 550px;
+    height: 550px;
+}
+.home-texto{
+    align-items: center;
+    padding-right: 180px;
 }
 
-.home-content{
-    margin-right: 250px;
+.home-texto h1 {
+    font-size: 43px;
+    letter-spacing: 3px;
 }
-
-.home-content h2 {
-    width: 600px;
-    font-size: 3.4rem;
+.home-texto h2 {
+    width: 650px;
+    font-size: 3.7rem;
     font-weight: 700;
     letter-spacing: 3px;
 }
-
 span {
     color: var(--main-color);
-    font-size: 3.6rem; 
+    font-size: 4.2rem;
 }
-
-.home-content h1 {
-    font-size: 28px;
-    letter-spacing: 3px;
-}
-
 #home-nome {
-    font-size: 44px;
+    font-size: 60px;
     font-weight: 700;
     line-height: 1.3;
-}
-
-.home-content p {
-    font-size: 2rem;
 }
 
 .social-media {
@@ -176,12 +189,12 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 5.2rem;
+    height: 5.2rem;
     background: transparent;
     border: .2rem solid var(--main-color);
     border-radius: 50%;
-    font-size: 3.4rem;
+    font-size: 4rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
     transition: .5s ease;
@@ -195,126 +208,73 @@ span {
 
 .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1.2rem 3rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--second-bg-color);
     letter-spacing: .1rem;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .btn:hover {
     box-shadow: none;
 }
 
-.home-img img {
-    width: 600px;
-    height: 600px;
+
+/* quem sou */
+
+.quem-sou {
+    height: 100vh;
+    background-color: #36363698;
+    display: flex;
+    align-items: center;
 }
 
-.img-profile {
-    border-radius: 50%;
+.quem-sou-container {
+    padding: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+
+.quem-sou-container .quem-sou-img {
+    width: 500px;
     padding: 10px;
     box-shadow: 1px 1px 1px 1px var(--cyan1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
-
-/* quem sou */
-
-.quem-sou {
-    margin-top: 100px;
-    padding: 72px 0px;
-}
-
-.quem-sou-content>div {
-    box-shadow: 1px 1px 1px 1px var(--cyan1);
-    background-color: #2d2d2d;
-    margin-top: 6rem;
-    margin-left: 11.3rem;
-    margin-right: 11.2rem;
-    padding: 24px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-}
-
-.quem-sou-content>div #img-dev {
-    width: 47%;
-    background-image: url("./imagens/imagem-quem-sou.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     border-radius: 4px;
     height: 500px;
+    margin-right: 80px;
 }
 
-.quem-sou-content>div #img-dev p {
-    color: #111;
-    background-color: #fff;
-    padding: 8px;
-    border-radius: 16px;
-    width: 180px;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 800;
-    margin: 16px;
+.quem-sou-texto {
+    align-items: center;
 }
 
-.quem-sou-content>div div:nth-child(2) {
-    width: 49%;
+.quem-sou-texto h1 {
+    width: 260px;
+    font-size: 5rem;
+    letter-spacing: 3px;
 }
 
-.quem-sou-content>div div:nth-child(2) h2 {
-    letter-spacing: 1px;
-    line-height: 150%;
-    font-size: 2.5rem;
-    font-weight: 500;
+.quem-sou-texto h2 {
     color: var(--main-color);
-}
-
-.quem-sou-content>div div:nth-child(2) h3 {
-    letter-spacing: 1px;
-    line-height: 100%;
+    margin-top: 10px;
     font-size: 3.2rem;
-    font-weight: 500;
-    margin: 20px 0px;
-    color: #fff;
 }
 
-.quem-sou-content>div div:nth-child(2) h4 {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 100%;
-    color: #fff;
-}
-
-.quem-sou-content>div div:nth-child(2) p {
+.quem-sou-texto p {
     letter-spacing: 1px;
     line-height: 100%;
     font-size: 2.2rem;
     color: #FFFFFF;
     line-height: 160%;
     margin: 32px 0px 48px 0px;
-}
-
-.quem-sou-content>div div:nth-child(2) nav ul {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.quem-sou-content>div div:nth-child(2) nav ul a {
-    background-color: #111;
-    border: 2px solid #1f1f1f;
-    border-radius: 6px;
-    padding: 16px;
 }
 
 /* FORMAÇÃO */
@@ -796,121 +756,95 @@ svg {
 }
 
 /* responsividade */
-@media (max-width: 1630px) {
-    .home-content{
-        margin-right: 135px;
+@media (max-width: 1600px) {
+    .home-container .home-img{
+        width: 550px;
+        width: 550px;
     }
-
+    .home-texto{
+        padding-right: 70px;
+    }
 }
 @media (max-width: 1500px) {
     html {
         font-size: 55%;
     }
-    .home-content{
-        margin-right: 0px;
-    }
-    .home-img img {
+    .home-container .home-img{
         width: 500px;
         height: 500px;
     }
+    .home-texto{
+        padding-right: 70px;
+    }
+    .home-texto h1 {
+        width: 390px;
+    }
+    .home-texto h2 {
+        width: auto;
+    }
+    .quem-sou-img {
+        width: 400px;
+        height: 400px;
+    }
 
 }
+
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
     }
+
     .header {
         padding: 2rem 2%;
     }
-    .navbar{
+
+    .navbar {
         margin-right: 5px;
     }
-    .home-img img {
+    .home-container .home-img{
         width: 400px;
         height: 400px;
     }
-    .home-img{
-        text-align: center;
-    }
-    span {
-        color: var(--main-color);
-        font-size: 3.6rem;
-    }
-    .home-content{
-        margin-right: 10px;
-    }
-    
-    .home-content h1 {
-        width: 280px;
-        font-size: 28px;
-        letter-spacing: 3px;
+    .home-texto h1 {
+        font-size: 31px;
     }
     #home-nome {
-        font-size: 39px;
-        font-weight: 700;
-        line-height: 1.3;
+        font-size: 45px;
+    }
+    .home-texto{
+        padding-right: 30px;
+    }
+    .home-texto h2 {
+        font-size: 29px;
+    }
+    span {
+        font-size: 30px;
+    }
+    .quem-sou-container .quem-sou-img {
+        width: 400px;
+        height: 400px;
+        margin-right: 30px;
     }
 
-    .home-content h2 {
-        width: 500px;
-        font-size: 3rem;
-        font-weight: 700;
+    .quem-sou-texto h1 {
+        width: 260px;
+        font-size: 39px;
         letter-spacing: 3px;
     }
 
-    .quem-sou {
-        padding: 72px 20px
+    .quem-sou-texto h2 {
+        color: var(--main-color);
+        margin-top: 10px;
+        font-size: 31px;
     }
 
-    .quem-sou-content {
-        padding: 72px 20px
-    }
-
-    .quem-sou-content .layout>div {
-        flex-wrap: wrap;
-        gap: 32px
-    }
-
-    .quem-sou .quem-sou-content>div {
-        flex-wrap: wrap;
-        gap: 32px;
-        margin-left: auto;
-        margin-right: auto;
-
-    }
-
-    .quem-sou-content .layout>div .quem-sou-img {
-        width: 100%;
-        height: 400px
-    }
-
-    .quem-sou .quem-sou-content>div #img-dev {
-        width: 100%;
-        height: 400px
-    }
-
-    .quem-sou-content .layout>div div:nth-child(2) {
-        width: 100%
-    }
-
-    .quem-sou .quem-sou-content>div div:nth-child(2) {
-        width: 100%
-    }
-
-    .quem-sou-content .layout>div div:nth-child(2) nav ul {
-        flex-wrap: wrap
-    }
-
-    .quem-sou .quem-sou-content>div div:nth-child(2) nav ul {
-        flex-wrap: wrap
-    }
-
-    .quem-sou-content .layout>div div:nth-child(2) nav ul a img {
-        width: 40px
-    }
-
-    .quem-sou .quem-sou-content>div div:nth-child(2) nav ul a img {
-        width: 40px
+    .quem-sou-texto p {
+        letter-spacing: 1px;
+        line-height: 100%;
+        font-size: 2.2rem;
+        color: #FFFFFF;
+        line-height: 160%;
+        margin: 12px 0px 18px 0px;
     }
 
     .container {
@@ -940,23 +874,50 @@ svg {
     .header {
         padding: 2rem 0.1%;
     }
-    .logo{
+
+    .logo {
         margin-left: 10px;
     }
-    .navbar{
+
+    .navbar {
         margin: 0px;
     }
-    .quem-sou-content .layout>div .quem-sou-img {
-        height: 350px
+    .home-texto{
+        padding-right: 0px;
+    }
+    .home-texto h1 {
+        font-size: 28px;
+    }
+    #home-nome {
+        font-size: 45px;
+    }
+    .home-texto h2 {
+        font-size: 28px;
+    }
+    span {
+        font-size: 28px;
+    }
+    .quem-sou-container .quem-sou-img {
+        width: 400px;
+        height: 400px;
+        margin-right: 30px;
     }
 
-    .quem-sou-content .layout>div div:nth-child(2) h2 {
-        font-size: 3.2rem
+    .quem-sou-texto {
+        justify-content: center;
+        margin-top: 15px;
     }
 
-    .quem-sou .quem-sou-content>div {
-        margin-left: auto;
-        margin-right: auto;
+    .quem-sou-texto h1 {
+        font-size: 35px;
+    }
+
+    .quem-sou-texto h2 {
+        font-size: 26px;
+    }
+
+    .quem-sou-texto p {
+        font-size: 2rem;
     }
 
     .projetos {
@@ -978,18 +939,29 @@ svg {
 }
 
 @media (max-width: 992px) {
-    .home-img img {
+    .home{
+        justify-content: center;
+    }
+    .home-container .home-img{
         width: 350px;
         height: 350px;
+    }
+    .home-texto h1 {
+        width: auto;
+    }
+    .home-texto{
+        padding-right: 0px;
     }
     #menu-icon {
         display: block;
         margin-right: 20px;
     }
-    .logo{
+
+    .logo {
         margin-left: 50px;
         margin-right: 0px;
     }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -1014,19 +986,29 @@ svg {
     .home-content h1 {
         font-size: 23px;
     }
+
     #home-nome {
         font-size: 34px;
     }
+
     .home-content h2 {
-        font-size: 2.5rem;
+        font-size: 31px;
         width: 300px;
     }
-    .quem-sou .quem-sou-content>div #img-dev {
-        height: 350px
+
+    .quem-sou-texto {
+        margin-top: 0px;
     }
 
-    .quem-sou .quem-sou-content>div div:nth-child(2) h2 {
-        font-size: 3.2rem
+    .quem-sou-container {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .quem-sou-container .quem-sou-img {
+        width: 350px;
+        height: 350px;
+        margin-right: 20px;
     }
 
     #servicos {
@@ -1046,49 +1028,36 @@ svg {
 }
 
 @media (max-width: 769px) {
-    .home {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
+    .home-container{
+        flex-direction: column-reverse;
     }
-    .home-content h1 {
-        width: 280px;
-        font-size: 28px;
-        letter-spacing: 3px;
+    .home-texto{
+        margin-bottom: 50px ;
+    }
+
+    .home-texto h1 {
+        font-size: 30px;
     }
     #home-nome {
-        font-size: 39px;
-        font-weight: 700;
-        line-height: 1.3;
+        font-size: 37px;
     }
-    .home-content h2 {
-        width: 300px;
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: 3px;
+    .home-texto h2 {
+        font-size: 32px;
+        max-width: 582px;
+        width: auto;
     }
-    .home-content{
+    span {
+        font-size: 32px;
+    }
+    .quem-sou{
+        justify-content: center;
+    }
+    .quem-sou-container {
+        flex-direction: column-reverse;
+    }
+
+    .quem-sou-texto {
         margin-bottom: 50px;
-    }
-    .home-img{
-        text-align: left;
-    }
-    .home-img img {
-        max-width: 550px;
-        max-height: 550px;
-    }
-    .quem-sou-content .layout>div .quem-sou-img {
-        height: 300px
-    }
-
-    .quem-sou .quem-sou-content>div {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .quem-sou .quem-sou-content>div #img-dev {
-        height: 300px;
     }
 
     grade {
@@ -1232,14 +1201,22 @@ svg {
         align-items: center;
         flex-direction: column;
     }
-    .logo{
+    .logo {
         margin-left: 20px;
     }
+
     .home-content h1 {
         width: 290px;
     }
+    .quem-sou{
+        width: auto;
+    }
+
     .quem-sou-content {
         padding: 2rem;
+    }
+    .quem-sou-texto {
+        margin-bottom: 30px;
     }
 
     .projetos h2 {
@@ -1268,10 +1245,23 @@ svg {
 }
 
 @media (max-width: 376px) {
-    .home-img img {
-        width: 300px;
-        height: 300px;
+    .home-texto h1 {
+        font-size: 25px;
+        width: 310px;
     }
+    #home-nome {
+        font-size: 39px;
+    }
+    .home-texto h2 {
+        font-size: 24px;
+    }
+    span {
+        font-size: 29px;
+    }
+    .quem-sou-container .quem-sou-img{
+        margin: 0px;
+    }
+   
     .grade {
         gap: 8px;
     }
@@ -1282,8 +1272,20 @@ svg {
 }
 
 @media (max-width: 340px) {
-    .home-img img {
-        width: 250px;
-        height: 250px;
+    .home-container .home-img{
+        width: 300px;
+        height: 300px;
     }
+    .quem-sou-container .quem-sou-img{
+        width: 300px;
+        height: 300px;
+    }
+    .quem-sou-texto h2 {
+        font-size: 24px;
+    }
+    .quem-sou-container{
+        padding: 0px 20px 20px 20px;
+        margin-bottom: 10px;
+    }
+
 }
