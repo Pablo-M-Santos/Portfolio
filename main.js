@@ -47,4 +47,4 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-console.log('Site no ar.');
+console.log('Sistema no ar...');
