@@ -470,7 +470,7 @@ span {
 /* PROJETOS */
 
 .projetos {
-    height: 350vh;
+    height: auto;
     background-color: #36363698;
 }
 
@@ -500,7 +500,6 @@ span {
 
 .projetos img:hover {
     opacity: 0.9;
-    box-shadow: 100px rgba(0, 0, 0, 0.5);
 }
 
 .texto {
@@ -551,9 +550,9 @@ span {
     align-items: center;
 }
 
-.links,
-a {
-    margin-right: 30px;
+.links .github {
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .links a:hover {
     transition: .4s linear;
@@ -596,38 +595,31 @@ a {
 }
 
 
-
-
-
-
 /* serviços */
 
-#servicos {
+.extracurriculares {
     padding: 12px 0px 0px 0px;
+    background-color: #1E1E1E;
     margin-left: 10rem;
     margin-right: 10rem;
 }
 
-#servicos .grid-layout h2 {
+.grid-layout h2 {
     text-align: left;
     margin-top: 150px;
     margin-left: 8px;
-    color: #000;
-    font-size: 8rem;
+    color: #ffffff;
+    font-size: 6rem;
 }
 
-#servicos .grid-layout h2 span {
-    color: var(--cyan1);
-}
-
-#servicos .grid-layout #services {
+.grid-layout .extra-container {
     display: flex;
     height: auto;
     flex-wrap: wrap;
     margin: 100px 0px 250px 0px;
 }
 
-#servicos .grid-layout #services article {
+.extra-container .extra-card {
     background-color: #111;
     height: auto;
     padding: 32px;
@@ -640,31 +632,37 @@ a {
     border-radius: 4px;
 }
 
-#servicos .grid-layout #services article:hover {
-    border: 1px solid var(--cyan1);
-}
-
-#servicos .grid-layout #services article div {
+.extra-card .imagem-container {
     height: 90px;
 }
 
-#servicos .grid-layout #services article div img {
+.extra-card .imagem-container img {
     width: 70px;
+    margin-top: 20px;
 }
 
-#servicos .grid-layout #services article h3 {
+.extra-card h3 {
     padding: 24px 0px;
     color: #fff;
     font-size: 2.4rem;
     font-weight: 500;
 }
 
-#servicos .grid-layout #services article p {
+.extra-card p {
     line-height: 3.2rem;
     color: #9ca3af;
     font-size: 1.8rem;
 }
-
+.extra-card a{
+    margin-top: 10px;
+    width: auto;
+    display: flex;
+    align-content: flex-end;
+    font-size: 17px;
+}
+.extra-card i{
+    font-size: 40px;
+}
 /* footer */
 footer {
     width: 100%;
@@ -794,6 +792,17 @@ svg {
         width: 400px;
         height: 400px;
     }
+    .projetos-box img {
+        width: 400px;
+        height: 400px;
+    }
+    .nome{
+        font-size: 25px;
+    }
+    .detalhe{
+        font-size: 24px;
+        width: auto;
+    }
 
 }
 
@@ -866,17 +875,7 @@ svg {
         margin-top: 6rem;
         margin-left: 4.5rem;
         margin-right: 4.5rem;
-    }
-
-    .projetos {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    #servicos {
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
+    }   
 
     #footer_social_media .footer-link {
         height: 4.5rem;
@@ -941,12 +940,7 @@ svg {
         font-size: 2rem;
     }
 
-    .projetos {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    #servicos {
+    .extracurriculares {
         margin-left: 3rem;
         margin-right: 3rem;
     }
@@ -1036,12 +1030,33 @@ svg {
         height: 350px;
         margin-right: 20px;
     }
-
-    #servicos {
+    .projetos-box img{
+        width: 350px;
+        height: 350px;
+    }
+    .ferramentas{
+        font-size: 40px;
+    }
+    .nome{
+        font-size: 20px;
+    }
+    .detalhe{
+        font-size: 20px;
+    }
+    .links{
+        font-size: 8px;
+    }
+    .texto{
+        margin-left: 30px;
+    }
+    #texto{
+        margin-left: 0px;
+    }
+    .extracurriculares {
         padding: 48px 24px;
     }
 
-    #servicos {
+    .extracurriculares {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
@@ -1134,25 +1149,30 @@ svg {
         font-size: 15px;
         line-height: 2.25rem;
     }
-
-    .projetos h2 {
-        margin-bottom: 3rem;
+    .projetos-box{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        padding-bottom: 40px;
     }
-
-    .projetos h2 {
-        font-size: 6rem;
+    .projetos-box #right{
+        flex-direction: row;
+        justify-content: end;
     }
-
-    .projetos h2::after {
-        width: 10px;
-        height: 10px;
+    #right{
+        flex-direction: column;
+        justify-content: flex-end;
     }
-
-    .projetos-container {
-        grid-template-columns: repeat(2, 1fr);
+    #texto {
+        text-align: left;
+        align-items: start;
+        margin-right: 0px;
+    } 
+    .texto{
+        margin-left: 0px;
+        margin-right: 0px;
     }
-
-    #servicos .grid-layout #services article {
+    .extracurriculares .grid-layout .extra-container .extra-card {
         flex-basis: calc(100% - 20px);
     }
 
@@ -1275,24 +1295,14 @@ svg {
         gap: 15px;
         justify-content: center;
     }
-
-    .projetos h2 {
-        margin-bottom: 3rem;
-    }
-
-    .projetos-container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
     .projetos-box img {
         width: 100%;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        height: 400px;
+        height: auto;
         transition: 0.5s all ease;
     }
-
     #footer_social_media .footer-link {
         height: 5rem;
         width: 5rem;
@@ -1394,6 +1404,13 @@ svg {
     }
     .competencias-grade{
         grid-template-columns: 1fr 1fr;
+    }
+    .github{
+        font-size: 40px;
+    }
+    .site{
+        font-size: 17px;
+        padding: 5px 8px;
     }
 }
 
