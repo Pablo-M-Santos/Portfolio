@@ -12,17 +12,6 @@ let sections = document.querySelectorAll('section');
 let footer = document.querySelector('footer');
 let navLinks = document.querySelectorAll('header nav a');
 
-// Função para fechar o menu ao clicar em um link do menu
-function closeMenu() {
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
-
-
-navLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -52,4 +41,10 @@ window.onscroll = () => {
     // sticky navbar
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
+
+    // remove navbar click navbar link (scroll)
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
+
+console.log('Sistema no ar...');

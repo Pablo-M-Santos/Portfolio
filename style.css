@@ -470,27 +470,37 @@ span {
 /* PROJETOS */
 
 .projetos {
-    background: var(--bg-color);
-    margin-bottom: 7rem;
-    padding: 20px;
-    margin-left: 8.5rem;
-    margin-right: 8.5rem;
+    height: 350vh;
+    background-color: #36363698;
+}
+
+.projetos-container{
+    padding: 72px 0px;
 }
 
 .projetos h2 {
-    margin-top: 55px;
-    font-size: 9rem;
-    color: #000;
+    font-size: 6rem;
+    color: #ffffff;
+}
+.projetos-box {
+    margin-top: 50px;
+    margin-bottom: 7rem;
+    display: flex;
 }
 
-.projetos h2::after {
-    display: inline-block;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background: var(--cyan1);
-    border-radius: 50%;
-    margin-left: 5px;
+.projetos-box img {
+    width: 450px;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.projetos img:hover {
+    opacity: 0.9;
+    box-shadow: 100px rgba(0, 0, 0, 0.5);
 }
 
 .texto {
@@ -519,31 +529,11 @@ span {
 }
 
 .ferramentas {
+    display: flex;
     color: rgb(178, 178, 178);
     letter-spacing: 2px;
     line-height: 150%;
-    font-size: 18px;
-}
-
-.projetos-box {
-    margin-top: 50px;
-    margin-bottom: 7rem;
-    display: flex;
-}
-
-.projetos-box img {
-    width: 500px;
-    height: 450px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-}
-
-.projetos img:hover {
-    opacity: 0.9;
-    box-shadow: 100px rgba(0, 0, 0, 0.5);
+    font-size: 48px;
 }
 
 #right {
@@ -565,11 +555,19 @@ span {
 a {
     margin-right: 30px;
 }
-
 .links a:hover {
     transition: .4s linear;
-    transform: scale(1.03);
+    transform: scale(1.09);
 }
+.github {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+.github:hover {
+    color: var(--main-color);
+}
+
 
 .site {
     display: flex;
@@ -597,14 +595,10 @@ a {
     color: var(--main-color);
 }
 
-.github {
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-}
 
-.github:hover {
-    color: var(--main-color);
-}
+
+
+
 
 /* serviços */
 
