@@ -2,7 +2,7 @@
   💻<br>Portfólio -  Pablo Santos
 </h1>
 
-![Resultado do projeto](imagens/preview.png)
+![Resultado do projeto](imagens/foto-home.png)
 
 <h4 align="center"><a href="https://pablo-m-santos.github.io/Portfolio/">Clique para visitar o meu projeto ( EM DESENVOLVIMENTO!! )</a></h4>
 
