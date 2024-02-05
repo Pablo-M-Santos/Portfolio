@@ -597,7 +597,7 @@ span {
 
 /* serviços */
 
-.extracurriculares {
+.eventos {
     padding: 12px 0px 0px 0px;
     background-color: #1E1E1E;
     margin-left: 10rem;
@@ -612,14 +612,14 @@ span {
     font-size: 6rem;
 }
 
-.grid-layout .extra-container {
+.grid-layout .evento-container {
     display: flex;
     height: auto;
     flex-wrap: wrap;
     margin: 100px 0px 250px 0px;
 }
 
-.extra-container .extra-card {
+.evento-container .evento-card {
     background-color: #111;
     height: auto;
     padding: 32px;
@@ -632,35 +632,38 @@ span {
     border-radius: 4px;
 }
 
-.extra-card .imagem-container {
+.evento-card .imagem-container {
     height: 90px;
 }
 
-.extra-card .imagem-container img {
+.evento-card .imagem-container img {
     width: 70px;
     margin-top: 20px;
 }
+.imagem-container img{
+    height: 47.57px;
+}
 
-.extra-card h3 {
+.evento-card h3 {
     padding: 24px 0px;
     color: #fff;
     font-size: 2.4rem;
     font-weight: 500;
 }
 
-.extra-card p {
+.evento-card p {
     line-height: 3.2rem;
     color: #9ca3af;
     font-size: 1.8rem;
 }
-.extra-card a{
+.evento-card a{
     margin-top: 10px;
     width: auto;
     display: flex;
     align-content: flex-end;
     font-size: 17px;
 }
-.extra-card i{
+.evento-card i{
     font-size: 40px;
 }
 /* footer */
@@ -940,7 +943,7 @@ svg {
         font-size: 2rem;
     }
 
-    .extracurriculares {
+    .eventos {
         margin-left: 3rem;
         margin-right: 3rem;
     }
@@ -1052,11 +1055,11 @@ svg {
     #texto{
         margin-left: 0px;
     }
-    .extracurriculares {
+    .eventos {
         padding: 48px 24px;
     }
 
-    .extracurriculares {
+    .eventos {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
@@ -1172,8 +1175,11 @@ svg {
         margin-left: 0px;
         margin-right: 0px;
     }
-    .extracurriculares .grid-layout .extra-container .extra-card {
+    .eventos .grid-layout .evento-container .evento-card {
         flex-basis: calc(100% - 20px);
+    }
+    .grid-layout h2{
+        font-size: 5.5rem;
     }
 
     #footer_social_media .footer-link {
@@ -1306,6 +1312,9 @@ svg {
     #footer_social_media .footer-link {
         height: 5rem;
         width: 5rem;
+    }
+    .grid-layout h2{
+        font-size: 4.6rem;
     }
 
 
