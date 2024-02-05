@@ -610,6 +610,7 @@ span {
     margin-left: 8px;
     color: #ffffff;
     font-size: 6rem;
+    width: auto;
 }
 
 .grid-layout .extra-container {
