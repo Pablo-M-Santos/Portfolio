@@ -626,10 +626,12 @@ span {
     margin: 8px;
     flex-basis: calc(33% - 20px);
     flex-grow: 1;
-    border: 1px solid #111;
+    box-shadow: 1px 1px 1px 1px var(--cyan1);
     transition: 1s all ease;
-    border: 1px solid #1f1f1f;
-    border-radius: 4px;
+    border-radius: 20px;
+}
+.evento-card:hover{
+    transform: scale(1.02) ;
 }
 
 .evento-card .imagem-container {
