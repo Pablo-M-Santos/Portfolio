@@ -668,96 +668,18 @@ span {
 .evento-card i{
     font-size: 40px;
 }
+
+
+
 /* footer */
-footer {
-    width: 100%;
-}
-
-#footer_content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 3rem 3.5rem;
-}
-
-#footer_social_media {
+.footer{
     display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-#footer_social_media .footer-link {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    color: var(--color-neutral-40);
-    border-radius: 50%;
-    transition: all 0.4s;
+    background-color: #111                                                                                                              ;
+    padding: 12px;
 }
-
-
-#footer_social_media .footer-link i {
-    font-size: 1.25rem;
-}
-
-#footer_social_media .footer-link:hover {
-    opacity: 0.8;
-}
-
-#instagram {
-    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
-}
-
-#facebook {
-    background-color: #4267b3;
-}
-
-#whatsapp {
-    background-color: #25d366;
-}
-
-#contato {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-}
-
-.footer-list h3 {
-    margin-bottom: 20px;
-    font-size: 20px;
-}
-
-.footer-list .footer-link {
-    color: var(--color-neutral-30);
-    transition: all 0.4s;
-}
-
-.footer-list .footer-link:hover {
-    color: var(--cyan1);
-}
-
-
-
-#footer_copyright {
-    display: flex;
-    justify-content: center;
-    background-color: var(--color-neutral-0);
-    font-size: 1.4rem;
-    padding: 1.5rem;
-    font-weight: 100;
-}
-
-svg {
-    text-align: center;
-    margin: 5px 0px 0px 0px;
-}
+/* animação */
 
 /* responsividade */
 @media (max-width: 1600px) {
@@ -881,12 +803,6 @@ svg {
         margin-left: 4.5rem;
         margin-right: 4.5rem;
     }   
-
-    #footer_social_media .footer-link {
-        height: 4.5rem;
-        width: 4.5rem;
-    }
-
 }
 
 @media (max-width: 1025px) {
@@ -950,11 +866,7 @@ svg {
         margin-right: 3rem;
     }
 
-    #footer_social_media .footer-link {
-        height: 5rem;
-        width: 5rem;
-    }
-
+    
 
 }
 
@@ -1064,11 +976,6 @@ svg {
     .eventos {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
-    }
-
-    #footer_social_media .footer-link {
-        height: 4.5rem;
-        width: 4.5rem;
     }
 
 }
@@ -1255,12 +1162,7 @@ svg {
         text-align: center;
     }
 
-    #footer_content {
-        max-width: fit-content;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-left: 1.5rem;
-    }
+    
 
 }
 
@@ -1311,12 +1213,12 @@ svg {
         height: auto;
         transition: 0.5s all ease;
     }
-    #footer_social_media .footer-link {
-        height: 5rem;
-        width: 5rem;
-    }
+    
     .grid-layout h2{
         font-size: 4.6rem;
+    }
+    .footer{
+        font-size: 12px;
     }
 
 
