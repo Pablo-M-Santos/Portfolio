@@ -2,7 +2,7 @@
   💻<br>Portfólio -  Pablo Santos
 </h1>
 
-![Resultado do projeto](imagens/foto-home.png)
+![Resultado do projeto](imagens/preview.png)
 
 <h4 align="center"><a href="https://pablo-m-santos.github.io/Portfolio/">Clique para visitar o meu projeto ( EM DESENVOLVIMENTO!! )</a></h4>
 
@@ -30,9 +30,10 @@ Para o desenvolvimento do portfólio usei as seguintes tecnologias:
 O portfólio ainda está em desenvolvimento e as próximas atualizações serão feitas das seguintes maneiras:
 
   -  [ ] Animação no site;
-  -  [ OK ] Adicionar as cores corretas; 
-  -  [ OK ] Melhorias na responsividade mobile;
-  -  [ OK ] Melhoria no layout;
-  -  [ OK ] Adicionar projetos;
-  -  [ OK ] Imagens da minha pessoa;
-  -  [ OK ] Acessibilidade...
+  -  [ ] Adicionar o tema escuro;
+  -  [ ] Adicionar as cores corretas; 
+  -  [ ] Melhorias na responsividade mobile;
+  -  [ ] Melhoria no layout;
+  -  [ ] Adicionar projetos;
+  -  [ ] Imagens da minha pessoa;
+  -  [ ] Acessibilidade...

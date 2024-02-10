@@ -12,49 +12,10 @@
 }
 
 :root {
-    --bg-color: #1E1E1E;
-    --second-bg-color: #323946;
-    --text-color: #fff;
-    --main-color: #0ef;
-    --dark2: #3a415a;
-    --dark3: #566981;
-    --dark4: #89a7b1;
-    --cyan1: #70e3ea;
-    --color-neutral-0: #0e0c0c;
-    --color-neutral-30: #a8a29e;
-    --color-neutral-40: #f5f5f5;
-}
-
-/* scroll lateral*/
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark2);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--dark3);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--dark4);
-}
-
-
-::-webkit-scrollbar {
-    width: 8px
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark2);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--dark3);
-    border-radius: 8px
+    --bg-color: #FFF;
+    --text-color: #000;
+    --color-cinza: #334155;
+    --color-azul: #0284C7;
 }
 
 html {
@@ -63,8 +24,7 @@ html {
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--color-azul);
     font-size: 1.6rem;
 }
 
@@ -74,12 +34,12 @@ section {
 
 /* menu */
 .header {
+    background-color: var(--bg-color);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,16 +47,12 @@ section {
 }
 
 .header .navbar a:hover {
-    color: var(--main-color);
-}
-
-.header.sticky {
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    color: var(--color-azul);
 }
 
 .logo {
     font-size: 3rem;
-    color: var(--text-color);
+    color: var(--color-cinza);
     font-weight: 600;
     cursor: pointer;
     margin-right: 50px;
@@ -104,34 +60,44 @@ section {
 
 #logo {
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--color-cinza);
     font-weight: 600;
     cursor: default;
 }
 
 .navbar a {
     font-size: 1.9rem;
-    color: var(--text-color);
+    color: var(--color-cinza);
     margin-left: 4rem;
+    font-weight: 700;
     transition: .3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
+    color: var(--color-azul);
 }
 
 #menu-icon {
     font-size: 3.6rem;
-    color: var(--text-color);
+    color: var(--color-cinza);
     display: none;
     cursor: pointer;
 }
-
+.onda{
+    background-color: #ffffff;
+    width: 100%;
+}
+.onda-botton{
+    background-color: #ffffff;
+    width: 100%;
+    margin-bottom: -65px;
+}
 /* HOME */
 .home {
-    height: 100vh;
-    background-color: #1E1E1E;
+    background-color: var(--bg-color);
+    height: 85vh;
+    padding-bottom: 0px;
     display: flex;
     align-items: center;
 }
@@ -149,7 +115,7 @@ section {
 .home-container .home-img {
     border-radius: 50%;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px var(--cyan1);
+    box-shadow: 1px 1px 1px 1px var(--color-azul);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -160,10 +126,11 @@ section {
 .home-texto {
     align-items: center;
     padding-right: 180px;
+    color: #334155;
 }
 
 .home-texto h1 {
-    font-size: 43px;
+    font-size: 40px;
     letter-spacing: 3px;
 }
 
@@ -175,12 +142,12 @@ section {
 }
 
 span {
-    color: var(--main-color);
+    color: var(--color-azul);
     font-size: 4.2rem;
 }
 
 #home-nome {
-    font-size: 60px;
+    font-size: 52px;
     font-weight: 700;
     line-height: 1.3;
 }
@@ -189,58 +156,62 @@ span {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    color: var(--color-cinza);
     width: 5.2rem;
     height: 5.2rem;
     background: transparent;
-    border: .2rem solid var(--main-color);
     border-radius: 50%;
     font-size: 4rem;
-    color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
+    transition: .10s ease-in-out;
 }
 
 .social-media a:hover {
-    background: var(--main-color);
-    color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    background:var(--color-azul) ;
+    color: #fff;
+    box-shadow: 0 0 1rem var(--color-azul);
 }
 
 .btn {
     display: inline-block;
     padding: 1.2rem 3rem;
-    background: var(--main-color);
+    background: var(--color-azul);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.8rem;
-    color: var(--second-bg-color);
+    color: #fff;
     letter-spacing: .1rem;
+    border: solid var(--color-azul);
     font-weight: 800;
 }
 
 .btn:hover {
     box-shadow: none;
+    background-color: #fff;
+    color: var(--color-cinza);
+    border: solid var(--color-cinza);
 }
-
 
 /* quem sou */
 
 .quem-sou {
-    height: 100%;
-    background-color: #36363698;
+    height: 85vh;
+    background-color: var(--color-azul);
     display: flex;
     align-items: center;
 }
 
 .quem-sou-container {
     padding: 24px;
-    border-radius: 4px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 15px 7px #00000028;
     display: flex;
     justify-content: space-between;
     height: auto;
@@ -249,11 +220,10 @@ span {
 .quem-sou-container .quem-sou-img {
     width: 500px;
     padding: 10px;
-    box-shadow: 1px 1px 1px 1px var(--cyan1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 4px;
+    border-radius: 20px;
     height: 500px;
     margin-right: 80px;
 }
@@ -266,10 +236,11 @@ span {
     width: 260px;
     font-size: 5rem;
     letter-spacing: 3px;
+    color: #000000 ;
 }
 
 .quem-sou-texto h3 {
-    color: var(--main-color);
+    color: var(--color-cinza);
     margin-top: 10px;
     font-size: 3.2rem;
 }
@@ -278,16 +249,21 @@ span {
     letter-spacing: 1px;
     line-height: 100%;
     font-size: 2.2rem;
-    color: #FFFFFF;
+    color: var(--color-cinza);
     line-height: 160%;
     margin: 32px 0px 48px 0px;
+}
+#btn-quem-sou{
+    background-color: #fff;
+    color: var(--color-cinza);
+
 }
 
 /* FORMAÇÃO */
 
 .formacao {
+    background-color: var(--bg-color);
     height: auto;
-    color: #fff;
     padding: 72px 0px;
 }
 
@@ -299,7 +275,7 @@ span {
 
 .formacao h2 {
     font-size: 6rem;
-    color: #ffffff;
+    color: #000000;
 }
 
 .formacao-grade {
@@ -318,7 +294,7 @@ span {
 .formacao-tecnica {
     grid-column: 1/3;
     background-color: #0a0a0a;
-    box-shadow: 1px 1px 1px 1px var(--cyan1);
+    box-shadow: 8px 8px 7px #00000067;
     border-radius: 5px;
     padding: 20px;
     display: flex;
@@ -358,7 +334,7 @@ span {
     flex-direction: column;
     gap: 25px;
     background-color: #0a0a0a;
-    border: 2px solid #6c6c6c;
+    box-shadow: 8px 8px 7px #00000067;
     border-radius: 5px;
     padding: 25px;
     transition: .3s;
@@ -385,12 +361,13 @@ span {
 }
 
 .formacao-titulo {
-    color: white;
+    color: rgb(0, 0, 0);
     letter-spacing: 1px;
     font-weight: 800;
     font-size: 2rem;
     position: relative;
     transition: .3s;
+    
 }
 
 .formacao-titulo::before {
@@ -398,7 +375,7 @@ span {
     content: "";
     width: 5px;
     height: 16px;
-    background: var(--cyan1);
+    background: var(--color-azul);
     margin-right: 16px;
     transition: .3s;
 }
@@ -418,7 +395,7 @@ span {
 .competencias p,
 .habilidades p,
 .idiomas p {
-    color: #e9e9e9;
+    color: var(--color-cinza);
     font-size: 18px;
     margin-top: 4px;
 }
@@ -470,8 +447,8 @@ span {
 /* PROJETOS */
 
 .projetos {
+    background-color: var(--bg-color);
     height: auto;
-    background-color: #36363698;
 }
 
 .projetos-container{
@@ -480,7 +457,7 @@ span {
 
 .projetos h2 {
     font-size: 6rem;
-    color: #ffffff;
+    color: #000000;
 }
 .projetos-box {
     margin-top: 50px;
@@ -517,7 +494,7 @@ span {
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 4px;
-    color: var(--main-color);
+    color: #000000;
 }
 
 .detalhe {
@@ -525,11 +502,11 @@ span {
     letter-spacing: 2px;
     line-height: 150%;
     font-size: 29px;
+    color: var(--color-cinza);
 }
 
 .ferramentas {
     display: flex;
-    color: rgb(178, 178, 178);
     letter-spacing: 2px;
     line-height: 150%;
     font-size: 48px;
@@ -560,11 +537,12 @@ span {
 }
 .github {
     font-size: 50px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 .github:hover {
-    color: var(--main-color);
+    color: #000;
+    transition: .5 all ease;
 }
 
 
@@ -573,16 +551,14 @@ span {
     font-size: 20px;
     align-items: center;
     font-family: 300;
-    color: white;
-    border: 1px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 100px;
     padding: 8px 16px;
 
 }
 
 .site:hover {
-    color: var(--main-color);
-    border: 1px solid var(--main-color);
+    transition: .5 all ease;
 }
 
 #seta {
@@ -590,23 +566,14 @@ span {
     align-items: center;
 }
 
-#seta:hover {
-    color: var(--main-color);
-}
 
-
-/* serviços */
+/* eventos */
 
 .eventos {
-    padding: 12px 0px 0px 0px;
-    background-color: #1E1E1E;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    background-color: var(--color-azul);
 }
-
 .grid-layout h2 {
     text-align: left;
-    margin-top: 150px;
     margin-left: 8px;
     color: #ffffff;
     font-size: 6rem;
@@ -616,17 +583,17 @@ span {
     display: flex;
     height: auto;
     flex-wrap: wrap;
-    margin: 100px 0px 250px 0px;
+    margin: 100px 0px 100px 0px;
 }
 
 .evento-container .evento-card {
-    background-color: #111;
+    background-color: #ffffff;
     height: auto;
     padding: 32px;
     margin: 8px;
     flex-basis: calc(33% - 20px);
     flex-grow: 1;
-    box-shadow: 1px 1px 1px 1px var(--cyan1);
+    box-shadow: 8px 8px 7px #00000028;
     transition: 1s all ease;
     border-radius: 20px;
 }
@@ -634,12 +601,8 @@ span {
     transform: scale(1.02) ;
 }
 
-.evento-card .imagem-container {
-    height: 90px;
-}
-
 .evento-card .imagem-container img {
-    width: 70px;
+    width: 90px;
     margin-top: 20px;
 }
 .imagem-container img{
@@ -648,14 +611,14 @@ span {
 
 .evento-card h3 {
     padding: 24px 0px;
-    color: #fff;
+    color: #000;
     font-size: 2.4rem;
     font-weight: 500;
 }
 
 .evento-card p {
     line-height: 3.2rem;
-    color: #9ca3af;
+    color: var(--color-cinza);
     font-size: 1.8rem;
 }
 .evento-card a{
@@ -676,7 +639,7 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111                                                                                                              ;
+    background-color: #ffffff                                                                                                              ;
     padding: 12px;
 }
 /* animação */
