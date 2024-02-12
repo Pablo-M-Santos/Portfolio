@@ -84,16 +84,19 @@ section {
     display: none;
     cursor: pointer;
 }
-.onda{
+
+.onda {
     background-color: #ffffff;
     max-width: 100%;
     margin-bottom: -10px;
 }
-.onda-botton{
+
+.onda-botton {
     background-color: #ffffff;
     max-width: 100%;
     margin-bottom: -65px;
 }
+
 /* HOME */
 .home {
     background-color: var(--bg-color);
@@ -175,7 +178,7 @@ span {
 }
 
 .social-media a:hover {
-    background:var(--color-azul) ;
+    background: var(--color-azul);
     color: #fff;
     box-shadow: 0 0 1rem var(--color-azul);
 }
@@ -237,7 +240,7 @@ span {
     width: 260px;
     font-size: 5rem;
     letter-spacing: 3px;
-    color: #000000 ;
+    color: #000000;
 }
 
 .quem-sou-texto h3 {
@@ -254,7 +257,8 @@ span {
     line-height: 160%;
     margin: 32px 0px 48px 0px;
 }
-#btn-quem-sou{
+
+#btn-quem-sou {
     background-color: #fff;
     color: var(--color-cinza);
 
@@ -368,7 +372,7 @@ span {
     font-size: 2rem;
     position: relative;
     transition: .3s;
-    
+
 }
 
 .formacao-titulo::before {
@@ -452,7 +456,7 @@ span {
     height: auto;
 }
 
-.projetos-container{
+.projetos-container {
     padding: 72px 0px;
 }
 
@@ -460,6 +464,7 @@ span {
     font-size: 6rem;
     color: #000000;
 }
+
 .projetos-box {
     margin-top: 50px;
     margin-bottom: 7rem;
@@ -532,10 +537,12 @@ span {
     margin-right: 15px;
     margin-left: 15px;
 }
+
 .links a:hover {
     transition: .4s linear;
     transform: scale(1.09);
 }
+
 .github {
     font-size: 50px;
     color: rgb(0, 0, 0);
@@ -567,12 +574,12 @@ span {
     align-items: center;
 }
 
-
 /* eventos */
 
 .eventos {
     background-color: var(--color-azul);
 }
+
 .grid-layout h2 {
     text-align: left;
     margin-left: 8px;
@@ -584,7 +591,7 @@ span {
     display: flex;
     height: auto;
     flex-wrap: wrap;
-    margin: 100px 0px 100px 0px;
+    margin: 100px 0px;
 }
 
 .evento-container .evento-card {
@@ -598,15 +605,17 @@ span {
     transition: 1s all ease;
     border-radius: 20px;
 }
-.evento-card:hover{
-    transform: scale(1.02) ;
+
+.evento-card:hover {
+    transform: scale(1.02);
 }
 
 .evento-card .imagem-container img {
     width: 90px;
     margin-top: 20px;
 }
-.imagem-container img{
+
+.imagem-container img {
     height: 47.57px;
 }
 
@@ -622,28 +631,68 @@ span {
     color: var(--color-cinza);
     font-size: 1.8rem;
 }
-.evento-card a{
+
+.evento-card a {
     margin-top: 10px;
     width: auto;
     display: flex;
     align-content: flex-end;
     font-size: 17px;
 }
-.evento-card i{
+
+.evento-card i {
     font-size: 40px;
 }
 
-
-
 /* footer */
-.footer{
+
+
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff                                                                                                              ;
+    background-color: #ffffff;
+    color: var(--color-cinza);
     padding: 12px;
 }
-/* animação */
+
+.navbar-footer {
+    margin: 2.2rem 0px;
+}
+
+.navbar-footer a {
+    font-size: 1.9rem;
+    color: var(--color-cinza);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.navbar-footer a:hover,
+.navbar-footer a.active {
+    color: var(--color-azul);
+}
+
+#social-media-footer a {
+    display: flex;
+    justify-content: center;
+    width: 5.2rem;
+    height: 5.2rem;
+    font-size: 4rem;
+    margin: 0px 2rem;
+}
+
+#social-media-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.9rem;
+    font-weight: 700;
+}
 
 /* responsividade */
 @media (max-width: 1600px) {
@@ -683,14 +732,17 @@ span {
         width: 400px;
         height: 400px;
     }
+
     .projetos-box img {
         width: 400px;
         height: 400px;
     }
-    .nome{
+
+    .nome {
         font-size: 25px;
     }
-    .detalhe{
+
+    .detalhe {
         font-size: 24px;
         width: auto;
     }
@@ -764,7 +816,7 @@ span {
         margin-top: 6rem;
         margin-left: 4.5rem;
         margin-right: 4.5rem;
-    }   
+    }
 }
 
 @media (max-width: 1025px) {
@@ -824,12 +876,7 @@ span {
         font-size: 2rem;
     }
 
-    .eventos {
-        margin-left: 3rem;
-        margin-right: 3rem;
-    }
 
-    
 
 }
 
@@ -910,43 +957,50 @@ span {
         height: 350px;
         margin-right: 20px;
     }
-    .projetos-box img{
+
+    .projetos-box img {
         width: 350px;
         height: 350px;
     }
-    .ferramentas{
+
+    .ferramentas {
         font-size: 40px;
     }
-    .nome{
+
+    .nome {
         font-size: 20px;
     }
-    .detalhe{
+
+    .detalhe {
         font-size: 20px;
     }
-    .links{
+
+    .links {
         font-size: 8px;
     }
-    .texto{
+
+    .texto {
         margin-left: 30px;
     }
-    #texto{
+
+    #texto {
         margin-left: 0px;
     }
+
     .eventos {
         padding: 48px 24px;
     }
 
-    .eventos {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+    footer {
+        width: auto;
     }
-
 }
 
 @media (max-width: 769px) {
     .home {
         height: 100vh;
     }
+
     .home-container {
         flex-direction: column-reverse;
     }
@@ -980,7 +1034,8 @@ span {
     .quem-sou-container {
         flex-direction: column-reverse;
     }
-    .onda-botton{
+
+    .onda-botton {
         margin-bottom: 95px;
         background-color: #fff;
     }
@@ -1031,33 +1086,40 @@ span {
         font-size: 15px;
         line-height: 2.25rem;
     }
-    .projetos-box{
+
+    .projetos-box {
         display: flex;
         flex-direction: column-reverse;
         justify-content: flex-end;
         padding-bottom: 40px;
     }
-    .projetos-box #right{
+
+    .projetos-box #right {
         flex-direction: row;
         justify-content: end;
     }
-    #right{
+
+    #right {
         flex-direction: column;
         justify-content: flex-end;
     }
+
     #texto {
         text-align: left;
         align-items: start;
         margin-right: 0px;
-    } 
-    .texto{
+    }
+
+    .texto {
         margin-left: 0px;
         margin-right: 0px;
     }
+
     .eventos .grid-layout .evento-container .evento-card {
         flex-basis: calc(100% - 20px);
     }
-    .grid-layout h2{
+
+    .grid-layout h2 {
         font-size: 5.5rem;
     }
 
@@ -1132,7 +1194,20 @@ span {
         text-align: center;
     }
 
-    
+    .footer-container {
+        margin-top: 30px;
+    }
+
+    .navbar-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar-footer a {
+        margin: 10px 0px;
+    }
 
 }
 
@@ -1164,7 +1239,7 @@ span {
         padding: 24px 24px 0px 24px;
     }
 
-    
+
     .quem-sou-texto {
         margin-bottom: 30px;
     }
@@ -1173,6 +1248,7 @@ span {
         gap: 15px;
         justify-content: center;
     }
+
     .projetos-box img {
         width: 100%;
         background-repeat: no-repeat;
@@ -1181,14 +1257,20 @@ span {
         height: auto;
         transition: 0.5s all ease;
     }
-    
-    .grid-layout h2{
+
+    .grid-layout h2 {
         font-size: 4.6rem;
     }
-    .footer{
-        font-size: 12px;
+
+    .footer-direitos p {
+        font-size: 1.7rem;
+
     }
 
+    #social-media-footer a {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
 
 }
 
@@ -1251,12 +1333,13 @@ span {
         width: 250px;
         height: 250px;
     }
-    .quem-sou-container{
+
+    .quem-sou-container {
         padding: 10px;
     }
 
     .quem-sou-content {
-        padding:24px;
+        padding: 24px;
     }
 
     .quem-sou {
@@ -1264,9 +1347,10 @@ span {
     }
 
     .formacao-grade {
-        gap:15px;
+        gap: 15px;
     }
-    .curso{
+
+    .curso {
         padding: 10px;
     }
 
@@ -1275,21 +1359,37 @@ span {
     .idiomas p {
         font-size: 15px;
     }
+
     .formacao-tecnica p strong,
     .curso p strong {
         font-size: 2.3rem;
     }
-    .habilidades-grade{
+
+    .habilidades-grade {
         grid-template-columns: 1fr 1fr;
     }
-    .competencias-grade{
+
+    .competencias-grade {
         grid-template-columns: 1fr 1fr;
     }
-    .github{
+
+    .github {
         font-size: 40px;
     }
-    .site{
+
+    .site {
         font-size: 17px;
         padding: 5px 8px;
     }
+    .footer-direitos p {
+        font-size: 1.5rem;
+
+    }
+    #social-media-footer a{
+        margin: 0px 1.5rem;
+    }
+    footer{
+        margin-bottom: 50px;
+    }
+
 }
