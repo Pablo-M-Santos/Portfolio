@@ -31,9 +31,9 @@ O portfólio ainda está em desenvolvimento e as próximas atualizações serão
 
   -  [ ] Animação no site;
   -  [ ] Adicionar o tema escuro;
-  -  [ ] Adicionar as cores corretas; 
-  -  [ ] Melhorias na responsividade mobile;
-  -  [ ] Melhoria no layout;
-  -  [ ] Adicionar projetos;
-  -  [ ] Imagens da minha pessoa;
-  -  [ ] Acessibilidade...
+  -  [ OK ] Adicionar as cores corretas; 
+  -  [ OK ] Melhorias na responsividade mobile;
+  -  [ OK ] Melhoria no layout;
+  -  [ OK ] Adicionar projetos;
+  -  [ OK ] Imagens da minha pessoa;
+  -  [ OK ] Acessibilidade...
