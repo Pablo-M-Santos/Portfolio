@@ -4,7 +4,7 @@
 
 ![Resultado do projeto](./imagens/foto-home.png)
 
-<h4 align="center"><a href="https://pablo-m-santos.github.io/Portfolio/">Clique para visitar o meu projeto ( EM DESENVOLVIMENTO!! )</a></h4>
+<h4 align="center"><a href="https://pablo-m-santos.github.io/Portfolio/">Clique para visitar o meu portfólio</a></h4>
 
 ## 🌳 Projeto
 O objetivo do portfólio é colocar meus projetos, informações sobre mim, informar meus conhecimentos, serviços e meu currículo, para a visualização das pessoas/empresas.
