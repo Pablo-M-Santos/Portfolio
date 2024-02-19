@@ -612,12 +612,12 @@ span {
 }
 
 .evento-card .imagem-container img {
-    width: 90px;
+    width: 200px;
     margin-top: 20px;
 }
 
 .imagem-container img {
-    height: 47.57px;
+    height: auto;
 }
 
 .evento-card h3 {
