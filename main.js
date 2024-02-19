@@ -48,3 +48,12 @@ window.onscroll = () => {
 };
 
 console.log('Sistema no ar...');
+
+
+const home = document.querySelector('.home');
+
+const myObserver = new IntersectionObserver( (entries) => {
+    console.log(entries);
+})
+
+myObserver.observe(home)

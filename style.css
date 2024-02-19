@@ -174,7 +174,7 @@ span {
     border-radius: 50%;
     font-size: 4rem;
     margin: 3rem 1.5rem 3rem 0;
-    transition: .10s ease-in-out;
+    transition: 400ms linear;
 }
 
 .social-media a:hover {
@@ -193,6 +193,7 @@ span {
     letter-spacing: .1rem;
     border: solid var(--color-azul);
     font-weight: 800;
+    transition: 400ms linear;
 }
 
 .btn:hover {
@@ -371,7 +372,7 @@ span {
     font-weight: 800;
     font-size: 2rem;
     position: relative;
-    transition: .3s;
+    transition: 500ms linear;
 
 }
 
@@ -382,12 +383,12 @@ span {
     height: 16px;
     background: var(--color-azul);
     margin-right: 16px;
-    transition: .3s;
+    transition: 500ms linear;
 }
 
 .formacao-titulo:hover:before {
     width: 20px;
-    transition: .3s;
+    transition: 500ms linear;
 }
 
 .competencias-grade {
@@ -420,11 +421,10 @@ span {
 }
 
 .bloco {
-    transition: .3s;
+    transition: 400ms linear;
 }
 
 .bloco:hover {
-    transition: .3s;
     transform: scale(1.08);
 }
 
@@ -478,11 +478,12 @@ span {
     background-position: center;
     background-size: cover;
     border-radius: 30px;
-    transition: all 0.3s ease-in-out;
+    transition: 400ms linear;
 }
 
 .projetos img:hover {
-    opacity: 0.9;
+
+    transform: scale(1.01);
 }
 
 .texto {
@@ -536,10 +537,10 @@ span {
 .links .github {
     margin-right: 15px;
     margin-left: 15px;
+    transition: 500ms linear;
 }
 
 .links a:hover {
-    transition: .4s linear;
     transform: scale(1.09);
 }
 
@@ -566,7 +567,7 @@ span {
 }
 
 .site:hover {
-    transition: .5 all ease;
+    transition: 500ms linear;
 }
 
 #seta {
@@ -1286,7 +1287,7 @@ footer {
 
     #home-nome {
         font-size: 32px;
-    }
+    }   
 
     .home-texto h2 {
         font-size: 20px;
