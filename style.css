@@ -611,13 +611,17 @@ span {
     transform: scale(1.02);
 }
 
+.evento-card .imagem-container{
+    text-align: center;
+}
+
 .evento-card .imagem-container img {
     width: 200px;
     margin-top: 20px;
 }
 
 .imagem-container img {
-    height: auto;
+    height: 115px;
 }
 
 .evento-card h3 {
