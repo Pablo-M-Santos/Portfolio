@@ -478,16 +478,15 @@ span {
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(20px);
 }
-
 .card .img-certificados{
     text-align: center;
 }
 
 .card .img-certificados img {
     width: 250px;
-    margin-top: 20px;
+    margin: 20px 0px 140px 0px ; 
 }
 
 .img-certificados img {
@@ -515,9 +514,6 @@ span {
     font-size: 17px;
 }
 
-.card i {
-    font-size: 40px;
-}
 
 .certificados-drive {
     display: inline-block;
@@ -576,11 +572,6 @@ span {
     background-size: cover;
     border-radius: 30px;
     transition: 400ms linear;
-}
-
-.projetos img:hover {
-
-    transform: scale(1.01);
 }
 
 .texto {
