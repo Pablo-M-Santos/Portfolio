@@ -1,5 +1,5 @@
 <h1 align="center">
-  💻<br>Portfólio -  Pablo Santos
+  💻 Portfólio -  Pablo Santos
 </h1>
 
 ![Resultado do projeto](./imagens/foto-home.png)
