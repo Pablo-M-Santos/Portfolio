@@ -20,10 +20,13 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
             });
+            let targetLink = document.querySelector('header nav a[href="#' + id + '"]');
+            if (targetLink) {
+                targetLink.classList.add('active');
+            }
         }
     });
 
@@ -32,10 +35,13 @@ window.onscroll = () => {
     let windowHeight = window.innerHeight;
 
     if (window.scrollY + windowHeight >= footerTop) {
-        navLinks.forEach(links => {
-            links.classList.remove('active');
-            document.querySelector('header nav a[href="#contato"]').classList.add('active');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
         });
+        let contactLink = document.querySelector('header nav a[href="#contato"]');
+        if (contactLink) {
+            contactLink.classList.add('active');
+        }
     }
 
     // sticky navbar
@@ -49,11 +55,16 @@ window.onscroll = () => {
 
 console.log('Sistema no ar...');
 
+const myObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
 
-const home = document.querySelector('.home');
+const elements = document.querySelectorAll('.anima-home, .anima-quem-sou, .anima-formacao, .anima-form, .anima-formacao2, .anima-certificado, .anima-projeto-left, .anima-projeto-right');
 
-const myObserver = new IntersectionObserver( (entries) => {
-    console.log(entries);
-})
-
-myObserver.observe(home)
+elements.forEach((element) => myObserver.observe(element));
