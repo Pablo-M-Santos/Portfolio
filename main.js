@@ -36,7 +36,7 @@ window.onscroll = () => {
 
     if (window.scrollY + windowHeight >= footerTop) {
         navLinks.forEach(link => {
-            link.classList.remove('active');s
+            link.classList.remove('active');
         });
         let contactLink = document.querySelector('header nav a[href="#contato"]');
         if (contactLink) {
