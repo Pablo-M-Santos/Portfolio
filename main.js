@@ -55,16 +55,4 @@ window.onscroll = () => {
 
 console.log('Sistema no ar...');
 
-const myObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
 
-const elements = document.querySelectorAll('.anima-home, .anima-quem-sou, .anima-formacao, .anima-form, .anima-formacao2, .anima-certificado, .anima-projeto-left, .anima-projeto-right');
-
-elements.forEach((element) => myObserver.observe(element));
