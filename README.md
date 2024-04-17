@@ -22,18 +22,7 @@ O portfólio é composto por 6 seções diferentes:
 ## 👨🏽‍💻 Tecnologias utilizadas
 Para o desenvolvimento do portfólio usei as seguintes tecnologias:
   - Visual Studio Code;
-  - HTML ;
+  - FIGMA;
+  - HTML;
   - Css;
   - JavaScript ;
-
-## ⚙️ melhorias e atualizações
-O portfólio ainda está em desenvolvimento e as próximas atualizações serão feitas das seguintes maneiras:
-
-  -  [ ] Animação no site;
-  -  [ ] Adicionar o tema escuro;
-  -  [ ] Adicionar as cores corretas; 
-  -  [ ] Melhorias na responsividade mobile;
-  -  [ ] Melhoria no layout;
-  -  [ ] Adicionar projetos;
-  -  [ ] Imagens da minha pessoa;
-  -  [ ] Acessibilidade...
