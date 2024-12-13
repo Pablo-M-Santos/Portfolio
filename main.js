@@ -68,3 +68,47 @@ const myObserver = new IntersectionObserver((entries) => {
 const elements = document.querySelectorAll('.anima-home, .anima-quem-sou, .anima-formacao, .anima-form, .anima-formacao2, .anima-certificado, .anima-projeto-left, .anima-projeto-right');
 
 elements.forEach((element) => myObserver.observe(element));
+
+
+function showExperience(company) {
+    const companies = document.querySelectorAll('.experiencia-opcoes li');
+    companies.forEach(item => item.classList.remove('active-experiencia'));
+  
+    document.querySelector(`[onclick="showExperience('${company}')"]`).classList.add('active-experiencia');
+  
+    const details = document.getElementById('experiencias-detalhes');
+    
+    switch (company) {
+      case 'escola':
+        details.innerHTML = `
+           <div class="title-row">
+            <h2>Escola</h2>
+            <span class="data">Nov 2021 - Nov 2022 (1 ano)</span>
+          </div>    
+          <p>
+            Trabalhei como instrutor conteudista em frontend na Digital House, o trabalho consistia em criar conteúdos para as aulas de especialização frontend. Alguns temas dos conteúdos realizados foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI, React Hook Form e styled-components.
+          </p>
+        `;
+        break;
+      case 'freelancer':
+        details.innerHTML = `
+           <div class="title-row">
+            <h2>Desenvolvedor Frontend</h2>
+            <span class="data">Nov 2021 - Nov 2022 (1 ano)</span>
+          </div>    
+          <p>Descrição da experiência na Zuplae.</p>
+        `;
+        break;
+        case 'estagio':
+        details.innerHTML = `
+          <div class="title-row">
+            <h2>Professor conteudista em Frontend</h2>
+            <span class="data">Nov 2021 - Nov 2022 (1 ano)</span>
+          </div>        
+          <p><strong>Estágio</strong></p>
+          <p>Descrição da experiência na Zuplae.</p>
+        `;
+        break;
+    }
+  }
+  
