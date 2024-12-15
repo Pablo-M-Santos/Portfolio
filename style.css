@@ -278,6 +278,7 @@ span {
     align-items: center;
     text-align: center;
     margin-bottom: 100px;
+    padding: 0px 300px;
 }
 
 .titulo-experiencia {
@@ -288,59 +289,39 @@ span {
 
 .container-experiencia {
     display: flex;
-    gap: 20px;
 }
 
 .experiencia-opcoes {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
 }
 
+.barra-deslizante {
+    position: absolute;
+    left: 0;
+    width: 4px;
+    height: 64px;
+    background-color: #fff;
+    transition: top 0.3s ease-in-out;
+    top: 0;
+}
 
 .experiencia-opcoes li {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 20px 60px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s, border-left 0.3s;
     font-size: 20px;
     text-align: left;
     color: black;
     border-left: 2px solid transparent;
 }
 
-.experiencia-opcoes li::before {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    border-left: 2px solid #7f56da;
-    display: none;
-
-}
-
-
+.experiencia-opcoes li:hover,
 .experiencia-opcoes li.active-experiencia {
-    color: #fff;
-    border-left: 4px solid #ffffff;
+    color: white;
 }
-
-.experiencia-opcoes li.active-experiencia::before {
-    display: block;
-}
-
-.experiencia-opcoes li:hover {
-    color: #fff;
-
-}
-
-.experiencia-opcoes li.active-experiencia,
-.experiencia-opcoes li:hover {
-    color: #ffffff;
-}
-
 
 .detalhes {
     flex: 1;
@@ -350,14 +331,18 @@ span {
     text-align: left;
     margin: 30px 0px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
+
 }
 
 .detalhes p {
-    margin: 20px 0px;
-    color: #000000;
+    margin: 40px 0px;
+    color: #ffffff;
+    font-weight: 700;
     font-size: 18px;
     text-align: left;
+    letter-spacing: 2px;
+    line-height: 3rem;
 }
 
 .title-row {
@@ -369,16 +354,36 @@ span {
 
 .title-row h2 {
     margin: 0;
-    color: rgb(0, 0, 0);
-    font-size: 22px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    letter-spacing: 2px;
 }
 
 .title-row .data {
     font-size: 15px;
     font-weight: bold;
-    color: #d1dceb;
+    color: white;
     margin-right: 50px;
     white-space: nowrap;
+}
+
+
+.ferramentas-experiencia {
+    text-align: left;
+    flex-direction: column;
+}
+
+.ferramentas-experiencia h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    cursor: pointer;
 }
 
 
@@ -726,6 +731,7 @@ span {
     line-height: 150%;
     font-size: 48px;
 }
+
 
 #right {
     justify-content: right;

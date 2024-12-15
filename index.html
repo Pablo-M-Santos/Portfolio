@@ -63,7 +63,7 @@
           <img class="quem-sou-img" src="./imagens/quem-sou-img.png" alt="">
           <div class="quem-sou-texto">
             <h2><strong>Quem Sou</strong></h2>
-            <h3>Desenvolvedor Front - End</h3>  
+            <h3>Desenvolvedor Front - End</h3>
             <p>Olá, meu nome é Pablo Moreira Santos. Atualmente, estou estudando e cursando o curso técnico em
               Informática. Estou em busca de oportunidades de emprego na área de programação Front-End, ansioso para
               demonstrar meus conhecimentos e sempre empenhado em aprender mais.</p>
@@ -73,29 +73,53 @@
       </div>
     </section>
 
-       <!-- EXPERIENCIA -->
-       <section class="experiencia">
-        Em desenvolvimento...😀
-        <h2 class="anima-formacao titulo-experiencia">Experiências</h2>
-        <div class="container-experiencia">
-          <ul class="experiencia-opcoes">
-            <li class="active-experiencia" onclick="showExperience('estagio')">WDA</li>
-            <li onclick="showExperience('freelancer')">freelancer</li>
-            <li onclick="showExperience('estagio')">estagio</li>
-          </ul>
-          <div class="detalhes" id="experiencias-detalhes">
-            <div class="title-row">
-              <h2 class="titulo-card">Desenvolvedor Full-Stack</h2>
-              <span class="data">Nov 2021 - Nov 2022 (1 ano)</span>
+    <!-- EXPERIENCIA -->
+    <section class="experiencia">
+      Em desenvolvimento...😀
+      <h2 class="titulo-experiencia">Experiências</h2>
+      <div class="container-experiencia">
+        <ul class="experiencia-opcoes">
+          <div class="barra-deslizante"></div>
+          <li class="active-experiencia" onclick="showExperience(this, 'wda')">WDA</li>
+          <li onclick="showExperience(this, 'freelancer')">Freelancer</li>
+          <li onclick="showExperience(this, 'estagio')">Estágio</li>
+        </ul>
+        <div class="detalhes" id="experiencias-detalhes">
+          <div class="title-row">
+            <h2 class="titulo-card">Desenvolvedor Full-Stack</h2>
+            <span class="data">Nov 2021 - Nov 2022 (1 ano)</span>
+          </div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+          </p>
+          <div class="ferramentas-experiencia">
+            <h3 class="titulo-ferramenta">Ferramentas Utilizadas:</h3>
+            <div class="icons">
+              <div class="icon" title="React">
+                <a
+                  href="https://www.google.com/search?q=HTML&sca_esv=0c3a6d1f3aa5848b&sxsrf=ADLYWIKhbHSxyQNZJ55pDpooA1f367VZfw%3A1734229961293&ei=yT9eZ6jJEfrU1sQPzqXN6Ag&ved=0ahUKEwjo0bSG3qiKAxV6qpUCHc5SE40Q4dUDCBA&uact=5&oq=HTML&gs_lp=Egxnd3Mtd2l6LXNlcnAiBEhUTUwyChAjGIAEGCcYigUyChAAGIAEGBQYhwIyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABEisBFAAWN4CcAB4AZABAJgBoAGgAc8EqgEDMC40uAEDyAEA-AEBmAIEoALlBMICChAAGIAEGEMYigWYAwCSBwMwLjSgB64Y&sclient=gws-wiz-serp"><img
+                    align="center" title="HTML" alt="HTML" height="40" width="50"
+                    src="https://skillicons.dev/icons?i=html"></a>
+              </div>
+              <div class="icon" title="Redux">
+                <img align="center" title="CSS" alt="CSS" height="40" width="50"
+                  src="https://skillicons.dev/icons?i=css">
+              </div>
+              <div class="icon" title="TypeScript">
+                <img align="center" title="JavaScript" alt="JavaScript" height="40" width="50"
+                  src="https://skillicons.dev/icons?i=javascript">
+              </div>
+              <!-- Adicione mais ícones conforme necessário -->
             </div>
-            <h3 class="sub-titulo-experiencia"><strong>WDA Tecnologia & Inovação</strong></h3>
-            <p class="sobre-experiencia">
-              Trabalhei como instrutor conteudista em frontend na Digital House, o trabalho consistia em criar conteúdos para as aulas de especialização frontend. Alguns temas dos conteúdos realizados foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI, React Hook Form e styled-components.
-            </p>
           </div>
         </div>
-       </section>
-       <img class="onda-botton" src="./imagens/onda-quem-sou.png" alt="">
+      </div>
+    </section>
+
+
+    <img class="onda-botton" src="./imagens/onda-quem-sou.png" alt="">
 
     <!-- FORMAÇÃO -->
     <section class="formacao anima-formacao2" id="formacao">
