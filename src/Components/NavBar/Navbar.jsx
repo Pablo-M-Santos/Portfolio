@@ -10,16 +10,20 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <header className="header">
       <a href="/" className="logo">Pablo Santos</a>
       <nav className={`navbar ${isOpen ? 'active' : ''}`}>
-        <a href="#home">Home</a>
-        <a href="#quem-sou">Quem Sou</a>
-        <a href="#formacao">Formação</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#eventos">Eventos</a>
-        <a href="#contato">Contato</a>
+        <a href="#home" onClick={closeNavbar}>Home</a>
+        <a href="#quem-sou" onClick={closeNavbar}>Quem Sou</a>
+        <a href="#formacao" onClick={closeNavbar}>Formação</a>
+        <a href="#projetos" onClick={closeNavbar}>Projetos</a>
+        <a href="#eventos" onClick={closeNavbar}>Eventos</a>
+        <a href="#contato" onClick={closeNavbar}>Contato</a>
       </nav>
       <button className="hamburguer" onClick={toggleNavbar}>
         {isOpen ? <MdOutlineMenuOpen /> : <FiMenu />} 
@@ -29,3 +33,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

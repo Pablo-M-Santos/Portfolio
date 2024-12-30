@@ -67,9 +67,26 @@
     color: #0284C7; 
 }
 
+@media (max-width: 1100px){
+    .logo {
+        font-size: 20px;
+    }
+    .navbar a {
+        font-size: 15px;
+        margin-left: 25px;
+    }
+    .header {
+        width: 95%;
+    }
+}
+
+
 @media (max-width: 800px){
     .hamburguer{
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     .navbar {
         display: none; 
@@ -100,4 +117,20 @@
     .navbar.active {
         display: flex; 
     }
+    .header {
+        width: 80%;
+    }
+    .logo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 350px){
+    .logo {
+        font-size: 20px;
+    }
+    .header {
+        padding: 15px 20px;
+    }
+
 }
