@@ -1,5 +1,6 @@
 import './Main.css';
-import fotoPerfil from '../../assets/foto-perfil-nova.png';
+import fotoPerfil from '../../assets/ImagemHome.png';
+import fotoQuemSou from '../../assets/ImagemQuemSou.jpg';
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { useEffect } from 'react';
@@ -37,7 +38,7 @@ const Main = () => {
         <div className="home-container">
           <img src={fotoPerfil} alt="Pablo Santos" className="home-img" />
           <div className="home-texto">
-            <h1>Olá, eu sou<br/><strong id="home-nome">Pablo Santos,</strong></h1>
+            <h1>Olá, eu sou<br/><div id="home-nome">Pablo Santos,</div></h1>
             <h2>sou <span> desenvolvedor Full-Stack.</span></h2>
 
             <div className="social-media">
@@ -51,16 +52,42 @@ const Main = () => {
         </div>
       </section>
 
-
-
-
-
-
-
-      
-      <section className="section" id="quem-sou">
-        Quem Sou
+      <section className="quem-sou section" id="quem-sou">
+        <div className="waveTop"></div>
+        <div className="quem-sou-container  ">
+          <img src={ fotoQuemSou } alt="" className="quem-sou-img" />
+          <div className="quem-sou-texto">
+          <h2>Quem Sou</h2>
+            <h3>Desenvolvedor Front - End</h3>
+            <p>Olá, meu nome é Pablo Moreira Santos. Atualmente, estou estudando e cursando o curso técnico em
+              Informática. Estou em busca de oportunidades de emprego na área de programação Front-End, ansioso para
+              demonstrar meus conhecimentos e sempre empenhado em aprender mais.</p>
+            <a href="https://wa.me/558592822527?text=Olá!,%20eu%20vim%20do%20seu%20Portfólio">Saiba Mais</a>
+          </div>
+        </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section className="section" id="formacao">
         Formação
       </section>
