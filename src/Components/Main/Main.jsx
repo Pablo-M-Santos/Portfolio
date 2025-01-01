@@ -59,10 +59,8 @@ const Main = () => {
           <div className="quem-sou-texto">
           <h2>Quem Sou</h2>
             <h3>Desenvolvedor Front - End</h3>
-            <p>Olá, meu nome é Pablo Moreira Santos. Atualmente, estou estudando e cursando o curso técnico em
-              Informática. Estou em busca de oportunidades de emprego na área de programação Front-End, ansioso para
-              demonstrar meus conhecimentos e sempre empenhado em aprender mais.</p>
-            <a href="https://wa.me/558592822527?text=Olá!,%20eu%20vim%20do%20seu%20Portfólio">Saiba Mais</a>
+            <p>Sou desenvolvedor Full-Stack com 2 anos de experiência em desenvolvimento. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e estudando React e TypeScript. Estou em busca de uma oportunidade para aplicar minhas habilidades, crescer profissionalmente e desenvolver soluções inovadoras e eficientes.</p>
+            <a  className="btn" href="https://wa.me/558592822527?text=Olá!,%20eu%20vim%20do%20seu%20Portfólio">Saiba Mais</a>
           </div>
         </div>
       </section>
