@@ -189,14 +189,14 @@ span {
 
 .quem-sou-texto h3 {
   font-size: 30px;
-  color: #1d1d1def; 
+  color: #1d1d1def;
 }
 
 .quem-sou-texto p {
   letter-spacing: 1px;
   line-height: 100%;
   font-size: 20px;
-  color: #1d1d1def; 
+  color: #1d1d1def;
   line-height: 160%;
   font-weight: 400;
   margin: 20px 0px 48px 0px;
@@ -248,20 +248,21 @@ span {
   .home-container {
     width: 85%;
   }
+
   /* Quem Sou */
   .quem-sou-texto h2 {
     font-size: 40px;
   }
-  
+
   .quem-sou-texto h3 {
     font-size: 28px;
   }
-  
+
   .quem-sou-texto p {
     font-size: 20px;
     margin: 20px 0px;
   }
-  
+
 }
 
 @media (max-width: 1500px) {
@@ -299,19 +300,20 @@ span {
     font-size: 20px;
   }
 
-   /* Quem Sou */
-   .quem-sou-texto h2 {
-    font-size: 40px;
+  /* Quem Sou */
+  .quem-sou-texto h2 {
+    font-size: 30px;
   }
-  
+
   .quem-sou-texto h3 {
-    font-size: 27px;
+    font-size: 25px;
   }
-  
+
   .quem-sou-texto p {
-    font-size: 18px;
+    font-size: 17px;
     margin: 20px 0px;
   }
+
   .quem-sou-img {
     width: 350px;
     height: 350px;
@@ -341,17 +343,40 @@ span {
   .home-container {
     width: 90%;
   }
+
+  /* Quem Sou */
+  .quem-sou-texto h2 {
+    font-size: 29px;
+  }
+
+  .quem-sou-texto h3 {
+    font-size: 24px;
+  }
+
+  .quem-sou-texto p {
+    font-size: 16px;
+    margin: 20px 0px;
+  }
+
+  .quem-sou-img {
+    width: 350px;
+    height: 350px;
+  }
 }
 
 @media (max-width: 1250px) {
+
   /* Home */
   .home-container {
     flex-direction: column-reverse;
-    padding-top: 200px;
   }
 
   .home-texto h1 {
     font-size: 25px;
+  }
+
+  .home {
+    height: 135vh;
   }
 
   .home-texto h2 {
@@ -374,12 +399,30 @@ span {
 
   .home-container {
     width: 80%;
+    margin-top: 0px;
   }
 
   /* Quem Sou  */
+  .quem-sou-container {
+    flex-direction: column;
+    width: 65%;
+  }
+
+  .quem-sou-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 50% 20%;
+    border-radius: 20px;
+    margin-right: 0px;
+  }
+
 }
 
 @media (max-width: 800px) {
+  .home {
+    height: 120vh;
+  }
   .home-texto h1 {
     font-size: 25px;
   }
@@ -402,9 +445,16 @@ span {
     height: 450px;
   }
 
+  .home-container {
+    margin-top: 0px;
+  }
+
 }
 
 @media (max-width: 600px) {
+  .home {
+    height: 125vh;
+  }
   .home-texto h1 {
     font-size: 22px;
   }
@@ -434,6 +484,25 @@ span {
   .btn {
     padding: 0.5rem 2.7rem;
   }
+
+  /* Quem Sou */
+  .quem-sou-texto h2 {
+    font-size: 27px;
+  }
+
+  .quem-sou-texto h3 {
+    font-size: 22px;
+  }
+
+  .quem-sou-texto p {
+    font-size: 15px;
+    margin: 20px 0px;
+  }
+
+  .quem-sou-container {
+    width: 75%;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -470,6 +539,28 @@ span {
 
   .btn {
     padding: 0.3rem 2.5rem;
+  }
+
+  /* Quem Sou */
+  .quem-sou-texto h2 {
+    font-size: 27px;
+  }
+
+  .quem-sou-texto h3 {
+    font-size: 22px;
+  }
+
+  .quem-sou-texto p {
+    font-size: 15px;
+    margin: 20px 0px;
+  }
+
+  .quem-sou-container {
+    width: 75%;
+  }
+
+  .quem-sou-container {
+    padding: 10px;
   }
 }
 
@@ -508,4 +599,30 @@ span {
   .btn {
     padding: 0.3rem 2.5rem;
   }
+
+  /* Quem Sou */
+  .quem-sou-texto h2 {
+    font-size: 27px;
+  }
+
+  .quem-sou-texto h3 {
+    font-size: 20px;
+  }
+
+  .quem-sou-texto p {
+    font-size: 16px;
+    margin: 20px 0px;
+    line-height: 140%;
+  }
+
+  .quem-sou-container {
+    width: 75%;
+  }
+
+  .quem-sou-container {
+    padding: 10px;
+  }
+
+
+  
 }

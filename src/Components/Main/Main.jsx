@@ -54,11 +54,11 @@ const Main = () => {
 
       <section className="quem-sou section" id="quem-sou">
         <div className="waveTop"></div>
-        <div className="quem-sou-container  ">
+        <div className="quem-sou-container">
           <img src={ fotoQuemSou } alt="" className="quem-sou-img" />
           <div className="quem-sou-texto">
           <h2>Quem Sou</h2>
-            <h3>Desenvolvedor Front - End</h3>
+            <h3>Desenvolvedor Full - Stack</h3>
             <p>Sou desenvolvedor Full-Stack com 2 anos de experiência em desenvolvimento. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e estudando React e TypeScript. Estou em busca de uma oportunidade para aplicar minhas habilidades, crescer profissionalmente e desenvolver soluções inovadoras e eficientes.</p>
             <a  className="btn" href="https://wa.me/558592822527?text=Olá!,%20eu%20vim%20do%20seu%20Portfólio">Saiba Mais</a>
           </div>
