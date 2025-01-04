@@ -328,7 +328,7 @@ span {
 
 /* Formação */
 
-.formacao {
+/* .formacao {
   height: auto;
   position: relative;
   background-color: #0284C7;
@@ -337,7 +337,7 @@ span {
   align-items: center;
   flex-direction: column;
   padding-bottom: 5vh;
-}
+} */
 
 .waveBottom {
   background-image: url('../../assets/waveTop.svg');
@@ -351,6 +351,17 @@ span {
   height: 35vh;
   z-index: 1;
   transform: rotate(180deg);
+}
+
+.wave {
+  height: auto;
+  position: relative;
+  background-color: #0284C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5vh;
 }
 
 

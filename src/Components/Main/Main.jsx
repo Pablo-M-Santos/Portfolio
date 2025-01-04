@@ -141,8 +141,11 @@ const Main = () => {
           </div>
         </section>
       </section>
-      <section className="formacao section" id="formacao">
+      <section className="wave section" id="formacao">
         <div className="waveBottom"></div>
+      </section>
+      <section className="formacao section" id="formacao">
+        Formação
       </section>
 
       <section className="section" id="projetos">
