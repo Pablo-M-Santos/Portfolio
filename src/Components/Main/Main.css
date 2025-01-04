@@ -146,13 +146,14 @@ span {
 }
 
 .quem-sou {
-  height: 200vh;
+  height: auto;
   position: relative;
   background-color: #0284C7;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 5vh;
 }
 
 .quem-sou-container {
@@ -165,6 +166,7 @@ span {
   display: flex;
   justify-content: space-between;
   width: 78%;
+  margin-top: 300px;
 }
 
 .quem-sou-img {
@@ -210,8 +212,8 @@ span {
   background-color: var(--color-azul);
   align-items: center;
   text-align: center;
-  margin-bottom: 100px;
   width: 78%;
+  padding-bottom: 5rem;
 }
 
 .titulo-experiencia {
@@ -220,12 +222,14 @@ span {
   margin-bottom: 5rem;
   color: white;
 }
+
 .container-experiencia {
   display: flex;
   background: white;
-  padding: 20px;
+  padding: 35px 20px;
   border-radius: 20px;
   box-shadow: 10px 15px 7px #00000028;
+
 }
 
 .experiencia-opcoes {
@@ -269,17 +273,16 @@ span {
   margin: 30px 0px;
   color: #1d1d1def;
   font-size: 22px;
-
 }
 
 .detalhes p {
-  margin: 40px 0px 0px 0px;
+  margin: 20px 0px;
   color: #1d1d1def;
   font-weight: 700;
   font-size: 18px;
   text-align: left;
   letter-spacing: 2px;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 .title-row {
@@ -322,6 +325,38 @@ span {
   flex-wrap: wrap;
   cursor: pointer;
 }
+
+/* Formação */
+
+.formacao {
+  height: auto;
+  position: relative;
+  background-color: #0284C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5vh;
+}
+
+.waveBottom {
+  background-image: url('../../assets/waveTop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+
+
+
+
+
 
 
 
@@ -485,8 +520,6 @@ span {
 }
 
 @media (max-width: 1250px) {
-
-  /* Home */
   .home-container {
     flex-direction: column-reverse;
   }
@@ -537,6 +570,60 @@ span {
     margin-right: 0px;
   }
 
+
+  /* Experiência */
+  .experiencia {
+    width: 65%;
+  }
+
+  .experiencia-opcoes li {
+    font-size: 18px;
+  }
+
+  .detalhes h3 {
+    font-size: 20px;
+  }
+
+  .detalhes p {
+    font-size: 16px;
+  }
+
+  .container-experiencia {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .experiencia-opcoes {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .detalhes {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .ferramentas-experiencia h3 {
+    font-size: 18px;
+  }
+
+  .title-row h2 {
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .title-row .data {
+    font-size: 12px;
+  }
+
+  .title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 @media (max-width: 800px) {
@@ -570,6 +657,25 @@ span {
     margin-top: 0px;
   }
 
+  /* Quem sou */
+
+  .quem-sou-container {
+    margin-top: 300px;
+  }
+
+  /* Experiência */
+  .experiencia {
+    width: 75%;
+  }
+
+  .detalhes {
+    margin-top: 10px;
+  }
+
+  .detalhes p {
+    text-align: justify;
+    line-height: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -684,6 +790,17 @@ span {
   .quem-sou-container {
     padding: 10px;
   }
+
+
+  /* Experiência */
+  .experiencia-opcoes li {
+    font-size: 16px;
+  }
+
+  .detalhes p {
+    font-size: 15px;
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -745,7 +862,8 @@ span {
     padding: 10px;
   }
 
-  .quem-sou {
-    height: 170vh;
+  /* Experiência */
+  .detalhes p {
+    line-height: 1.5rem;
   }
 }
