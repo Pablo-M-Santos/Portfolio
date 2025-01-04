@@ -130,7 +130,6 @@ span {
 
 
 /* QUEM SOU */
-
 .waveTop {
   background-image: url('../../assets/waveTop.svg');
   background-repeat: no-repeat;
@@ -147,12 +146,13 @@ span {
 }
 
 .quem-sou {
-  height: 150vh;
+  height: 200vh;
   position: relative;
   background-color: #0284C7;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .quem-sou-container {
@@ -168,14 +168,14 @@ span {
 }
 
 .quem-sou-img {
-  width: 400px;
+  width: auto;
   padding: 5px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 20px;
   height: 400px;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 
 .quem-sou-texto {
@@ -202,6 +202,125 @@ span {
   font-weight: 400;
   margin: 20px 0px 48px 0px;
   text-align: justify;
+}
+
+/* Experiência */
+.experiencia {
+  display: grid;
+  background-color: var(--color-azul);
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+  width: 78%;
+}
+
+.titulo-experiencia {
+  font-size: 2.5rem;
+  margin-top: 200px;
+  margin-bottom: 5rem;
+  color: white;
+}
+.container-experiencia {
+  display: flex;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 15px 7px #00000028;
+}
+
+.experiencia-opcoes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.barra-deslizante {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 64px;
+  background-color: #0284C7;
+  transition: top 0.3s ease-in-out;
+  top: 0;
+}
+
+.experiencia-opcoes li {
+  padding: 20px 60px 20px 20px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-left 0.3s;
+  font-size: 20px;
+  text-align: left;
+  color: #1d1d1def;
+  border-left: 2px solid transparent;
+}
+
+.experiencia-opcoes li:hover,
+.experiencia-opcoes li.active-experiencia {
+  color: #0284C7;
+}
+
+.detalhes {
+  flex: 1;
+}
+
+.detalhes h3 {
+  text-align: left;
+  margin: 30px 0px;
+  color: #1d1d1def;
+  font-size: 22px;
+
+}
+
+.detalhes p {
+  margin: 40px 0px 0px 0px;
+  color: #1d1d1def;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 3rem;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.title-row h2 {
+  margin: 0;
+  color: #1d1d1def;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.title-row .data {
+  font-size: 15px;
+  font-weight: bold;
+  color: #1d1d1def;
+  margin-right: 50px;
+  white-space: nowrap;
+}
+
+
+.ferramentas-experiencia {
+  text-align: left;
+  flex-direction: column;
+}
+
+.ferramentas-experiencia h3 {
+  color: #1d1d1def;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  cursor: pointer;
 }
 
 

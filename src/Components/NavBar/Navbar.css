@@ -10,9 +10,10 @@
     background-color: #1d1d1def;
     border-radius: 10px;
     margin-top: 10px;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 2;
 }
-
 
 .logo {
     font-size: 25px;
