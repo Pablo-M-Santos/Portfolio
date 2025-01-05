@@ -326,6 +326,51 @@ span {
   cursor: pointer;
 }
 
+.icon {
+  position: relative;
+}
+
+.icon::after {
+  content: attr(title);
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 0.8rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease, visibility 0s 1s;
+}
+
+.icon:hover::after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease, visibility 0s 0s;
+}
+
+.icon:hover::after {
+  animation: showTooltip 5s forwards;
+}
+
+@keyframes showTooltip {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+
+
 /* Wave Bottom */
 
 .waveBottom {
@@ -479,9 +524,125 @@ span {
   margin: 20px 0;
 }
 
+/* Projetos */
+.projetos {
+  height: 100vh;
+  width: 100%;
+}
+
+.projetos-container {
+  width: 78%;
+}
+
+.projetos h2 {
+  font-size: 3rem;
+  color: #1d1d1def;
+}
+
+.projetos-content {
+  margin-top: 50px;
+  margin-bottom: 7rem;
+  display: flex;
+}
+
+.img-projeto {
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  transition: 400ms linear;
+}
+
+.projeto-texto {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  margin-left: 30px;
+  margin-bottom: 40px;
+  gap: 2.8rem;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.nome {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 4px;
+  color: #1d1d1def;
+}
+
+.detalhe {
+  width: 680px;
+  letter-spacing: 2px;
+  line-height: 150%;
+  font-size: 25px;
+  color: #1d1d1def;
+}
+
+.ferramentas {
+  display: flex;
+  letter-spacing: 2px;
+  line-height: 150%;
+  font-size: 48px;
+}
+
+#right {
+  justify-content: right;
+}
+
+#texto {
+  text-align: right;
+  align-items: end;
+  margin-right: 30px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links .github {
+  margin-right: 15px;
+  margin-left: 15px;
+  transition: 500ms linear;
+}
+
+.links a:hover {
+  transform: scale(1.09);
+}
+
+.github {
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.github:hover {
+  color: #000;
+  transition: .5 all ease;
+}
 
 
+.site {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  font-family: 300;
+  color: rgb(0, 0, 0);
+  border-radius: 100px;
+  padding: 8px 16px;
 
+}
+
+.site:hover {
+  transition: 500ms linear;
+}
+
+#seta {
+  font-size: 35px;
+  align-items: center;
+}
 
 
 
@@ -884,57 +1045,13 @@ span {
     line-height: 2rem;
   }
 
-  .titulo-experiencia {
-    font-size: 2rem;
-  }
-
   .icons {
     justify-content: center;
   }
 
-  .icon {
-    position: relative;
+  .titulo-experiencia {
+    font-size: 2rem;
   }
-
-  .icon::after {
-    content: attr(title);
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    white-space: nowrap;
-    font-size: 0.8rem;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s;
-  }
-
-  .icon:hover::after {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.3s ease, visibility 0s 0s;
-  }
-
-  .icon:hover::after {
-    animation: showTooltip 2s forwards;
-  }
-
-  @keyframes showTooltip {
-    0% {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    100% {
-      visibility: hidden;
-      opacity: 0;
-    }
-  }
-
 
   /* Formação */
   .formacao {

@@ -1,5 +1,6 @@
 import "./Main.css";
 import fotoPerfil from "../../assets/ImagemHome.png";
+import locadoraWDA from "../../assets/locadoraWDA.png";
 import fotoQuemSou from "../../assets/ImagemQuemSou.jpg";
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
@@ -371,13 +372,32 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="section" id="projetos">
-        {/* #1 - Locadora API */}
-        {/* #2 - Transmartins Vue */}
-        {/* #3 - UECE */}
-        {/* #4 - Eletronic Arts */}
-        {/* #5 - Transmartins  */}
+      {/* #1 - Locadora WDA */}
+      {/* #2 - Transmartins Vue */}
+      {/* #3 - UECE */}
+      {/* #4 - Eletronic Arts */}
+      {/* #5 - Transmartins  */}
+      <section className="projetos section" id="projetos">
+        <div className="projetos-container">
+          <h2>Projetos</h2>
+          {/* Locadora API */}
+          <div className="projetos-content">
+            <img src={locadoraWDA} alt="Pablo Santos" className="img-projeto" />
+            <div className="projeto-texto">
+              <h3 className="nome">LOCADORA WDA</h3>
+              <p className="detalhe">
+                Site baseado na empresa Atual Cargas uma transportadora que usa
+                a logística no seu cotidiano.
+              </p>
+              <div className="ferramentas">
+                <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+              </div>
+              <div className="links"></div>
+            </div>
+          </div>
+        </div>
       </section>
+
       <section className="section" id="eventos">
         Eventos
       </section>
