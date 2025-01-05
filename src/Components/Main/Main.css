@@ -350,14 +350,14 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 300px; 
-  padding-bottom: 50px; 
+  margin-bottom: 300px;
+  padding-bottom: 50px;
 }
 
 
 /* Formação */
 .formacao {
-  height: auto;
+  height: 170vh;
   width: 100%;
 }
 
@@ -429,7 +429,7 @@ span {
 .competencias,
 .habilidades,
 .idiomas {
-    padding: 20px 20px 20px 0px;
+  padding: 20px 20px 20px 0px;
 }
 
 .formacao-titulo {
@@ -640,6 +640,41 @@ span {
     width: 350px;
     height: 350px;
   }
+
+
+  /* Formação */
+  .formacao-container {
+    width: 65%;
+  }
+
+  .formacao-tecnica p,
+  .curso p {
+    color: white;
+    font-size: 19px;
+  }
+
+  .formacao-tecnica p strong,
+  .curso p strong {
+    font-size: 19px;
+  }
+
+  .sub-titulo {
+    font-size: 19px;
+  }
+
+  .curso .time,
+  .formacao-tecnica .time {
+    font-size: 19px;
+  }
+
+  .curso {
+    justify-content: space-between;
+  }
+
+  .formacao-titulo {
+    font-size: 20px;
+  }
+
 }
 
 @media (max-width: 1250px) {
@@ -747,6 +782,47 @@ span {
     align-items: flex-start;
     text-align: left;
   }
+
+  /* Formação */
+  .formacao-container {
+    width: 65%;
+  }
+
+  .formacao-tecnica p,
+  .curso p {
+    color: white;
+    font-size: 17px;
+  }
+
+  .formacao-tecnica p strong,
+  .curso p strong {
+    font-size: 17px;
+  }
+
+  .sub-titulo {
+    font-size: 17px;
+  }
+
+  .curso .time,
+  .formacao-tecnica .time {
+    font-size: 17px;
+  }
+
+  .curso {
+    padding: 15px;
+  }
+
+  .formacao-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .competencias-grade {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .habilidades-grade {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 800px) {
@@ -798,6 +874,48 @@ span {
   .detalhes p {
     text-align: justify;
     line-height: 2rem;
+  }
+
+  .titulo-experiencia {
+    font-size: 2rem;
+  }
+
+  /* Formação */
+  .formacao {
+    height: 200vh;
+  }
+
+  .formacao-container {
+    width: 75%;
+  }
+
+  .formacao-tecnica p,
+  .curso p {
+    font-size: 15px;
+  }
+
+  .formacao-tecnica p strong,
+  .curso p strong {
+    font-size: 15px;
+  }
+
+  .sub-titulo {
+    font-size: 15px;
+  }
+
+  .curso .time,
+  .formacao-tecnica .time {
+    font-size: 15px;
+  }
+
+  .curso {
+    padding: 10px;
+  }
+
+  .competencias p,
+  .habilidades p,
+  .idiomas p {
+    font-size: 15px;
   }
 }
 
@@ -852,6 +970,26 @@ span {
 
   .quem-sou-container {
     width: 75%;
+  }
+
+  /* Formação */
+  .formacao {
+    height: 250vh;
+  }
+  .formacao h2 {
+    font-size: 2.5rem;
+  }
+
+  .formacao-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .competencias-grade {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .habilidades-grade {
+    grid-template-columns: 1fr 1fr;
   }
 
 }
@@ -923,7 +1061,6 @@ span {
   .detalhes p {
     font-size: 15px;
   }
-
 }
 
 @media (max-width: 400px) {
@@ -988,5 +1125,40 @@ span {
   /* Experiência */
   .detalhes p {
     line-height: 1.5rem;
+  }
+
+  /* Formação */
+  .formacao {
+    height: 260vh;
+  }
+
+  .competencias-grade {
+    grid-template-columns: 1fr ;
+    gap: 50px;
+  }
+
+  .habilidades-grade {
+    grid-template-columns: 1fr ;
+    gap: 50px;
+  }
+
+  .formacao-tecnica p,
+  .curso p {
+    color: white;
+    font-size: 13px;
+  }
+
+  .formacao-tecnica p strong,
+  .curso p strong {
+    font-size: 13px;
+  }
+
+  .sub-titulo {
+    font-size: 13px;
+  }
+
+  .curso .time,
+  .formacao-tecnica .time {
+    font-size: 13px;
   }
 }
