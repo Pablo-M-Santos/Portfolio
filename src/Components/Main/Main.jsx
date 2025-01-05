@@ -21,7 +21,7 @@ const Main = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.25 }
     );
 
     sections.forEach((section) => {
@@ -372,7 +372,11 @@ const Main = () => {
       </section>
 
       <section className="section" id="projetos">
-        Projetos
+        {/* #1 - Locadora API */}
+        {/* #2 - Transmartins Vue */}
+        {/* #3 - UECE */}
+        {/* #4 - Eletronic Arts */}
+        {/* #5 - Transmartins  */}
       </section>
       <section className="section" id="eventos">
         Eventos
