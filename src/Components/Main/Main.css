@@ -526,7 +526,7 @@ span {
 
 /* Projetos */
 .projetos {
-  height: 100vh;
+  height: 250vh;
   width: 100%;
 }
 
@@ -581,12 +581,6 @@ span {
   color: #1d1d1def;
 }
 
-.ferramentas {
-  display: flex;
-  letter-spacing: 2px;
-  line-height: 150%;
-  font-size: 48px;
-}
 
 #right {
   justify-content: right;
@@ -619,7 +613,6 @@ span {
 }
 
 .github:hover {
-  color: #000;
   transition: .5 all ease;
 }
 
@@ -637,11 +630,7 @@ span {
 
 .site:hover {
   transition: 500ms linear;
-}
-
-#seta {
-  font-size: 35px;
-  align-items: center;
+  color: #0284C7;
 }
 
 

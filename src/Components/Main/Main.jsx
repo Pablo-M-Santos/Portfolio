@@ -1,6 +1,9 @@
 import "./Main.css";
 import fotoPerfil from "../../assets/ImagemHome.png";
 import locadoraWDA from "../../assets/locadoraWDA.png";
+import transmartins from "../../assets/transmartins.png";
+import ueceEnem from "../../assets/EnemUece.png";
+import eletronic from "../../assets/EletronicArts.png";
 import fotoQuemSou from "../../assets/ImagemQuemSou.jpg";
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
@@ -372,8 +375,6 @@ const Main = () => {
         </div>
       </section>
 
-      {/* #1 - Locadora WDA */}
-      {/* #2 - Transmartins Vue */}
       {/* #3 - UECE */}
       {/* #4 - Eletronic Arts */}
       {/* #5 - Transmartins  */}
@@ -384,16 +385,298 @@ const Main = () => {
           <div className="projetos-content">
             <img src={locadoraWDA} alt="Pablo Santos" className="img-projeto" />
             <div className="projeto-texto">
-              <h3 className="nome">LOCADORA WDA</h3>
+              <h3 className="nome">LOCADORA DE LIVROS</h3>
               <p className="detalhe">
-                Site baseado na empresa Atual Cargas uma transportadora que usa
-                a logística no seu cotidiano.
+                O Gerenciamento de Livros é um sistema desenvolvido para
+                gerenciar e otimizar a administração de uma locadora de livros.
               </p>
               <div className="ferramentas">
-                <img src="https://skillicons.dev/icons?i=git,kubernetes,docker,c,vim" />
+                <div className="icons">
+                  <div className="icon" title="GitLab">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=gitlab"
+                      alt="GitLab"
+                    />
+                  </div>
+                  <div className="icon" title="Figma">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=figma"
+                      alt="Figma"
+                    />
+                  </div>
+                  <div className="icon" title="Vue.js">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=vue"
+                      alt="Vue.js"
+                    />
+                  </div>
+                  <div className="icon" title="Spring">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=spring"
+                      alt="Spring"
+                    />
+                  </div>
+                  <div className="icon" title="Java">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=java"
+                      alt="Java"
+                    />
+                  </div>
+                  <div className="icon" title="Postman">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=postman"
+                      alt="Postman"
+                    />
+                  </div>
+                  <div className="icon" title="Docker">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=docker"
+                      alt="Docker"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="links"></div>
+              <div className="links">
+                <a href="https://locadora-api-wda.vercel.app/" className="site">
+                  VER SITE
+                </a>
+                <a
+                  href="https://github.com/Pablo-M-Santos/LocadoraAPI"
+                  title="github"
+                  className="github"
+                >
+                  <img
+                    height={40}
+                    width={50}
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Github"
+                  />
+                </a>
+              </div>
             </div>
+          </div>
+
+          {/* Transmartins Vue */}
+          <div className="projetos-content" id="right">
+            <div className="projeto-texto" id="texto">
+              <h3 className="nome">TRANSMARTINS</h3>
+              <p className="detalhe">
+                A Transmartins conta com uma frota moderna e diversificada, além
+                de ser uma agência profissional de logística e cargas.
+              </p>
+              <div className="ferramentas">
+                <div className="icons">
+                  <div className="icon" title="HTML">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=html"
+                      alt="HTML"
+                    />
+                  </div>
+                  <div className="icon" title="CSS">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=css"
+                      alt="CSS"
+                    />
+                  </div>
+                  <div className="icon" title="JavaScript">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=javascript"
+                      alt="JavaScript"
+                    />
+                  </div>
+                  <div className="icon" title="Figma">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=figma"
+                      alt="Figma"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="links">
+                <a
+                  href="https://pablo-m-santos.github.io/Transmartins/"
+                  className="site"
+                >
+                  VER SITE
+                </a>
+                <a
+                  href="https://github.com/Pablo-M-Santos/Transmartins"
+                  title="github"
+                  className="github"
+                >
+                  <img
+                    height={40}
+                    width={50}
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Github"
+                  />
+                </a>
+              </div>
+            </div>
+            <img
+              src={transmartins}
+              alt="Pablo Santos"
+              className="img-projeto"
+            />
+          </div>
+
+          {/* UECE */}
+          <div className="projetos-content">
+            <img src={ueceEnem} alt="Pablo Santos" className="img-projeto" />
+            <div className="projeto-texto">
+              <h3 className="nome">UECE & ENEM</h3>
+              <p className="detalhe">
+                É um site feito especialmente para os alunos que poderão
+                calcular de forma rápida e precisa a sua nota de corte na UECE
+                ou do ENEM.
+              </p>
+              <div className="ferramentas">
+                <div className="icons">
+                  <div className="icon" title="HTML">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=html"
+                      alt="HTML"
+                    />
+                  </div>
+                  <div className="icon" title="CSS">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=css"
+                      alt="CSS"
+                    />
+                  </div>
+                  <div className="icon" title="JavaScript">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=javascript"
+                      alt="JavaScript"
+                    />
+                  </div>
+                  <div className="icon" title="Bootstrap">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=bootstrap"
+                      alt="Bootstrap"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="links">
+                <a
+                  href="https://pablo-m-santos.github.io/UECE/"
+                  className="site"
+                >
+                  VER SITE
+                </a>
+                <a
+                  href="https://github.com/Pablo-M-Santos/UECE"
+                  title="github"
+                  className="github"
+                >
+                  <img
+                    height={40}
+                    width={50}
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Github"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Eletronic Arts */}
+          <div className="projetos-content" id="right">
+            <div className="projeto-texto" id="texto">
+              <h3 className="nome">ELETRONIC ARTS GAMES</h3>
+              <p className="detalhe">
+                Site da Eletronic Arts, proporcionando uma experiência única aos
+                amantes do universo dos jogos eletrônicos.
+              </p>
+              <div className="ferramentas">
+                <div className="icons">
+                  <div className="icon" title="HTML">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=html"
+                      alt="HTML"
+                    />
+                  </div>
+                  <div className="icon" title="CSS">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=css"
+                      alt="CSS"
+                    />
+                  </div>
+                  <div className="icon" title="JavaScript">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=javascript"
+                      alt="JavaScript"
+                    />
+                  </div>
+                  <div className="icon" title="Bootstrap">
+                    <img
+                      height={40}
+                      width={50}
+                      src="https://skillicons.dev/icons?i=bootstrap"
+                      alt="Bootstrap"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="links">
+                <a
+                  href="https://eletronic-arts.netlify.app/"
+                  className="site"
+                >
+                  VER SITE
+                </a>
+                <a
+                  href="https://github.com/Pablo-M-Santos/Eletronic-Arts"
+                  title="github"
+                  className="github"
+                >
+                  <img
+                    height={40}
+                    width={50}
+                    src="https://skillicons.dev/icons?i=github"
+                    alt="Github"
+                  />
+                </a>
+              </div>
+            </div>
+            <img src={eletronic} alt="Pablo Santos" className="img-projeto" />
           </div>
         </div>
       </section>
