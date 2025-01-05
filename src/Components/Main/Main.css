@@ -643,6 +643,10 @@ span {
 
 
   /* Formação */
+  .formacao {
+    height: 200vh;
+  }
+  
   .formacao-container {
     width: 65%;
   }
@@ -784,6 +788,10 @@ span {
   }
 
   /* Formação */
+  .formacao {
+    height: 230vh;
+  }
+
   .formacao-container {
     width: 65%;
   }
@@ -882,7 +890,7 @@ span {
 
   /* Formação */
   .formacao {
-    height: 200vh;
+    height: 230vh;
   }
 
   .formacao-container {
@@ -974,7 +982,7 @@ span {
 
   /* Formação */
   .formacao {
-    height: 250vh;
+    height: 270vh;
   }
   .formacao h2 {
     font-size: 2.5rem;
@@ -1061,6 +1069,11 @@ span {
   .detalhes p {
     font-size: 15px;
   }
+
+  /* Formação */
+  .formacao {
+    height: 290vh;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1129,7 +1142,7 @@ span {
 
   /* Formação */
   .formacao {
-    height: 260vh;
+    height: 300vh;
   }
 
   .competencias-grade {
