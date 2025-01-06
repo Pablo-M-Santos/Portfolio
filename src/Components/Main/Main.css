@@ -1151,7 +1151,8 @@ span {
 
   /* Projetos */
   .projetos {
-    height: 420vh;
+    height: auto;
+    margin-top: 300px;
   }
 
   .projetos-container {
@@ -1248,6 +1249,9 @@ span {
   }
 
   /* Projetos */
+  .projetos {
+    margin-top: 350px;
+  }
   .projetos-container {
     width: 75%;
   }
@@ -1336,9 +1340,7 @@ span {
   }
 
   /* Projetos */
-  .projetos {
-    height: 420vh;
-  }
+
 
   .projetos-container {
     width: 75%;
