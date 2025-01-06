@@ -1352,6 +1352,10 @@ span {
     font-size: 15px;
   }
 
+  .img-projeto {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1468,10 +1472,5 @@ span {
 
   .projeto-texto {
     gap: 2rem;
-  }
-
-  .img-projeto {
-    width: 250px;
-    height: 250px;
   }
 }
