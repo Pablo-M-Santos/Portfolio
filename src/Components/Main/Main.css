@@ -526,7 +526,7 @@ span {
 
 /* Projetos */
 .projetos {
-  height: 280vh;
+  height: auto;
 }
 
 .projetos-container {
@@ -1459,7 +1459,7 @@ span {
 
   /* Projetos */
   .projetos {
-    height: 450vh;
+    height: auto;
   }
 
   .projetos-container {
