@@ -1,10 +1,11 @@
 import "./Main.css";
 import fotoPerfil from "../../assets/ImagemHome.png";
+import fotoQuemSou from "../../assets/ImagemQuemSou.jpg";
 import locadoraWDA from "../../assets/locadoraWDA.png";
 import transmartins from "../../assets/transmartins.png";
 import ueceEnem from "../../assets/EnemUece.png";
 import eletronic from "../../assets/EletronicArts.png";
-import fotoQuemSou from "../../assets/ImagemQuemSou.jpg";
+import arduinoDay from "../../assets/arduinoDay.png";
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { useEffect, useState } from "react";
@@ -656,10 +657,7 @@ const Main = () => {
                 </div>
               </div>
               <div className="links">
-                <a
-                  href="https://eletronic-arts.netlify.app/"
-                  className="site"
-                >
+                <a href="https://eletronic-arts.netlify.app/" className="site">
                   VER SITE
                 </a>
                 <a
@@ -681,9 +679,52 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="section" id="eventos">
-        Eventos
+      {/* Eventos */}
+      <section className="eventos section" id="eventos">
+        <div className="grid-layout">
+          <h2 className="anima-certificado">Eventos</h2>
+          <div className="evento-container">
+            <article className="evento-card anima-certificado">
+              <div className="imagem-container">
+                <img src={arduinoDay} alt="ícone código" />
+              </div>
+              <h3>Desenvolvimento com Arduino</h3>
+              <p>
+                Criei sistemas destinados a eventos como o Arduino Day,
+                incluindo um Seguidor de Linha e projetos para exposição.
+              </p>
+            </article>
+
+            <article className="evento-card anima-certificado">
+              <div className="imagem-container">
+                <img src="./imagens/feprocic.png" alt="ícone imagem" />
+              </div>
+              <h3>FEPROCIC</h3>
+              <p>
+                Participei do evento da Escola Luiza de Teodoro Viera na área de
+                Informática, incluindo palestras e projetos de Front-End.
+              </p>
+            </article>
+
+            <article className="evento-card anima-certificado">
+              <div className="imagem-container">
+                <img
+                  className="fabrica"
+                  src="./imagens/fabrica_de_programadores.png  "
+                  alt="ícone layers"
+                />
+              </div>
+              <h3>Fábrica de Programadores</h3>
+              <p>
+                Participei do evento Programando com Games da Fábrica de
+                Programadores, utilizando uma estrutura em blocos por meio da
+                IDE AppInventor.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
+
       <section className="section" id="contato">
         Contato
       </section>

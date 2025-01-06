@@ -632,7 +632,79 @@ span {
   color: #0284C7;
 }
 
+/* Eventos */
+.eventos {
+  height: auto;
+  background-color: #0284C7;
+}
 
+.grid-layout h2 {
+  text-align: left;
+  margin-left: 8px;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.grid-layout .evento-container {
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  margin: 100px 0px;
+}
+
+.evento-container .evento-card {
+  background-color: #ffffff;
+  height: auto;
+  padding: 32px;
+  margin: 8px;
+  flex-basis: calc(33% - 20px);
+  flex-grow: 1;
+  box-shadow: 8px 8px 7px #00000028;
+  transition: 1s all ease;
+  border-radius: 20px;
+}
+
+.evento-card:hover {
+  transform: scale(1.02);
+}
+
+.evento-card .imagem-container {
+  text-align: center;
+}
+
+.evento-card .imagem-container img {
+  width: 250px;
+  margin-top: 20px;
+}
+
+.imagem-container img {
+  height: 115px;
+}
+
+.evento-card h3 {
+  padding: 24px 0px;
+  color: #1d1d1def;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.evento-card p {
+  line-height: 3.2rem;
+  color: #1d1d1def;
+  font-size: 1.8rem;
+}
+
+.evento-card a {
+  margin-top: 10px;
+  width: auto;
+  display: flex;
+  align-content: flex-end;
+  font-size: 17px;
+}
+
+.evento-card i {
+  font-size: 40px;
+}
 
 
 
@@ -1172,6 +1244,24 @@ span {
     height: 350px;
   }
 
+  /* Eventos */
+  .grid-layout {
+    width: 75%;
+    margin-top: 100px;
+  }
+
+  .grid-layout .evento-container {
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .evento-container .evento-card {
+    padding: 15px
+  }
+
+  .evento-card h3 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1340,8 +1430,6 @@ span {
   }
 
   /* Projetos */
-
-
   .projetos-container {
     width: 75%;
   }
