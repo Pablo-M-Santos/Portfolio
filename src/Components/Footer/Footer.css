@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #ffffffef;
+    padding: 12px;
+}
+
+.footer-container {
+    background-color: #1d1d1def;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.navbar-footer {
+    margin: 2.2rem 0px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+.navbar-footer a {
+    font-size: 18px;
+    color: #ffffffef;
+    font-weight: 700;
+    margin-left: 2rem;
+    transition: .3s;
+}
+
+.navbar-footer a:hover,
+.navbar-footer a.active {
+    color: #0284C7;
+}
+
+#social-media-footer a {
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin: 0px 2rem;
+    color: white;
+}
+
+#social-media-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container p {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media (max-width: 1100px) {
+    .footer-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #social-media-footer a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-container p {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .footer-container {
+        width: 80%;
+    }
+
+    #social-media-footer a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-footer a {
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+    .navbar-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .footer-container {
+        width: 80%;
+    }
+
+    #social-media-footer a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-footer a {
+        font-size: 15px;
+        margin-left: 0px;
+    }
+
+    .navbar-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #social-media-footer a {
+        margin: 0 auto;
+    }
+
+}

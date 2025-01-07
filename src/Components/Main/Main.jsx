@@ -726,10 +726,6 @@ const Main = () => {
           </div>
         </div>
       </section>
-
-      <section className="section" id="contato">
-        Contato
-      </section>
     </div>
   );
 };
