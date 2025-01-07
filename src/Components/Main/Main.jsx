@@ -229,12 +229,11 @@ const Main = () => {
           <h2>Formação</h2>
           <div className="formacao-grid">
             <div className="formacao-tecnica">
-              <h3 className="sub-titulo">Formação</h3>
+              <h3 className="sub-titulo">Ensino Superior</h3>
               <p>
-                <strong>Técnico em Informática</strong> - EEEP Luíza de Teodoro
-                Vieira{" "}
+                <strong>Graduação em Análise e Desenvolvimento de Sistemas</strong>
               </p>
-              <p className="time">2022 - 2024</p>
+              <p className="time">2025 - ATUALMENTE</p>
             </div>
             <div className="curso">
               <h3 className="sub-titulo">Curso</h3>
