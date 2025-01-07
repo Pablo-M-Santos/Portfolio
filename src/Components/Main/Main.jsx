@@ -6,6 +6,8 @@ import transmartins from "../../assets/transmartins.png";
 import ueceEnem from "../../assets/EnemUece.png";
 import eletronic from "../../assets/EletronicArts.png";
 import arduinoDay from "../../assets/arduinoDay.png";
+import feprocic from "../../assets/feprocic.png";
+import fabricaProgramadores from "../../assets/fabrica-de-programadores.png";
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 import { useEffect, useState } from "react";
@@ -697,7 +699,7 @@ const Main = () => {
 
             <article className="evento-card anima-certificado">
               <div className="imagem-container">
-                <img src="./imagens/feprocic.png" alt="ícone imagem" />
+                <img src={feprocic} alt="ícone imagem" />
               </div>
               <h3>FEPROCIC</h3>
               <p>
@@ -710,7 +712,7 @@ const Main = () => {
               <div className="imagem-container">
                 <img
                   className="fabrica"
-                  src="./imagens/fabrica_de_programadores.png  "
+                  src={fabricaProgramadores}
                   alt="ícone layers"
                 />
               </div>

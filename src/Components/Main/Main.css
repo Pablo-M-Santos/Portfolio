@@ -634,22 +634,25 @@ span {
 
 /* Eventos */
 .eventos {
-  height: auto;
+  height: 100vh;
   background-color: #0284C7;
+}
+
+.grid-layout {
+  width: 78%;
 }
 
 .grid-layout h2 {
   text-align: left;
   margin-left: 8px;
   color: #ffffff;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .grid-layout .evento-container {
   display: flex;
   height: auto;
   flex-wrap: wrap;
-  margin: 100px 0px;
 }
 
 .evento-container .evento-card {
@@ -684,14 +687,15 @@ span {
 .evento-card h3 {
   padding: 24px 0px;
   color: #1d1d1def;
-  font-size: 2.4rem;
+  font-size: 25px;
   font-weight: 500;
 }
 
 .evento-card p {
-  line-height: 3.2rem;
+  line-height: 2rem;
   color: #1d1d1def;
-  font-size: 1.8rem;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .evento-card a {
@@ -1112,7 +1116,6 @@ span {
     justify-content: flex-end;
   }
 
-
   .projeto-texto {
     margin-left: 0px;
   }
@@ -1121,6 +1124,15 @@ span {
     text-align: left;
     align-items: start;
     margin-right: 30px;
+  }
+
+  /* Eventos */
+  .eventos {
+    height: 120vh;
+  }
+  
+  .grid-layout {
+    width: 65%;
   }
 }
 
@@ -1245,9 +1257,13 @@ span {
   }
 
   /* Eventos */
+  .eventos {
+    height: 150vh;
+  }
+
   .grid-layout {
     width: 75%;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
   .grid-layout .evento-container {
@@ -1256,11 +1272,21 @@ span {
   }
 
   .evento-container .evento-card {
-    padding: 15px
+    max-height: 370px;
   }
 
   .evento-card h3 {
-    font-size: 30px;
+    font-size: 22px;
+  }
+
+  .evento-card p {
+    font-size: 15px;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+
+  .grid-layout h2 {
+    margin-bottom: 20px;
   }
 }
 
@@ -1342,6 +1368,7 @@ span {
   .projetos {
     margin-top: 350px;
   }
+
   .projetos-container {
     width: 75%;
   }
@@ -1353,6 +1380,15 @@ span {
   .img-projeto {
     width: 300px;
     height: 300px;
+  }
+  
+  /* Eventos */
+  .evento-container .evento-card {
+    max-height: 100%;
+  }
+
+  .eventos {
+    height: 160vh;
   }
 }
 
@@ -1433,7 +1469,7 @@ span {
   .projetos-container {
     width: 75%;
   }
-  
+
   .nome {
     font-size: 20px;
   }
@@ -1445,6 +1481,15 @@ span {
   .img-projeto {
     width: 100%;
     height: auto;
+  }
+
+  /* Eventos */
+  .eventos {
+    height: 170vh;
+  }
+
+  .evento-container .evento-card {
+    padding: 15px;
   }
 }
 
@@ -1555,12 +1600,21 @@ span {
   .projetos-container {
     width: 75%;
   }
-  
+
   .nome {
     font-size: 23px;
   }
 
   .projeto-texto {
     gap: 2rem;
+  }
+
+  /* Eventos */
+  .evento-card .imagem-container img {
+    height: auto;
+    width: 100%;
+  }
+  .evento-container .evento-card {
+    padding: 20px;
   }
 }
