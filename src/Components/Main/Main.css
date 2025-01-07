@@ -634,12 +634,14 @@ span {
 
 /* Eventos */
 .eventos {
-  height: 100vh;
+  height: auto;
   background-color: #0284C7;
+
 }
 
 .grid-layout {
   width: 78%;
+  margin: 150px 0px;
 }
 
 .grid-layout h2 {
@@ -1127,10 +1129,6 @@ span {
   }
 
   /* Eventos */
-  .eventos {
-    height: 120vh;
-  }
-  
   .grid-layout {
     width: 65%;
   }
@@ -1257,13 +1255,8 @@ span {
   }
 
   /* Eventos */
-  .eventos {
-    height: 150vh;
-  }
-
   .grid-layout {
     width: 75%;
-    margin-top: 0px;
   }
 
   .grid-layout .evento-container {
@@ -1381,14 +1374,10 @@ span {
     width: 300px;
     height: 300px;
   }
-  
+
   /* Eventos */
   .evento-container .evento-card {
     max-height: 100%;
-  }
-
-  .eventos {
-    height: 160vh;
   }
 }
 
@@ -1484,10 +1473,6 @@ span {
   }
 
   /* Eventos */
-  .eventos {
-    height: 170vh;
-  }
-
   .evento-container .evento-card {
     padding: 15px;
   }
@@ -1614,6 +1599,7 @@ span {
     height: auto;
     width: 100%;
   }
+
   .evento-container .evento-card {
     padding: 20px;
   }
