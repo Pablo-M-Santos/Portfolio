@@ -129,7 +129,7 @@ const Main = () => {
             </div>
             <a
               className="btn"
-              href="https://drive.google.com/file/d/1Mlr3oAObnPeRDAMPAMdWg2Dy3UydkZtX/view?usp=sharing"
+              href="https://drive.google.com/file/d/1pYlqASQRInR8jDcRFLaTGyKnc-cRcvA9/view?usp=sharing"
               target="_blank"
             >
               Currículo
