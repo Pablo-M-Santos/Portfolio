@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pablo Moreira Santos · Dev Backend Java &amp; Full-Stack</title>
+    <meta name="description" content="Dev Backend Java & Full-Stack. Sistemas corporativos de grande porte e interfaces web modernas com Vue.js e React." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-coffee" viewBox="0 0 16 16"><path d="M6.667 1.333v1.333M9.333 1.333v1.333M10.667 5.333c.177 0 .346.07.471.195.125.125.196.295.196.472v4.666M10.667 5.333H2.667A.667.667 0 0 0 2 6v5.333A2.667 2.667 0 0 0 4.667 14h4A2.667 2.667 0 0 0 11.333 11.333v-.667M10.667 5.333H12a2.667 2.667 0 0 1 0 5.334h-.667M4 1.333v1.333"/></symbol>
+      <symbol id="i-building" viewBox="0 0 16 16"><path d="M4 14.667v-12A1.333 1.333 0 0 1 5.333 1.333h5.334A1.333 1.333 0 0 1 12 2.667v12H4ZM4 8H2.667A1.333 1.333 0 0 0 1.333 9.333v4A1.333 1.333 0 0 0 2.667 14.667H4M12 6h1.333a1.333 1.333 0 0 1 1.334 1.333v6a1.333 1.333 0 0 1-1.334 1.334H12M6.667 4h2.666M6.667 6.667h2.666M6.667 9.333h2.666M6.667 12h2.666"/></symbol>
+      <symbol id="i-git-merge" viewBox="0 0 16 16"><path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm0 0a6 6 0 0 1-6-6m0 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 0v8"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 16 16"><path d="M8.5 1.5 2.8 8.4h3.4L5.5 14.5l5.7-6.9H7.8L8.5 1.5Z"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 14 14"><path d="M11.667 7.583c0 2.917-2.042 4.375-4.469 5.22a.7.7 0 0 1-.391 0C4.375 11.958 2.333 10.5 2.333 7.583V3.5a.583.583 0 0 1 .584-.583c1.166 0 2.624-.7 3.639-1.587a.58.58 0 0 1 .887 0c1.02.893 2.473 1.587 3.64 1.587a.583.583 0 0 1 .583.583v4.083Z"/></symbol>
+      <symbol id="i-crosshair" viewBox="0 0 14 14"><circle cx="7" cy="7" r="1.75"/><path d="M1.75 7h3.5M8.75 7h3.5"/></symbol>
+      <symbol id="i-folder-git" viewBox="0 0 14 14"><path d="M5.25 11.667H2.333a1.167 1.167 0 0 1-1.166-1.167V2.917a1.167 1.167 0 0 1 1.166-1.167h2.275a.58.58 0 0 1 .52.17l.47.7a1.17 1.17 0 0 0 .97.58h4.63a1.167 1.167 0 0 1 1.167 1.167v2.917"/><circle cx="7.583" cy="7" r="1.167"/><path d="M10.5 11.083c-1.633 0-2.917-1.283-2.917-2.916v4.667"/><circle cx="11.667" cy="11.083" r="1.167"/></symbol>
+      <symbol id="i-git-pr" viewBox="0 0 14 14"><path d="M8.75 1.75h2.917c.322 0 .583.261.583.583V5.25a.583.583 0 0 1-.583.583H8.75a.583.583 0 0 1-.583-.583V2.333c0-.322.261-.583.583-.583ZM5.833 12.25V8.167m0 4.083h-3.5a.583.583 0 0 1-.583-.583V8.167m4.083 4.083h3.5a.583.583 0 0 0 .584-.583V8.75a.583.583 0 0 0-.584-.583H5.833m0 0V4.667a.583.583 0 0 0-.583-.584H2.333a.583.583 0 0 0-.583.584v3.5m4.083 0H1.75"/></symbol>
+      <symbol id="i-megaphone" viewBox="0 0 14 14"><path d="m1.75 6.417 10.5-2.917v7l-10.5-2.333V6.417Z"/><path d="M6.767 9.8a1.75 1.75 0 1 1-3.384-.933"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 14 14"><path d="m2.333 9.917 3.5-3.5-3.5-3.5M7 11.083h4.667"/></symbol>
+      <symbol id="i-code" viewBox="0 0 14 14"><path d="m10.5 9.333 2.333-2.333L10.5 4.667M3.5 4.667 1.167 7 3.5 9.333M8.458 2.333 5.542 11.667"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 14 14"><path d="M7.484 1.271a1 1 0 0 0-.968 0l-5 2.275a.583.583 0 0 0 0 1.068L6.52 6.895a1 1 0 0 0 .968 0l5.005-2.275a.583.583 0 0 0 0-1.068L7.484 1.271ZM12.833 10.296 7.484 12.723a1 1 0 0 1-.968 0l-5.349-2.427M12.833 7.379 7.484 9.806a1 1 0 0 1-.968 0L1.167 7.379"/></symbol>
+      <symbol id="i-panels" viewBox="0 0 14 14"><path d="M1.75 5.25h10.5M5.25 12.25v-7M2.917 1.75h8.166c.645 0 1.167.522 1.167 1.167v8.166c0 .645-.522 1.167-1.167 1.167H2.917a1.167 1.167 0 0 1-1.167-1.167V2.917c0-.645.522-1.167 1.167-1.167Z"/></symbol>
+      <symbol id="i-radio" viewBox="0 0 14 14"><path d="M2.1 9.2a4.9 4.9 0 0 1 0-4.4M3.3 8a3.2 3.2 0 0 1 0-2M7.6 7a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0ZM8.6 5a3.2 3.2 0 0 1 0 4M9.8 3.8a4.9 4.9 0 0 1 0 6.4"/></symbol>
+      <symbol id="i-plug" viewBox="0 0 14 14"><path d="M9.917 12.25v-1.167a.583.583 0 0 1-.584-.583v-.583c0-.31.123-.607.342-.826.218-.218.515-.341.825-.341h1.166c.31 0 .607.123.826.341.218.219.341.516.341.826v.583a.583.583 0 0 1-.583.583M11.083 8.75V3.792a2.042 2.042 0 0 0-4.083 0v6.416a2.042 2.042 0 0 1-4.083 0V5.25M12.25 12.25v-1.167H9.917M1.75 2.917h2.333V1.75"/><path d="M4.083 2.917a.583.583 0 0 1 .584.583v.583c0 .31-.123.607-.342.826-.218.218-.515.341-.825.341H2.333a1.167 1.167 0 0 1-1.166-1.167V3.5a.583.583 0 0 1 .583-.583V1.75"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 14 14"><path d="M10.209 11.084H5.25a4.083 4.083 0 1 1 3.914-5.25h1.045a2.625 2.625 0 0 1 0 5.25Z"/></symbol>
+      <symbol id="i-database" viewBox="0 0 14 14"><path d="M12.25 2.917c0 .966-2.35 1.75-5.25 1.75s-5.25-.784-5.25-1.75S4.1 1.167 7 1.167s5.25.783 5.25 1.75Z"/><path d="M1.75 2.917v8.166c0 .465.553.91 1.538 1.238.985.328 2.32.513 3.712.513s2.728-.185 3.712-.513c.985-.328 1.538-.773 1.538-1.238V2.917"/><path d="M1.75 7c0 .464.553.909 1.538 1.237C4.272 8.566 5.608 8.75 7 8.75s2.728-.184 3.712-.513C11.697 7.909 12.25 7.464 12.25 7"/></symbol>
+      <symbol id="i-compass" viewBox="0 0 14 14"><path d="m7.578 3.932 1.125 2.006M11.163 7a5.25 5.25 0 0 1-8.325 0M12.25 12.25l-1.26-2.24M1.75 12.25l4.678-8.318M8.167 2.917a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 13 14"><path d="M5.367 1.636v4.04a1.6 1.6 0 0 1-.114.48L2.533 11.59a.54.54 0 0 0 .483.78h6.848a.54.54 0 0 0 .483-.78L7.627 6.156a1.6 1.6 0 0 1-.114-.48V1.636M4.562 1.636h3.756M3.757 9.15h5.366"/></symbol>
+      <symbol id="i-book" viewBox="0 0 14 14"><path d="M1.167 9.333V2.58A.58.58 0 0 1 1.75 2h4.5c.322 0 .583.261.583.583v8.75M12.833 9.333V2.58A.58.58 0 0 0 12.25 2h-.5M1.167 9.333h11.666M1.167 9.333c0 .9.7 1.584 1.583 1.584h8.5c.884 0 1.583-.684 1.583-1.584"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 16 16"><path d="M6 13.333H2.667A1.333 1.333 0 0 1 1.333 12V3.333a1.333 1.333 0 0 1 1.334-1.333h2.6a1.33 1.33 0 0 1 1.126.6l.54.8a1.33 1.33 0 0 0 1.113.6h5.287a1.333 1.333 0 0 1 1.333 1.333v3.333"/><circle cx="8.667" cy="8" r="1.333"/><path d="M12 12.667A3.333 3.333 0 0 1 8.667 9.333v5.334"/><circle cx="13.333" cy="12.667" r="1.333"/></symbol>
+      <symbol id="i-send" viewBox="0 0 16 16"><path d="M9.69 14.458a.667.667 0 0 0 1.25-.016L15.273 1.775a.667.667 0 0 0-.85-.85L1.757 5.258a.667.667 0 0 0-.017 1.25l5.29 2.12a1.33 1.33 0 0 1 .74.74l2.02 5.09ZM14.57 1.432 7.276 8.724"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 16 16"><path d="M8 3.333v9.334M12.667 8 8 12.667 3.333 8"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.667"/><path d="M8 1.333v1.334M8 13.333v1.334M3.287 3.287l.94.94M11.773 11.773l.94.94M1.333 8h1.334M13.333 8h1.334M4.227 11.773l-.94.94M12.713 3.287l-.94.94"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 16 16"><path d="M13.333 9.333A5.333 5.333 0 0 1 6.667 2.667a5.333 5.333 0 1 0 6.666 6.666Z"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 12 12"><path d="M10 5c0 2.497-2.77 5.097-3.7 5.9a.55.55 0 0 1-.6 0C4.77 10.097 2 7.497 2 5a4 4 0 0 1 8 0Z"/><circle cx="6" cy="5" r="1.5"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 12 12"><path d="M4 1v2M8 1v2M2.5 2h7a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1ZM1.5 5h9"/></symbol>
+      <symbol id="i-chevron-up" viewBox="0 0 14 14"><path d="M10.5 8.75 7 5.25l-3.5 3.5"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.333"/><path d="M1.667 10h16.666M10 1.667a12.75 12.75 0 0 1 3.333 8.333A12.75 12.75 0 0 1 10 18.333 12.75 12.75 0 0 1 6.667 10 12.75 12.75 0 0 1 10 1.667Z"/></symbol>
+      <symbol id="i-wallet" viewBox="0 0 20 20"><path d="M15.833 5.833V3.333A.833.833 0 0 0 15 2.5H4.167a1.667 1.667 0 0 0 0 3.333h11.666Zm0 0h.834a.833.833 0 0 1 .833.834V10m0 0H15a1.667 1.667 0 0 0 0 3.333h2.5a.833.833 0 0 0 .833-.833v-1.667A.833.833 0 0 0 17.5 10Z"/><path d="M2.5 4.167v11.666A1.667 1.667 0 0 0 4.167 17.5h12.5a.833.833 0 0 0 .833-.833v-3.334"/></symbol>
+      <symbol id="i-external" viewBox="0 0 16 16"><path d="M10 2h4v4M6.667 9.333 14 2M12 8.667v4a1.333 1.333 0 0 1-1.333 1.333H3.333A1.333 1.333 0 0 1 2 12.667V5.333A1.333 1.333 0 0 1 3.333 4h4"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 20 20"><path d="M5.833 5.833h8.334v8.334M5.833 14.167l8.334-8.334"/></symbol>
+      <symbol id="i-users" viewBox="0 0 20 20"><path d="M13.333 17.5v-1.667A3.333 3.333 0 0 0 10 12.5H5a3.333 3.333 0 0 0-3.333 3.333V17.5M13.333 2.607a3.333 3.333 0 0 1 0 6.453M18.333 17.5v-1.667a3.333 3.333 0 0 0-2.5-3.225M10.833 5.833a3.333 3.333 0 1 1-6.666 0 3.333 3.333 0 0 1 6.666 0Z"/></symbol>
+      <symbol id="i-folder-git2" viewBox="0 0 20 20"><path d="M15 15.833a4.167 4.167 0 0 1-4.167-4.166M15 15.833a1.667 1.667 0 1 0 3.333 0 1.667 1.667 0 0 0-3.333 0Zm-4.167-4.166v6.666m0-6.666a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Zm-3.333 5H3.333A1.667 1.667 0 0 1 1.667 15V4.167A1.667 1.667 0 0 1 3.333 2.5h3.25a1.67 1.67 0 0 1 1.409.75l.675 1a1.67 1.67 0 0 0 1.392.75h6.608a1.667 1.667 0 0 1 1.666 1.667v4.167"/></symbol>
+      <symbol id="i-github" viewBox="0 0 14 14"><path d="M8.75 12.833V10.5a2.4 2.4 0 0 0-.584-2.042c1.75 0 3.5-1.166 3.5-3.208a3 3 0 0 0-.583-2.042 3.3 3.3 0 0 0 0-2.041s-.584 0-1.75.875a9.3 9.3 0 0 0-4.667 0C3.5 1.167 2.917 1.167 2.917 1.167a3.3 3.3 0 0 0 0 2.041A3 3 0 0 0 2.333 5.25c0 2.042 1.75 3.208 3.5 3.208a2.4 2.4 0 0 0-.496.962c-.1.35-.128.718-.087 1.08v2.333"/><path d="M5.25 10.5c-2.63 1.167-2.917-1.167-4.083-1.167"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 14 14"><path d="M2.333 2.333h9.334c.644 0 1.166.523 1.166 1.167v7c0 .644-.522 1.167-1.166 1.167H2.333A1.167 1.167 0 0 1 1.167 10.5v-7c0-.644.522-1.167 1.166-1.167Z"/><path d="m12.833 4.083-5.232 3.326a1.17 1.17 0 0 1-1.202 0L1.167 4.083"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 14 14"><path d="M9.333 4.667a3.5 3.5 0 0 1 3.5 3.5v4.083H10.5V8.167a1.167 1.167 0 0 0-2.333 0v4.083H5.833V8.167a3.5 3.5 0 0 1 3.5-3.5ZM1.167 5.25H3.5v7H1.167v-7ZM3.5 2.333a1.167 1.167 0 1 1-2.333 0 1.167 1.167 0 0 1 2.333 0Z"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 14 14"><path d="M12.833 9.869v1.75a1.167 1.167 0 0 1-1.272 1.167 11.5 11.5 0 0 1-5.034-1.791 11.3 11.3 0 0 1-3.5-3.5A11.5 11.5 0 0 1 1.236 2.438 1.167 1.167 0 0 1 2.397 1.166h1.75a1.167 1.167 0 0 1 1.167 1c.073.56.21 1.11.408 1.64a1.167 1.167 0 0 1-.263 1.232l-.74.74a9.33 9.33 0 0 0 3.5 3.5l.741-.74a1.167 1.167 0 0 1 1.231-.263c.53.197 1.08.334 1.64.408a1.167 1.167 0 0 1 1.004 1.186Z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 14 14"><path d="M5.833 4.667h5.834c.644 0 1.166.522 1.166 1.166v5.834c0 .644-.522 1.166-1.166 1.166H5.833a1.167 1.167 0 0 1-1.166-1.166V5.833c0-.644.522-1.166 1.166-1.166Z"/><path d="M2.333 9.333c-.641 0-1.166-.525-1.166-1.166V2.333c0-.641.525-1.167 1.166-1.167h5.834c.641 0 1.166.526 1.166 1.167"/></symbol>
+      <symbol id="i-flame" viewBox="0 0 12 12"><path d="M4.25 7.25a1.25 1.25 0 0 0 1.25-1.25c0-.69-.25-1-.5-1.5-.536-1.072-.112-2.027 1-3 .25 1.25 1 2.45 2 3.25s1.5 1.75 1.5 2.75a3.5 3.5 0 1 1-7 0c0-.577.217-1.147.5-1.5a1.25 1.25 0 0 0 1.25 1.25Z"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 12 12"><path d="M3 4.5h-.75a1.25 1.25 0 0 1 0-2.5H3M9 4.5h.75a1.25 1.25 0 0 0 0-2.5H9M2 11h8M5 7.33V8.5c0 .275-.235.49-.485.605C3.925 9.375 3.5 10.12 3.5 11M7 7.33V8.5c0 .275.235.49.485.605C8.075 9.375 8.5 10.12 8.5 11M9 1H3v3.5a3 3 0 0 0 6 0V1Z"/></symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="#topo">pctheone</a>
+        <nav class="site-nav" aria-label="Seções">
+          <a class="site-nav__link" href="#sobre">sobre</a>
+          <a class="site-nav__link" href="#carreira">carreira</a>
+          <a class="site-nav__link" href="#projetos">projetos</a>
+          <a class="site-nav__link" href="#github">github</a>
+          <a class="site-nav__link" href="#creator">creator</a>
+          <a class="site-nav__link site-nav__link--accent" href="#contato">contato</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Alternar tema">
+          <svg class="icon theme-toggle__sun" width="16" height="16"><use href="#i-sun" /></svg>
+          <svg class="icon theme-toggle__moon" width="16" height="16"><use href="#i-moon" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="topo">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="log-line"><span class="log-line__level">INFO</span> [developer] Disponível para novos desafios.</p>
+            <h1 class="hero__title">Pablo Moreira Santos</h1>
+            <p class="hero__handle">@Pablo-M-Santos</p>
+            <p class="hero__summary">Dev Backend Java &amp; Full-Stack. Desenvolvo sistemas corporativos de grande porte e construo interfaces web modernas com Vue.js e React.</p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#projetos">
+                <svg class="icon" width="16" height="16"><use href="#i-folder" /></svg>
+                Ver projetos
+              </a>
+              <a class="button button--secondary" href="#contato">
+                <svg class="icon" width="16" height="16"><use href="#i-send" /></svg>
+                Falar comigo
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true"></div>
+        </div>
+        <a class="scroll-down" href="#sobre" aria-label="Rolar para baixo">
+          <svg class="icon" width="16" height="16"><use href="#i-arrow-down" /></svg>
+        </a>
+      </section>
+
+      <section class="stats">
+        <div class="container stats__grid">
+          <article class="stat-card">
+            <span class="stat-card__label">xp</span>
+            <svg class="icon stat-card__icon" width="16" height="16"><use href="#i-coffee" /></svg>
+            <strong class="stat-card__value">3+</strong>
+            <span class="stat-card__caption">Full-Stack</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">empresas</span>
+            <svg class="icon stat-card__icon" width="16" height="16"><use href="#i-building" /></svg>
+            <strong class="stat-card__value stat-card__value--company"><span class="accent">WDA</span> <span class="muted">•</span> <span class="accent">SesaTech</span></strong>
+            <span class="stat-card__caption">Sistemas web e corporativos</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">GITLAB &amp; GITHUB</span>
+            <svg class="icon stat-card__icon" width="16" height="16"><use href="#i-git-merge" /></svg>
+            <strong class="stat-card__value">1.000+</strong>
+            <span class="stat-card__caption">Contribuições em código</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-card__label">ENTREGAS</span>
+            <svg class="icon stat-card__icon" width="15" height="15"><use href="#i-zap" /></svg>
+            <strong class="stat-card__value stat-card__value--agile">Ágil</strong>
+            <span class="stat-card__caption">Sprints e Scrum</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-shield" /></svg><span class="accent">02</span><span>/</span><span>sobre</span></p>
+          <h2 class="section__title">Ficha de personagem</h2>
+          <p class="section__subtitle">Resumo profissional, como está no CV — só que com um pouco mais de personalidade.</p>
+
+          <div class="sheet">
+            <div class="sheet__intro">
+              <p class="terminal-label"><span class="accent">$</span> cat sobre.md</p>
+              <p class="sheet__bio">Sou <strong>desenvolvedor Full-Stack há 3 anos com Java</strong>. Comecei em 2024 construindo <strong>APIs REST</strong> para a <strong>WDA Tecnologia</strong>, passando por sistemas de faculdade, sistemas internos e desenvolvimento mobile de uso interno e externo</p>
+              <p class="sheet__bio">Hoje, na <strong>SesaTech</strong>, atuo em projetos para a <strong>TIM</strong>, sendo responsável por definir estrutura, processos e melhorias com foco em <strong>manutenibilidade</strong> construindo interfaces performáticas com <strong>Vue.js, Nuxt.js, Vuetify</strong> e <strong>Microsoft Azure</strong>.</p>
+              <p class="sheet__bio">Curto <strong>código organizado</strong> e entender o problema antes de codar. No momento, <strong>estudando mensageria e AWS</strong></p>
+            </div>
+
+            <div class="sheet__class">
+              <div class="class-card">
+                <div>
+                  <p class="class-card__label">Classe</p>
+                  <h3 class="class-card__title">Full-Stack Engineer</h3>
+                  <p class="class-card__base">Base: Fortaleza - CE</p>
+                </div>
+                <div class="class-card__level">
+                  <span class="class-card__label">Nível</span>
+                  <strong class="class-card__level-value">3+</strong>
+                  <span class="class-card__level-caption">anos de Java</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-groups">
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-code" /></svg>Linguagens</p>
+                <ul class="chip-list"><li class="chip">Java 11 / 17 / 21</li><li class="chip">TypeScript</li><li class="chip">JavaScript</li><li class="chip">Dart</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-layers" /></svg>FRAMEWORKS BACKEND</p>
+                <ul class="chip-list"><li class="chip">Spring Boot</li><li class="chip">Spring Data JPA</li><li class="chip">Spring Security</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-panels" /></svg>FRONTEND &amp; MOBILE</p>
+                <ul class="chip-list"><li class="chip">Vue.js</li><li class="chip">Nuxt.js</li><li class="chip">React.js</li><li class="chip">Next.js</li><li class="chip">Vuetify</li><li class="chip">Quasar</li><li class="chip">Flutter</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="12" height="14"><use href="#i-radio" /></svg>MENSAGERIA &amp; EVENTOS</p>
+                <ul class="chip-list"><li class="chip">Apache Kafka (estudando)</li><li class="chip">RabbitMQ (estudando)</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-plug" /></svg>INTEGRAÇÕES &amp; APIS</p>
+                <ul class="chip-list"><li class="chip">APIs RESTful</li><li class="chip">OAuth 2.0 / JWT</li><li class="chip">Postman</li><li class="chip">Swagger / OpenAPI</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-cloud" /></svg>Cloud &amp; DevOps</p>
+                <ul class="chip-list"><li class="chip">Microsoft Azure</li><li class="chip">AWS (estudando)</li><li class="chip">Docker</li><li class="chip">Git</li><li class="chip">Azure DevOps</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-database" /></svg>Dados</p>
+                <ul class="chip-list"><li class="chip">Oracle</li><li class="chip">MySQL</li><li class="chip">PostgreSQL</li><li class="chip">MongoDB</li><li class="chip">Redis</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-compass" /></svg>ARQUITETURA &amp; METODOLOGIAS</p>
+                <ul class="chip-list"><li class="chip">Clean Code</li><li class="chip">Arquitetura em Camadas</li><li class="chip">Scrum</li><li class="chip">Kanban</li></ul>
+              </div>
+              <div class="skill-group">
+                <p class="skill-group__label"><svg class="icon" width="13" height="14"><use href="#i-flask" /></svg>Qualidade &amp; testes</p>
+                <ul class="chip-list"><li class="chip">JUnit</li><li class="chip">Mockito</li><li class="chip">Spring Test</li><li class="chip">TDD</li></ul>
+              </div>
+            </div>
+
+            <div class="training">
+              <p class="skill-group__label"><svg class="icon" width="14" height="14"><use href="#i-book" /></svg>Treinamento</p>
+              <ul class="training__list">
+                <li class="training__item"><span><span class="training__name">Análise e Desenvolvimento de Sistemas</span> · UNINASSAU</span><span class="training__period">2025 – 2027</span></li>
+                <li class="training__item"><span><span class="training__name">Técnico em Informática</span> · EEEP Profª Luiza de Teodoro Vieira</span><span class="training__period">2022 – 2024</span></li>
+              </ul>
+              <p class="training__languages">Idiomas: Português (nativo) · Inglês (leitura técnica / em evolução)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="carreira">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-crosshair" /></svg><span class="accent">03</span><span>/</span><span>carreira</span></p>
+          <h2 class="section__title section__title--mono">$ git log --career</h2>
+          <p class="section__subtitle">Cada emprego é um commit. Do mais recente para o primeiro.</p>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <article class="commit-card">
+                <header class="commit-card__header">
+                  <p class="commit-card__hash-row"><span class="commit-card__label">commit</span><span class="accent">f8c2a1b</span><span class="commit-card__badge">(HEAD -&gt; main)</span></p>
+                  <p class="commit-card__meta">Author: Pablo Moreira Santos</p>
+                  <p class="commit-card__meta commit-card__meta--row">
+                    <span class="commit-card__meta-item"><svg class="icon" width="12" height="12"><use href="#i-calendar" /></svg>Date:&nbsp;&nbsp;&nbsp;02/2026 – atual</span>
+                    <span class="commit-card__meta-item"><svg class="icon" width="12" height="12"><use href="#i-pin" /></svg>Rio de Janeiro</span>
+                  </p>
+                </header>
+                <h3 class="commit-card__message">feat(sesatech): desenvolvimento e reestruturação de sistemas internos da TIM</h3>
+                <p class="commit-card__role"><span class="commit-card__role-title">Desenvolvedor Júnior</span> @ SesaTech</p>
+                <ul class="tag-list"><li class="tag">Vue.js</li><li class="tag">Nuxt.js</li><li class="tag">Vuetify</li><li class="tag">TypeScript</li><li class="tag">Java Spring</li><li class="tag">Pinia</li><li class="tag">Azure DevOps</li><li class="tag">Scrum</li></ul>
+                <button class="commit-card__toggle" type="button" aria-expanded="true">$ git show f8c2a1b<svg class="icon" width="14" height="14"><use href="#i-chevron-up" /></svg></button>
+                <ul class="commit-card__changes">
+                  <li class="change">Atuo no <strong>desenvolvimento e evolução de aplicações web</strong> para sistemas empresariais críticos da <strong>TIM</strong>, focando na construção de <strong>interfaces escaláveis, performáticas</strong> e orientadas à experiência do usuário.</li>
+                  <li class="change">Implementei melhorias de <strong>arquitetura frontend, componentização e reutilização de código</strong> migrando estruturas e aplicando <strong>TypeScript</strong>.</li>
+                  <li class="change">Gerenciei o <strong>estado global</strong> das aplicações utilizando <strong>Pinia</strong>, além de estruturar <strong>validações</strong> e o fluxo eficiente de dados.</li>
+                  <li class="change">Otimizei o carregamento e manipulação de <strong>dados de alta complexidade</strong> com estratégias de <strong>cache</strong> e <strong>redução de requisições</strong>, melhorando drasticamente a performance em cenários de grande volume de registros.</li>
+                  <li class="change">Desenvolvi fluxos de <strong>importação/exportação de arquivos</strong> e <strong>templates de e-mail corporativo</strong> integrados ao ecossistema da operação TIM.</li>
+                  <li class="change">Colaboro ativamente em ambiente ágil (<strong>Scrum</strong>), utilizando <strong>Azure DevOps</strong> para versionamento, code reviews e alinhamento técnico com equipes multidisciplinares.</li>
+                </ul>
+              </article>
+            </li>
+            <li class="timeline__item">
+              <article class="commit-card">
+                <header class="commit-card__header">
+                  <p class="commit-card__hash-row"><span class="commit-card__label">commit</span><span class="accent">7a4d9e2</span><span class="commit-card__badge">(HEAD -&gt; main)</span></p>
+                  <p class="commit-card__meta">Author: Pablo Moreira Santos</p>
+                  <p class="commit-card__meta commit-card__meta--row">
+                    <span class="commit-card__meta-item"><svg class="icon" width="12" height="12"><use href="#i-calendar" /></svg>Date:&nbsp;&nbsp;&nbsp;01/2024 – 02/2026</span>
+                    <span class="commit-card__meta-item"><svg class="icon" width="12" height="12"><use href="#i-pin" /></svg>Fortaleza</span>
+                  </p>
+                </header>
+                <h3 class="commit-card__message">feat(wda): evolução full-stack em APIs REST, Spring Boot e interfaces web/mobile</h3>
+                <p class="commit-card__role"><span class="commit-card__role-title">Desenvolvedor Full-Stack Júnior</span> @ WDA Tecnologia &amp; Inovação</p>
+                <ul class="tag-list"><li class="tag">Java 11/17</li><li class="tag">Spring Boot</li><li class="tag">PostgreSQL</li><li class="tag">Oracle</li><li class="tag">Redis</li><li class="tag">Vue.js</li><li class="tag">Quasar</li><li class="tag">React.js</li><li class="tag">Flutter</li><li class="tag">Docker</li></ul>
+                <button class="commit-card__toggle" type="button" aria-expanded="true">$ git show b53f653<svg class="icon" width="14" height="14"><use href="#i-chevron-up" /></svg></button>
+                <ul class="commit-card__changes">
+                  <li class="change"><strong>Liderei o desenvolvimento de microsserviços</strong> em Java com <strong>Quarkus</strong> e <strong>Apache Camel</strong> para integração de sistemas corporativos com o <strong>Salesforce</strong>, atendendo uma operadora de distribuição de energia elétrica do Reino Unido.</li>
+                  <li class="change">Atuei em projetos de grande porte cobrindo <strong>toda a stack frontend, backend e mobile</strong>, com foco em evolução contínua de sistemas em produção, criação de <strong>novas features e melhoria de performance.</strong></li>
+                  <li class="change">Atuei como <strong>referência técnica sênior</strong> no projeto, conduzindo <strong>decisões de arquitetura</strong>, <strong>code reviews</strong> e <strong>mentoria técnica</strong> da equipe.</li>
+                  <li class="change">Desenvolvi e refatorei APIs RESTful com <strong>Java 11, Java 17 e Spring Boot</strong>, atuando na criação de novas funcionalidades e <strong>modernização de código legado.</strong></li>
+                  <li class="change">Implementei <strong>integrações orientadas a eventos</strong> com <strong>Apache Kafka</strong>, processando grandes volumes de dados de clientes e casos via <strong>Salesforce API</strong>.</li>
+                  <li class="change">Configurei <strong>autenticação segura entre serviços</strong> utilizando fluxos <strong>JWT Bearer OAuth</strong> e <strong>OAuth 2.0</strong> com Salesforce Connected Apps, incluindo geração de pares de chaves via <strong>OpenSSL</strong> e gerenciamento de tokens.</li>
+                  <li class="change">Otimizei operações de <strong>CRUD em massa</strong> no backend, reduzindo o tempo de execução de <strong>~2 minutos para menos de 10 segundos</strong> utilizando reestruturação e <strong>Redis</strong> para cache.</li>
+                  <li class="change">Construí e evoluí interfaces web utilizando <strong>Vue.js, TypeScript e Quasar Framework</strong> (além de React.js/Next.js), priorizando <strong>componentização, responsividade</strong> e experiência do usuário.</li>
+                  <li class="change">Construí <strong>rotas de integração resilientes</strong> com <strong>Apache Camel</strong>, aplicando tratamento de erros, <strong>estratégias de retry</strong>, <strong>processamento assíncrono via wireTap</strong> e codificação correta de parâmetros de consulta em chamadas <strong>HTTP/OData</strong>.</li>
+                  <li class="change">Desenvolvi novas features e refatorei componentes no <strong>aplicativo mobile com Flutter e Dart</strong>, com foco em arquitetura limpa e usabilidade.</li>
+                  <li class="change">Implementei <strong>testes unitários e de integração</strong> utilizando <strong>JUnit 5 e Mockito</strong>, aumentando a cobertura e a confiabilidade das entregas.</li>
+                  <li class="change">Realizei o <strong>deploy e a operação</strong> de aplicações em ambientes <strong>OpenShift/Kubernetes</strong>, garantindo escalabilidade e alta disponibilidade.</li>
+                  <li class="change">Organizei e padronizei a <strong>estrutura de banco de dados</strong> (PostgreSQL e Oracle), aplicando boas práticas para leitura e escrita.</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="projetos">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-folder-git" /></svg><span class="accent">04</span><span>/</span><span>projetos</span></p>
+          <h2 class="section__title">Coisas que eu coloquei no ar</h2>
+          <p class="section__subtitle">Projetos pessoais e da AceleraDev, do globo 3D ao controle de finanças por áudio.</p>
+
+          <div class="project-list">
+            <article class="project-card project-card--media-start">
+              <div class="project-card__body">
+                <p class="project-card__heading"><span class="project-card__number">01</span><svg class="icon" width="20" height="20"><use href="#i-globe" /></svg></p>
+                <h3 class="project-card__title">Acelera Globe</h3>
+                <p class="project-card__description">Globo 3D interativo que mostra onde estão os alunos da AceleraDev que conseguiram vaga em tecnologia. Cada aluno aparece como avatar na sua cidade, com contadores de devs e de estados, filtros por área e zoom.</p>
+                <p class="project-card__label">filtros por área</p>
+                <ul class="tag-list tag-list--light"><li class="tag">Front-end</li><li class="tag">Back-end</li><li class="tag">Fullstack</li><li class="tag">Mobile</li><li class="tag">Cyber</li><li class="tag">Data</li><li class="tag">DevOps</li><li class="tag">QA</li><li class="tag">IA/Automações</li><li class="tag">Suporte</li></ul>
+                <p class="project-card__label">stack</p>
+                <ul class="tag-list tag-list--outline"><li class="tag">Quarkus</li><li class="tag">React</li><li class="tag">Three.js</li><li class="tag">PostgreSQL</li><li class="tag">Traefik</li><li class="tag">VPS</li></ul>
+                <a class="button button--primary project-card__cta" href="#" target="_blank" rel="noopener">
+                  Ver ao vivo
+                  <svg class="icon" width="16" height="16"><use href="#i-external" /></svg>
+                </a>
+              </div>
+              <figure class="project-card__media project-card__media--globe">
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/466e2d11794bf67b8eab1cbc87b0d03f2a0f4433?width=1260" alt="Acelera Globe: globo 3D com avatares dos alunos da AceleraDev contratados, contadores de devs e estados e filtros por área" />
+                <figcaption class="project-card__badge"><span class="accent">01</span> · destaque</figcaption>
+              </figure>
+            </article>
+
+            <article class="project-card project-card--media-end">
+              <figure class="project-card__media project-card__media--phone">
+                <img src="https://api.builder.io/api/v1/image/assets/TEMP/73502c02d261d1aecb74c99baaadadbafce0ce62?width=1008" alt="Money Flow: mockup do app num celular mostrando o bot do Telegram anotando “gastei 50 de carne, mercado, no Santander” por áudio e o gasto do mês no painel" />
+                <figcaption class="project-card__badge"><span class="accent">02</span> · destaque</figcaption>
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__heading"><span class="project-card__number">02</span><svg class="icon" width="20" height="20"><use href="#i-wallet" /></svg></p>
+                <h3 class="project-card__title">Money Flow</h3>
+                <p class="project-card__description">Controle financeiro pessoal por áudio no Telegram. Você manda um áudio — “gastei 50 de carne, mercado, no Santander” — e o bot anota valor, categoria e conta e mostra tudo num painel web. Sem planilha, sem app novo, sem senha de banco.</p>
+                <p class="project-card__label">o que faz</p>
+                <ul class="tag-list tag-list--light"><li class="tag">Lançamento por áudio</li><li class="tag">Painel web</li><li class="tag">Categorias e contas</li><li class="tag">Relatórios por período</li><li class="tag">Português e inglês</li></ul>
+                <p class="project-card__label">stack</p>
+                <ul class="tag-list tag-list--outline"><li class="tag">Spring Boot</li><li class="tag">PostgreSQL</li><li class="tag">Telegram Bot</li></ul>
+                <a class="button button--primary project-card__cta" href="#" target="_blank" rel="noopener">
+                  Ver landing page
+                  <svg class="icon" width="16" height="16"><use href="#i-external" /></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="github">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-git-pr" /></svg><span class="accent">05</span><span>/</span><span>github</span></p>
+          <h2 class="section__title">Um ano em blocos</h2>
+          <p class="section__subtitle">Contribuições reais no GitHub nos últimos 12 meses, direto da API.</p>
+
+          <div class="activity">
+            <div class="activity__header">
+              <p class="activity__total"><span class="accent activity__total-value" data-total>665</span> contribuições no último ano</p>
+              <a class="activity__profile" href="https://github.com/Pablo-M-Santos" target="_blank" rel="noopener">
+                <svg class="icon" width="14" height="14"><use href="#i-github" /></svg>guithepc
+              </a>
+            </div>
+
+            <div class="activity__body">
+              <div class="heatmap" data-heatmap>
+                <div class="heatmap__scroll">
+                  <div class="heatmap__months" data-heatmap-months></div>
+                  <div class="heatmap__main">
+                    <div class="heatmap__weekdays"><span>Seg</span><span>Qua</span><span>Sex</span></div>
+                    <div class="heatmap__grid" data-heatmap-grid></div>
+                  </div>
+                </div>
+                <div class="heatmap__legend"><span>menos</span><i class="cell cell--0"></i><i class="cell cell--1"></i><i class="cell cell--2"></i><i class="cell cell--3"></i><i class="cell cell--4"></i><span>mais</span></div>
+              </div>
+
+              <div class="activity__panels">
+                <div class="metrics">
+                  <div class="metric">
+                    <p class="metric__label"><svg class="icon" width="12" height="12"><use href="#i-calendar" /></svg>dias ativos</p>
+                    <strong class="metric__value" data-active-days>171</strong>
+                  </div>
+                  <div class="metric">
+                    <p class="metric__label"><svg class="icon" width="12" height="12"><use href="#i-flame" /></svg>maior sequência</p>
+                    <strong class="metric__value" data-streak>13 d</strong>
+                  </div>
+                  <div class="metric">
+                    <p class="metric__label"><svg class="icon" width="12" height="12"><use href="#i-trophy" /></svg>melhor dia</p>
+                    <strong class="metric__value" data-best-count>64</strong>
+                    <p class="metric__note" data-best-date>15 de outubro de 2026</p>
+                  </div>
+                </div>
+
+                <div class="monthly">
+                  <p class="metric__label">contribuições por mês</p>
+                  <div class="monthly__chart" data-monthly></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="creator">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-megaphone" /></svg><span class="accent">06</span><span>/</span><span>creator</span></p>
+          <h2 class="section__title">Fora do expediente</h2>
+          <p class="section__subtitle">Conteúdo de programação, tecnologia e projetos paralelos.</p>
+
+          <div class="link-cards">
+            <a class="link-card" href="https://linkedin.com/in/pablo-m-santos" target="_blank" rel="noopener">
+              <span class="link-card__icon"><svg class="icon" width="20" height="20"><use href="#i-users" /></svg></span>
+              <svg class="icon link-card__arrow" width="20" height="20"><use href="#i-arrow-up-right" /></svg>
+              <span class="link-card__label">LINKEDIN</span>
+              <strong class="link-card__title">in/pablo-m-santos</strong>
+              <span class="link-card__description">Conexões, artigos e trajetória profissional</span>
+              <span class="link-card__cta">Conectar →</span>
+            </a>
+            <a class="link-card" href="https://github.com/Pablo-M-Santos" target="_blank" rel="noopener">
+              <span class="link-card__icon"><svg class="icon" width="20" height="20"><use href="#i-folder-git2" /></svg></span>
+              <svg class="icon link-card__arrow" width="20" height="20"><use href="#i-arrow-up-right" /></svg>
+              <span class="link-card__label">GITHUB</span>
+              <strong class="link-card__title">@Pablo-M-Santos</strong>
+              <span class="link-card__description">Repositórios de projetos backend e full-stack</span>
+              <span class="link-card__cta">Explorar →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tinted" id="contato">
+        <div class="container">
+          <p class="section__eyebrow"><svg class="icon" width="14" height="14"><use href="#i-terminal" /></svg><span class="accent">07</span><span>/</span><span>contato</span></p>
+          <h2 class="section__title">Bora conversar</h2>
+          <p class="section__subtitle">Clique no comando de email para copiar o endereço. Os outros abrem direto.</p>
+
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dots"><i></i><i></i><i></i></span>
+              <span class="terminal__title">guilherme@lisboa: ~</span>
+            </div>
+            <div class="terminal__body">
+              <button class="terminal__row terminal__row--button" type="button" data-copy-email="pablomoreirasantos.hp@gmail.com">
+                <span class="terminal__command"><span class="accent">$</span> contact --email</span>
+                <span class="terminal__hint"><svg class="icon" width="14" height="14"><use href="#i-copy" /></svg>clique para copiar</span>
+              </button>
+              <p class="terminal__output">
+                <svg class="icon" width="14" height="14"><use href="#i-mail" /></svg>
+                <span>pablomoreirasantos.hp@gmail.com</span>
+                <span class="terminal__copied accent" data-copied hidden>copied ✓</span>
+              </p>
+
+              <a class="terminal__row" href="https://github.com/Pablo-M-Santos" target="_blank" rel="noopener"><span class="terminal__command"><span class="accent">$</span> contact --github</span></a>
+              <p class="terminal__output"><svg class="icon" width="14" height="14"><use href="#i-github" /></svg><a class="terminal__link" href="https://github.com/Pablo-M-Santos" target="_blank" rel="noopener">github.com/Pablo-M-Santos</a></p>
+
+              <a class="terminal__row" href="https://linkedin.com/in/pablo-m-santos" target="_blank" rel="noopener"><span class="terminal__command"><span class="accent">$</span> contact --linkedin</span></a>
+              <p class="terminal__output"><svg class="icon" width="14" height="14"><use href="#i-linkedin" /></svg><a class="terminal__link" href="https://linkedin.com/in/pablo-m-santos" target="_blank" rel="noopener">linkedin.com/in/pablo-m-santos</a></p>
+
+              <a class="terminal__row" href="tel:+5585992822527"><span class="terminal__command"><span class="accent">$</span> contact --phone</span></a>
+              <p class="terminal__output"><svg class="icon" width="14" height="14"><use href="#i-phone" /></svg><span>+55 (85) 99282-2527</span></p>
+            </div>
+            <p class="terminal__footer log-line"><span class="log-line__level">INFO</span> [contact] Respondo em português ou inglês.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>Pablo Moreira Santos · @Pablo-M-Santos · Fortaleza</p>
+        <p class="log-line"><span class="log-line__level">INFO</span> INFO [io.vue.java] pablo-portfolio stopped. Até à próxima.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
