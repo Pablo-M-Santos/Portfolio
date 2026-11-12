@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Icon from "./Icon";
 import Section from "./Section";
 
@@ -13,10 +13,12 @@ const MONTH_NAMES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "se
 const fallbackMonths = ["dez/25", "jan/26", "fev/26", "mar/26", "abr/26", "mai/26", "jun/26", "jul/26", "ago/26", "set/26", "out/26", "nov/26"];
 const fallbackMonthlyTotals = [58, 38, 52, 71, 27, 21, 39, 57, 34, 214, 48, 26];
 
-function useCountUp(endValue: string, duration: number = 1500) {
+function useCountUp(endValue: string, duration: number = 1500, shouldRun: boolean = false) {
   const [displayValue, setDisplayValue] = useState("0");
 
   useEffect(() => {
+    if (!shouldRun) return;
+
     const numericMatch = endValue.match(/[\d,.]+/);
     if (!numericMatch) {
       setDisplayValue(endValue);
@@ -57,7 +59,7 @@ function useCountUp(endValue: string, duration: number = 1500) {
 
     const animationId = requestAnimationFrame(updateCount);
     return () => cancelAnimationFrame(animationId);
-  }, [endValue, duration]);
+  }, [endValue, duration, shouldRun]);
 
   return displayValue;
 }
@@ -74,6 +76,27 @@ export default function Github() {
     date: "15 de outubro de 2026",
   });
   const [loading, setLoading] = useState<boolean>(true);
+
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     async function fetchGitHubData() {
@@ -151,9 +174,9 @@ export default function Github() {
     fetchGitHubData();
   }, []);
 
-  const animatedTotal = useCountUp(totalContributions.toString(), 1600);
-  const animatedActiveDays = useCountUp(activeDaysCount.toString(), 1600);
-  const animatedBestDayCount = useCountUp(bestDay.count.toString(), 1600);
+  const animatedTotal = useCountUp(totalContributions.toString(), 1600, isVisible);
+  const animatedActiveDays = useCountUp(activeDaysCount.toString(), 1600, isVisible);
+  const animatedBestDayCount = useCountUp(bestDay.count.toString(), 1600, isVisible);
 
   const firstDayOffset = days.length > 0 ? new Date(`${days[0].date}T12:00:00`).getDay() : 0;
 
@@ -168,8 +191,15 @@ export default function Github() {
           ? "Sincronizando com a API do GitHub..."
           : "Contribuições reais no GitHub nos últimos 12 meses, direto da API."
       }
+      animateHeader
     >
-      <div className="rounded-lg border border-line bg-surface p-6 sm:p-8 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)]">
+      <div 
+        ref={containerRef}
+        style={{ animationDelay: "120ms" }}
+        className={`rounded-lg border border-line bg-surface p-6 sm:p-8 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
+          isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
+        }`}
+      >
         <div className="flex flex-wrap items-start justify-between gap-4">
           <h3 className="text-2xl font-medium leading-8 sm:text-3xl">
             <span className="text-accent">{animatedTotal}</span> contribuições no último ano
