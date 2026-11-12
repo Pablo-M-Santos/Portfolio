@@ -69,7 +69,7 @@ export default function Stats() {
             <article
               key={label}
               style={{ animationDelay: `${(index + 1) * 120}ms` }}
-              className="flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-[25px] opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] hover:border-accent/40 transition-colors"
+              className="flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-[25px] opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] transition-all duration-300 ease-out  hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)]"
             >
               <header className="flex items-start justify-between gap-2">
                 <span className="font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted">{label}</span>

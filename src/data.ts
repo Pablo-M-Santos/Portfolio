@@ -21,10 +21,38 @@ export const navItems: NavItem[] = [
 ];
 
 export const stats: Stat[] = [
-  { label: "xp", icon: "coffee", iconSize: 16, value: "3+", valueSize: "xl", caption: "Full-Stack" },
-  { label: "empresas", icon: "building", iconSize: 16, value: "WDA • SesaTech", valueSize: "md", caption: "Sistemas web e corporativos" },
-  { label: "GITLAB & GITHUB", icon: "git-merge", iconSize: 16, value: "1.000+", valueSize: "xl", caption: "Contribuições em código" },
-  { label: "ENTREGAS", icon: "zap", iconSize: 15, value: "Ágil", valueSize: "lg", caption: "Sprints e Scrum" },
+  {
+    label: "xp",
+    icon: "coffee",
+    iconSize: 16,
+    value: "3+",
+    valueSize: "xl",
+    caption: "Full-Stack",
+  },
+  {
+    label: "empresas",
+    icon: "building",
+    iconSize: 16,
+    value: "WDA • SesaTech",
+    valueSize: "md",
+    caption: "Sistemas web e corporativos",
+  },
+  {
+    label: "GITLAB & GITHUB",
+    icon: "git-merge",
+    iconSize: 16,
+    value: "1.000+",
+    valueSize: "xl",
+    caption: "Contribuições em código",
+  },
+  {
+    label: "ENTREGAS",
+    icon: "zap",
+    iconSize: 15,
+    value: "Ágil",
+    valueSize: "lg",
+    caption: "Sprints e Scrum",
+  },
 ];
 
 export const bio: string[] = [
@@ -34,23 +62,84 @@ export const bio: string[] = [
 ];
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Linguagens", icon: "code", items: ["Java 11 / 17 / 21", "TypeScript", "JavaScript", "Dart"] },
-  { label: "FRAMEWORKS BACKEND", icon: "layers", items: ["Spring Boot", "Spring Data JPA", "Spring Security"] },
-  { label: "FRONTEND & MOBILE", icon: "panels", items: ["Vue.js", "Nuxt.js", "React.js", "Next.js", "Vuetify", "Quasar", "Flutter"] },
-  { label: "MENSAGERIA & EVENTOS", icon: "radio", iconWidth: 12, items: ["Apache Kafka (estudando)", "RabbitMQ (estudando)"] },
-  { label: "INTEGRAÇÕES & APIS", icon: "plug", items: ["APIs RESTful", "OAuth 2.0 / JWT", "Postman", "Swagger / OpenAPI"] },
-  { label: "Cloud & DevOps", icon: "cloud", items: ["Microsoft Azure", "AWS (estudando)", "Docker", "Git", "Azure DevOps"] },
-  { label: "Dados", icon: "database", items: ["Oracle", "MySQL", "PostgreSQL", "MongoDB", "Redis"] },
-  { label: "ARQUITETURA & METODOLOGIAS", icon: "compass", items: ["Clean Code", "Arquitetura em Camadas", "Scrum", "Kanban"] },
-  { label: "Qualidade & testes", icon: "flask", iconWidth: 13, items: ["JUnit", "Mockito", "Spring Test", "TDD"] },
+  {
+    label: "Linguagens",
+    icon: "code",
+    items: ["Java 11 / 17 / 21", "TypeScript", "JavaScript", "Dart"],
+  },
+  {
+    label: "FRAMEWORKS BACKEND",
+    icon: "layers",
+    items: ["Spring Boot", "Spring Data JPA", "Spring Security"],
+  },
+  {
+    label: "FRONTEND & MOBILE",
+    icon: "panels",
+    items: [
+      "Vue.js",
+      "Nuxt.js",
+      "React.js",
+      "Next.js",
+      "Vuetify",
+      "Quasar",
+      "Flutter",
+    ],
+  },
+  {
+    label: "MENSAGERIA & EVENTOS",
+    icon: "radio",
+    iconWidth: 12,
+    items: ["Apache Kafka (estudando)", "RabbitMQ (estudando)"],
+  },
+  {
+    label: "INTEGRAÇÕES & APIS",
+    icon: "plug",
+    items: ["APIs RESTful", "OAuth 2.0 / JWT", "Postman", "Swagger / OpenAPI"],
+  },
+  {
+    label: "Cloud & DevOps",
+    icon: "cloud",
+    items: [
+      "Microsoft Azure",
+      "AWS (estudando)",
+      "Docker",
+      "Git",
+      "Azure DevOps",
+    ],
+  },
+  {
+    label: "Dados",
+    icon: "database",
+    items: ["Oracle", "MySQL", "PostgreSQL", "MongoDB", "Redis"],
+  },
+  {
+    label: "ARQUITETURA & METODOLOGIAS",
+    icon: "compass",
+    items: ["Clean Code", "Arquitetura em Camadas", "Scrum", "Kanban"],
+  },
+  {
+    label: "Qualidade & testes",
+    icon: "flask",
+    iconWidth: 13,
+    items: ["JUnit", "Mockito", "Spring Test", "TDD"],
+  },
 ];
 
 export const training: TrainingItem[] = [
-  { name: "Análise e Desenvolvimento de Sistemas", institution: "UNINASSAU", period: "2025 – 2027" },
-  { name: "Técnico em Informática", institution: "EEEP Profª Luiza de Teodoro Vieira", period: "2022 – 2024" },
+  {
+    name: "Análise e Desenvolvimento de Sistemas",
+    institution: "UNINASSAU",
+    period: "2025 – 2027",
+  },
+  {
+    name: "Técnico em Informática",
+    institution: "EEEP Profª Luiza de Teodoro Vieira",
+    period: "2022 – 2024",
+  },
 ];
 
-export const languages = "Idiomas: Português (nativo) · Inglês (leitura técnica / em evolução)";
+export const languages =
+  "Idiomas: Português (nativo) · Inglês (leitura técnica / em evolução)";
 
 export const commits: Commit[] = [
   {
@@ -58,10 +147,20 @@ export const commits: Commit[] = [
     showHash: "f8c2a1b",
     period: "02/2026 – atual",
     location: "Rio de Janeiro",
-    message: "feat(sesatech): desenvolvimento e reestruturação de sistemas internos da TIM",
+    message:
+      "feat(sesatech): desenvolvimento e reestruturação de sistemas internos da TIM",
     roleTitle: "Desenvolvedor Júnior",
     company: "SesaTech",
-    tags: ["Vue.js", "Nuxt.js", "Vuetify", "TypeScript", "Java Spring", "Pinia", "Azure DevOps", "Scrum"],
+    tags: [
+      "Vue.js",
+      "Nuxt.js",
+      "Vuetify",
+      "TypeScript",
+      "Java Spring",
+      "Pinia",
+      "Azure DevOps",
+      "Scrum",
+    ],
     changes: [
       "Atuo no **desenvolvimento e evolução de aplicações web** para sistemas empresariais críticos da **TIM**, focando na construção de **interfaces escaláveis, performáticas** e orientadas à experiência do usuário.",
       "Implementei melhorias de **arquitetura frontend, componentização e reutilização de código** migrando estruturas e aplicando **TypeScript**.",
@@ -76,10 +175,22 @@ export const commits: Commit[] = [
     showHash: "b53f653",
     period: "01/2024 – 02/2026",
     location: "Fortaleza",
-    message: "feat(wda): evolução full-stack em APIs REST, Spring Boot e interfaces web/mobile",
+    message:
+      "feat(wda): evolução full-stack em APIs REST, Spring Boot e interfaces web/mobile",
     roleTitle: "Desenvolvedor Full-Stack Júnior",
     company: "WDA Tecnologia & Inovação",
-    tags: ["Java 11/17", "Spring Boot", "PostgreSQL", "Oracle", "Redis", "Vue.js", "Quasar", "React.js", "Flutter", "Docker"],
+    tags: [
+      "Java 11/17",
+      "Spring Boot",
+      "PostgreSQL",
+      "Oracle",
+      "Redis",
+      "Vue.js",
+      "Quasar",
+      "React.js",
+      "Flutter",
+      "Docker",
+    ],
     changes: [
       "**Liderei o desenvolvimento de microsserviços** em Java com **Quarkus** e **Apache Camel** para integração de sistemas corporativos com o **Salesforce**, atendendo uma operadora de distribuição de energia elétrica do Reino Unido.",
       "Atuei em projetos de grande porte cobrindo **toda a stack frontend, backend e mobile**, com foco em evolução contínua de sistemas em produção, criação de **novas features e melhoria de performance.**",
@@ -96,6 +207,41 @@ export const commits: Commit[] = [
       "Organizei e padronizei a **estrutura de banco de dados** (PostgreSQL e Oracle), aplicando boas práticas para leitura e escrita.",
     ],
   },
+  {
+    hash: "3c8e1f4",
+    showHash: "9d2a7b1",
+    period: "01/2024 – 12/2024",
+    location: "Fortaleza",
+    message:
+      "feat(wda): início da jornada full-stack em sistemas de produção web, backend e mobile",
+    roleTitle: "Desenvolvedor Full-Stack (Estágio)",
+    company: "WDA Tecnologia & Inovação",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "Oracle",
+      "Vue.js",
+      "Vuetify",
+      "Quasar",
+      "Flutter",
+      "Dart",
+      "JUnit",
+      "Mockito",
+      "Selenium",
+      "Swagger",
+    ],
+    changes: [
+      "Atuei diretamente em **código de produção** desde o início em sistemas corporativos de grande porte, assumindo responsabilidades reais nas frentes **frontend, backend e mobile**.",
+      "Contribuí na criação e refatoração de interfaces web com **Vue.js, Vuetify e Quasar**, desenvolvendo componentes, dashboards, tabelas e melhorias de fluxo e usabilidade.",
+      "Apoiei a implementação de **testes automatizados com Selenium** para validação de fluxos críticos de interface e responsividade.",
+      "Implementei e mantive funcionalidades backend com **Java e Spring Boot**, desenvolvendo endpoints REST para sistemas em produção.",
+      "Participei de **otimizações de CRUDs em massa**, reduzindo tempos de execução de minutos para segundos.",
+      "Desenvolvi **testes unitários e de integração** com **JUnit e Mockito**, além de apoiar a documentação técnica de APIs via **Swagger**.",
+      "Contribuí na estruturação e padronização de bancos de dados **PostgreSQL e Oracle**, aplicando boas práticas de modelagem e nomenclatura.",
+      "Participei do desenvolvimento de novas features e refatoração de componentes no **aplicativo mobile com Flutter e Dart** sob metodologia **Scrum**.",
+    ],
+  },
 ];
 
 export const projects: Project[] = [
@@ -106,7 +252,18 @@ export const projects: Project[] = [
     description:
       "Globo 3D interativo que mostra onde estão os alunos da AceleraDev que conseguiram vaga em tecnologia. Cada aluno aparece como avatar na sua cidade, com contadores de devs e de estados, filtros por área e zoom.",
     primaryLabel: "filtros por área",
-    primaryTags: ["Front-end", "Back-end", "Fullstack", "Mobile", "Cyber", "Data", "DevOps", "QA", "IA/Automações", "Suporte"],
+    primaryTags: [
+      "Front-end",
+      "Back-end",
+      "Fullstack",
+      "Mobile",
+      "Cyber",
+      "Data",
+      "DevOps",
+      "QA",
+      "IA/Automações",
+      "Suporte",
+    ],
     stack: ["Quarkus", "React", "Three.js", "PostgreSQL", "Traefik", "VPS"],
     cta: "Ver ao vivo",
     href: "#",
@@ -124,7 +281,13 @@ export const projects: Project[] = [
     description:
       "Controle financeiro pessoal por áudio no Telegram. Você manda um áudio — “gastei 50 de carne, mercado, no Santander” — e o bot anota valor, categoria e conta e mostra tudo num painel web. Sem planilha, sem app novo, sem senha de banco.",
     primaryLabel: "o que faz",
-    primaryTags: ["Lançamento por áudio", "Painel web", "Categorias e contas", "Relatórios por período", "Português e inglês"],
+    primaryTags: [
+      "Lançamento por áudio",
+      "Painel web",
+      "Categorias e contas",
+      "Relatórios por período",
+      "Português e inglês",
+    ],
     stack: ["Spring Boot", "PostgreSQL", "Telegram Bot"],
     cta: "Ver landing page",
     href: "#",
@@ -157,7 +320,26 @@ export const linkCards: LinkCardData[] = [
 ];
 
 export const contactCommands: ContactCommand[] = [
-  { command: "contact --github", icon: "github", text: "github.com/Pablo-M-Santos", href: "https://github.com/Pablo-M-Santos", external: true, isLink: true },
-  { command: "contact --linkedin", icon: "linkedin", text: "linkedin.com/in/pablo-m-santos", href: "https://linkedin.com/in/pablo-m-santos", external: true, isLink: true },
-  { command: "contact --phone", icon: "phone", text: "+55 (85) 99282-2527", href: "tel:+5585992822527" },
+  {
+    command: "contact --github",
+    icon: "github",
+    text: "github.com/Pablo-M-Santos",
+    href: "https://github.com/Pablo-M-Santos",
+    external: true,
+    isLink: true,
+  },
+  {
+    command: "contact --linkedin",
+    icon: "linkedin",
+    text: "linkedin.com/in/pablo-m-santos",
+    href: "https://linkedin.com/in/pablo-m-santos",
+    external: true,
+    isLink: true,
+  },
+  {
+    command: "contact --phone",
+    icon: "phone",
+    text: "+55 (85) 99282-2527",
+    href: "tel:+5585992822527",
+  },
 ];
