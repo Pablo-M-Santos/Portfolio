@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { stats } from "../data";
 import type { Stat } from "../types";
@@ -8,31 +9,88 @@ const valueSizes: Record<Stat["valueSize"], string> = {
   md: "text-[21px] leading-7",
 };
 
+function useCountUp(endValue: string, duration: number = 1500) {
+  const [displayValue, setDisplayValue] = useState("0");
+
+  useEffect(() => {
+    const numericMatch = endValue.match(/[\d,.]+/);
+    if (!numericMatch) {
+      setDisplayValue(endValue);
+      return;
+    }
+
+    const rawNumStr = numericMatch[0].replace(/\./g, "").replace(",", ".");
+    const targetNum = parseFloat(rawNumStr);
+
+    if (isNaN(targetNum)) {
+      setDisplayValue(endValue);
+      return;
+    }
+
+    const prefix = endValue.substring(0, numericMatch.index);
+    const suffix = endValue.substring((numericMatch.index || 0) + numericMatch[0].length);
+
+    let startTime: number | null = null;
+
+    const updateCount = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentNum = targetNum * easeProgress;
+
+      let formattedNum = Number.isInteger(targetNum)
+        ? Math.round(currentNum).toLocaleString("pt-BR")
+        : currentNum.toFixed(1).replace(".", ",");
+
+      setDisplayValue(`${prefix}${formattedNum}${suffix}`);
+
+      if (progress < 1) {
+        requestAnimationFrame(updateCount);
+      } else {
+        setDisplayValue(endValue);
+      }
+    };
+
+    const animationId = requestAnimationFrame(updateCount);
+    return () => cancelAnimationFrame(animationId);
+  }, [endValue, duration]);
+
+  return displayValue;
+}
+
 export default function Stats() {
   return (
-    <section className="border-y border-line bg-tint py-10 sm:py-14">
+    <section className="border-y border-line bg-tint py-10 sm:py-14 overflow-hidden">
       <div className="mx-auto grid w-full max-w-[1200px] gap-4 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4">
-        {stats.map(({ label, icon, iconSize, value, valueSize, caption }) => (
-          <article key={label} className="flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-[25px]">
-            <header className="flex items-start justify-between gap-2">
-              <span className="font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted">{label}</span>
-              <Icon name={icon} size={iconSize} className="text-accent" />
-            </header>
-            <strong
-              className={`my-auto py-3 font-mono font-semibold tracking-[-0.025em] text-accent ${valueSizes[valueSize]}`}
+        {stats.map(({ label, icon, iconSize, value, valueSize, caption }, index) => {
+          const animatedValue = useCountUp(value, 1600);
+
+          return (
+            <article
+              key={label}
+              style={{ animationDelay: `${(index + 1) * 120}ms` }}
+              className="flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-[25px] opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] hover:border-accent/40 transition-colors"
             >
-              {valueSize === "md"
-                ? value.split(" • ").map((part, index) => (
-                    <span key={part}>
-                      {index > 0 && <span className="text-muted"> • </span>}
-                      {part}
-                    </span>
-                  ))
-                : value}
-            </strong>
-            <p className="text-sm leading-5 text-muted">{caption}</p>
-          </article>
-        ))}
+              <header className="flex items-start justify-between gap-2">
+                <span className="font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted">{label}</span>
+                <Icon name={icon} size={iconSize} className="text-accent" />
+              </header>
+              <strong
+                className={`my-auto py-3 font-mono font-semibold tracking-[-0.025em] text-accent ${valueSizes[valueSize]}`}
+              >
+                {valueSize === "md"
+                  ? value.split(" • ").map((part, partIndex) => (
+                      <span key={part}>
+                        {partIndex > 0 && <span className="text-muted"> • </span>}
+                        {part}
+                      </span>
+                    ))
+                  : animatedValue}
+              </strong>
+              <p className="text-sm leading-5 text-muted">{caption}</p>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
