@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Icon from "./Icon";
 import LogLine from "./LogLine";
 import Section from "./Section";
@@ -6,6 +6,26 @@ import { contactCommands, EMAIL } from "../data";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   async function copyEmail() {
     try {
@@ -26,9 +46,12 @@ export default function Contact() {
       subtitle="Clique no comando de email para copiar o endereço. Os outros abrem direto."
       animateHeader
     >
-      <div 
+      <div
+        ref={containerRef}
         style={{ animationDelay: "120ms" }}
-        className="overflow-hidden rounded-lg border border-line bg-surface font-mono text-sm opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards]"
+        className={`overflow-hidden rounded-lg border border-line bg-surface font-mono text-sm opacity-0 ${
+          isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
+        }`}
       >
         <div className="flex h-8 items-center justify-between border-b border-line bg-raised px-4 text-[10px] text-muted">
           <span className="flex gap-1.5">
