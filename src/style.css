@@ -34,3 +34,15 @@
   --color-overlay: rgba(255, 255, 255, 0.85);
   --color-grid: rgba(26, 26, 26, 0.05);
 }
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

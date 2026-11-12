@@ -48,7 +48,7 @@ export default function Header() {
           href="#topo"
           className="font-mono text-sm font-semibold leading-5 text-ink hover:text-accent transition"
         >
-          pablo<span className="text-accent">.</span>
+          pablo
         </a>
         <nav
           aria-label="Seções"
