@@ -10,15 +10,17 @@ export default function Creator() {
       icon="megaphone"
       title="Fora do expediente"
       subtitle="Conteúdo de programação, tecnologia e projetos paralelos."
+      animateHeader
     >
       <div className="grid max-w-[640px] gap-4 sm:grid-cols-2">
-        {linkCards.map(({ icon, label, title, description, cta, href }) => (
+        {linkCards.map(({ icon, label, title, description, cta, href }, index) => (
           <a
             key={label}
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex min-h-[228px] flex-col rounded-lg border border-line bg-surface p-5 transition hover:border-accent"
+            style={{ animationDelay: `${(index + 1) * 120}ms` }}
+            className="group flex min-h-[228px] flex-col rounded-lg border border-line bg-surface p-5 opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)]"
           >
             <div className="flex items-start justify-between">
               <span className="grid size-10 place-items-center rounded-md bg-raised text-accent">
