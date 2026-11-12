@@ -20,7 +20,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-header-line bg-header backdrop-blur-md">
       <div className="mx-auto flex min-h-[65px] max-w-[1200px] flex-wrap items-center justify-between gap-x-4 gap-y-2 px-5 py-3 sm:px-8">
         <a href="#topo" className="font-mono text-sm font-semibold leading-5">
-          pctheone
+          pablo
         </a>
         <nav
           aria-label="Seções"
