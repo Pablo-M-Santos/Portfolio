@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from "react";
 import Icon from "./Icon";
 import RichText from "./RichText";
 import Section from "./Section";
@@ -9,6 +10,27 @@ const panel =
 const caption = "font-mono text-xs uppercase leading-4 tracking-[0.05em] text-muted";
 
 export default function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section
       id="sobre"
@@ -16,10 +38,14 @@ export default function About() {
       icon="shield"
       title="Ficha de personagem"
       subtitle="Resumo profissional, como está no CV — só que com um pouco mais de personalidade."
+      animateHeader
     >
-      <div className="flex flex-col gap-6 py-2">
-        
-        <article className={`${panel} p-5 sm:p-8 opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:100ms]`}>
+      <div ref={containerRef} className="flex flex-col gap-6 py-2">
+        <article
+          className={`${panel} p-5 sm:p-8 opacity-0 ${
+            isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:100ms]" : ""
+          }`}
+        >
           <p className="mb-4 font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted">
             <span className="text-accent">$</span> cat sobre.md
           </p>
@@ -32,7 +58,11 @@ export default function About() {
           </div>
         </article>
 
-        <article className={`${panel} flex flex-col gap-6 p-[25px] opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:200ms]`}>
+        <article
+          className={`${panel} flex flex-col gap-6 p-[25px] opacity-0 ${
+            isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:200ms]" : ""
+          }`}
+        >
           <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-line">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted">Classe</p>
@@ -47,8 +77,14 @@ export default function About() {
           </div>
 
           <div className="flex flex-col gap-5">
-            {skillGroups.map(({ label, icon, iconWidth, items }) => (
-              <div key={label} className="grid items-start gap-2 md:grid-cols-[158px_1fr]">
+            {skillGroups.map(({ label, icon, iconWidth, items }, groupIndex) => (
+              <div
+                key={label}
+                style={{ animationDelay: `${300 + groupIndex * 80}ms` }}
+                className={`grid items-start gap-2 md:grid-cols-[158px_1fr] opacity-0 ${
+                  isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
+                }`}
+              >
                 <p className={`flex items-center gap-2 ${caption} tracking-[0.05em]`}>
                   <Icon name={icon} width={iconWidth} className="text-accent" />
                   {label}
@@ -58,27 +94,29 @@ export default function About() {
             ))}
           </div>
 
-          <div className="flex flex-col gap-5 pt-6 border-t border-line">
-             <p className={`flex items-center gap-2 ${caption}`}>
-            <Icon name="book" className="text-accent" />
-            Treinamento
-          </p>
-          <ul className="flex flex-col gap-2">
-            {training.map(({ name, institution, period }) => (
-              <li key={name} className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm leading-5 text-muted">
-                <span>
-                  <span className="text-ink">{name}</span> · {institution}
-                </span>
-                <span className="font-mono text-xs leading-4">{period}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="font-mono text-xs leading-4 text-muted">{languages}</p>
+          <div
+            style={{ animationDelay: "600ms" }}
+            className={`flex flex-col gap-5 pt-6 border-t border-line opacity-0 ${
+              isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
+            }`}
+          >
+            <p className={`flex items-center gap-2 ${caption}`}>
+              <Icon name="book" className="text-accent" />
+              Treinamento
+            </p>
+            <ul className="flex flex-col gap-2">
+              {training.map(({ name, institution, period }) => (
+                <li key={name} className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm leading-5 text-muted">
+                  <span>
+                    <span className="text-ink">{name}</span> · {institution}
+                  </span>
+                  <span className="font-mono text-xs leading-4">{period}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-mono text-xs leading-4 text-muted">{languages}</p>
           </div>
         </article>
-
-    
-
       </div>
     </Section>
   );
