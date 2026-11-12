@@ -24,8 +24,12 @@ export default function Contact() {
       icon="terminal"
       title="Bora conversar"
       subtitle="Clique no comando de email para copiar o endereço. Os outros abrem direto."
+      animateHeader
     >
-      <div className="overflow-hidden rounded-lg border border-line bg-surface font-mono text-sm">
+      <div 
+        style={{ animationDelay: "120ms" }}
+        className="overflow-hidden rounded-lg border border-line bg-surface font-mono text-sm opacity-0 animate-[fadeInUp_0.7s_ease-out_forwards]"
+      >
         <div className="flex h-8 items-center justify-between border-b border-line bg-raised px-4 text-[10px] text-muted">
           <span className="flex gap-1.5">
             <i className="size-2 rounded-full bg-line" />
