@@ -34,7 +34,7 @@ export default function Creator() {
       subtitle="Conteúdo de programação, tecnologia e projetos paralelos."
       animateHeader
     >
-      <div ref={containerRef} className="grid max-w-[640px] gap-4 sm:grid-cols-2">
+      <div ref={containerRef} className="grid max-w-full sm:max-w-[640px] gap-4 sm:grid-cols-2">
         {linkCards.map(({ icon, label, title, description, cta, href }, index) => (
           <a
             key={label}
