@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import Section from "./Section";
 
@@ -13,12 +13,10 @@ const MONTH_NAMES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "se
 const fallbackMonths = ["dez/25", "jan/26", "fev/26", "mar/26", "abr/26", "mai/26", "jun/26", "jul/26", "ago/26", "set/26", "out/26", "nov/26"];
 const fallbackMonthlyTotals = [58, 38, 52, 71, 27, 21, 39, 57, 34, 214, 48, 26];
 
-function useCountUp(endValue: string, duration: number = 1500, shouldRun: boolean = false) {
+function useCountUp(endValue: string, duration: number = 1500) {
   const [displayValue, setDisplayValue] = useState("0");
 
   useEffect(() => {
-    if (!shouldRun) return;
-
     const numericMatch = endValue.match(/[\d,.]+/);
     if (!numericMatch) {
       setDisplayValue(endValue);
@@ -59,7 +57,7 @@ function useCountUp(endValue: string, duration: number = 1500, shouldRun: boolea
 
     const animationId = requestAnimationFrame(updateCount);
     return () => cancelAnimationFrame(animationId);
-  }, [endValue, duration, shouldRun]);
+  }, [endValue, duration]);
 
   return displayValue;
 }
@@ -76,25 +74,24 @@ export default function Github() {
     date: "15 de outubro de 2026",
   });
   const [loading, setLoading] = useState<boolean>(true);
-
   const [isVisible, setIsVisible] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect();
+          observer.unobserve(element);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.1 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
+    observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
@@ -174,9 +171,9 @@ export default function Github() {
     fetchGitHubData();
   }, []);
 
-  const animatedTotal = useCountUp(totalContributions.toString(), 1600, isVisible);
-  const animatedActiveDays = useCountUp(activeDaysCount.toString(), 1600, isVisible);
-  const animatedBestDayCount = useCountUp(bestDay.count.toString(), 1600, isVisible);
+  const animatedTotal = useCountUp(totalContributions.toString(), 1600);
+  const animatedActiveDays = useCountUp(activeDaysCount.toString(), 1600);
+  const animatedBestDayCount = useCountUp(bestDay.count.toString(), 1600);
 
   const firstDayOffset = days.length > 0 ? new Date(`${days[0].date}T12:00:00`).getDay() : 0;
 
@@ -191,9 +188,8 @@ export default function Github() {
           ? "Sincronizando com a API do GitHub..."
           : "Contribuições reais no GitHub nos últimos 12 meses, direto da API."
       }
-      animateHeader
     >
-      <div 
+      <div
         ref={containerRef}
         style={{ animationDelay: "120ms" }}
         className={`rounded-lg border border-line bg-surface p-6 sm:p-8 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
@@ -215,8 +211,8 @@ export default function Github() {
           </a>
         </div>
 
-        <div className="mt-7 overflow-x-auto pb-2">
-          <div className="min-w-[700px]">
+        <div className="mt-7 w-full pb-2">
+          <div className="w-full">
             <div className="mb-2 ml-7 grid grid-cols-12 font-mono text-[10px] text-muted">
               {months.map((month) => (
                 <span key={month}>{month.split("/")[0]}</span>
@@ -228,11 +224,11 @@ export default function Github() {
                 <span>Qua</span>
                 <span>Sex</span>
               </div>
-              <div className="grid flex-1 grid-flow-col grid-rows-7 gap-1">
+              <div className="grid flex-1 grid-flow-col grid-rows-7 gap-[2px]">
                 {days.length > 0 ? (
                   <>
                     {Array.from({ length: firstDayOffset }, (_, i) => (
-                      <span key={`empty-${i}`} className="aspect-square rounded-[2px] opacity-0" />
+                      <span key={`empty-${i}`} className="aspect-square w-full rounded-[2px] opacity-0" />
                     ))}
                     {days.map((day) => {
                       const formattedDate = new Date(`${day.date}T12:00:00`).toLocaleDateString("pt-BR", {
@@ -244,7 +240,7 @@ export default function Github() {
                         <span
                           key={day.date}
                           title={`${day.count} contribuições em ${formattedDate}`}
-                          className={`aspect-square rounded-[2px] transition-colors ${
+                          className={`aspect-square w-full rounded-[2px] transition-colors ${
                             [
                               "bg-raised",
                               "bg-accent/30",
@@ -263,7 +259,7 @@ export default function Github() {
                     return (
                       <span
                         key={index}
-                        className={`aspect-square rounded-[2px] ${loading ? "animate-pulse bg-raised" : ["bg-raised", "bg-accent/30", "bg-accent/50", "bg-accent/75", "bg-accent"][fallbackLevel]}`}
+                        className={`aspect-square w-full rounded-[2px] ${loading ? "animate-pulse bg-raised" : ["bg-raised", "bg-accent/30", "bg-accent/50", "bg-accent/75", "bg-accent"][fallbackLevel]}`}
                       />
                     );
                   })
