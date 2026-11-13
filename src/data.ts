@@ -245,59 +245,7 @@ export const commits: Commit[] = [
 ];
 
 export const projects: Project[] = [
-  {
-    number: "01",
-    icon: "globe",
-    title: "Acelera Globe",
-    description:
-      "Globo 3D interativo que mostra onde estão os alunos da AceleraDev que conseguiram vaga em tecnologia. Cada aluno aparece como avatar na sua cidade, com contadores de devs e de estados, filtros por área e zoom.",
-    primaryLabel: "filtros por área",
-    primaryTags: [
-      "Front-end",
-      "Back-end",
-      "Fullstack",
-      "Mobile",
-      "Cyber",
-      "Data",
-      "DevOps",
-      "QA",
-      "IA/Automações",
-      "Suporte",
-    ],
-    stack: ["Quarkus", "React", "Three.js", "PostgreSQL", "Traefik", "VPS"],
-    cta: "Ver ao vivo",
-    href: "#",
-    image: {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/466e2d11794bf67b8eab1cbc87b0d03f2a0f4433?width=1260",
-      alt: "Acelera Globe: globo 3D com avatares dos alunos da AceleraDev contratados, contadores de devs e estados e filtros por área",
-    },
-    mediaClassName: "bg-raised",
-    mediaFirst: true,
-  },
-  {
-    number: "02",
-    icon: "wallet",
-    title: "Money Flow",
-    description:
-      "Controle financeiro pessoal por áudio no Telegram. Você manda um áudio — “gastei 50 de carne, mercado, no Santander” — e o bot anota valor, categoria e conta e mostra tudo num painel web. Sem planilha, sem app novo, sem senha de banco.",
-    primaryLabel: "o que faz",
-    primaryTags: [
-      "Lançamento por áudio",
-      "Painel web",
-      "Categorias e contas",
-      "Relatórios por período",
-      "Português e inglês",
-    ],
-    stack: ["Spring Boot", "PostgreSQL", "Telegram Bot"],
-    cta: "Ver landing page",
-    href: "#",
-    image: {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/73502c02d261d1aecb74c99baaadadbafce0ce62?width=1008",
-      alt: "Money Flow: mockup do app num celular mostrando o bot do Telegram anotando “gastei 50 de carne, mercado, no Santander” por áudio e o gasto do mês no painel",
-    },
-    mediaClassName: "bg-[#080a1e]",
-    mediaFirst: false,
-  },
+
 ];
 
 export const linkCards: LinkCardData[] = [
