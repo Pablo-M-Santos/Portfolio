@@ -49,7 +49,7 @@ export default function About() {
           <p className="mb-4 font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted">
             <span className="text-accent">$</span> cat sobre.md
           </p>
-          <div className="flex max-w-[833px] flex-col gap-4 text-muted">
+          <div className="flex max-w-[833px] flex-col gap-4 text-sm sm:text-base leading-relaxed text-muted">
             {bio.map((paragraph) => (
               <p key={paragraph}>
                 <RichText text={paragraph} />
@@ -59,20 +59,24 @@ export default function About() {
         </article>
 
         <article
-          className={`${panel} flex flex-col gap-6 p-[25px] opacity-0 ${
+          className={`${panel} flex flex-col gap-6 p-5 sm:p-[25px] opacity-0 ${
             isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:200ms]" : ""
           }`}
         >
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-line">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-line">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted">Classe</p>
-              <h3 className="mt-1 text-2xl font-bold leading-8">Full-Stack Engineer</h3>
+              <h3 className="mt-1 text-xl sm:text-2xl font-bold leading-8">Full-Stack Engineer</h3>
               <p className="font-mono text-xs text-muted">Base: Fortaleza - CE</p>
             </div>
-            <div className="flex flex-col items-center rounded-md bg-raised px-5 py-3">
+            <div className="flex items-center sm:flex-col justify-between sm:justify-center rounded-md bg-raised px-4 py-2.5 sm:px-5 sm:py-3">
               <span className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted">Nível</span>
-              <strong className="font-mono text-3xl font-semibold leading-9 text-accent">3+</strong>
-              <span className="font-mono text-[11px] text-muted">anos de Java</span>
+              <div className="flex items-baseline gap-1.5 sm:flex-col sm:items-center sm:gap-0">
+                <strong className="font-mono text-2xl sm:text-3xl font-semibold leading-none sm:leading-9 text-accent">
+                  3+
+                </strong>
+                <span className="font-mono text-[11px] text-muted">anos de Java</span>
+              </div>
             </div>
           </div>
 
@@ -81,7 +85,7 @@ export default function About() {
               <div
                 key={label}
                 style={{ animationDelay: `${300 + groupIndex * 80}ms` }}
-                className={`grid items-start gap-2 md:grid-cols-[158px_1fr] opacity-0 ${
+                className={`grid items-start gap-2.5 md:grid-cols-[158px_1fr] opacity-0 ${
                   isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
                 }`}
               >
@@ -96,7 +100,7 @@ export default function About() {
 
           <div
             style={{ animationDelay: "600ms" }}
-            className={`flex flex-col gap-5 pt-6 border-t border-line opacity-0 ${
+            className={`flex flex-col gap-4 sm:gap-5 pt-6 border-t border-line opacity-0 ${
               isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
             }`}
           >
@@ -104,9 +108,12 @@ export default function About() {
               <Icon name="book" className="text-accent" />
               Treinamento
             </p>
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3 sm:gap-2">
               {training.map(({ name, institution, period }) => (
-                <li key={name} className="flex flex-wrap justify-between gap-x-4 gap-y-1 text-sm leading-5 text-muted">
+                <li
+                  key={name}
+                  className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-x-4 text-sm leading-5 text-muted"
+                >
                   <span>
                     <span className="text-ink">{name}</span> · {institution}
                   </span>
