@@ -4,9 +4,9 @@ import { stats } from "../data";
 import type { Stat } from "../types";
 
 const valueSizes: Record<Stat["valueSize"], string> = {
-  xl: "text-5xl leading-[48px]",
-  lg: "text-4xl leading-10",
-  md: "text-[21px] leading-7",
+  xl: "text-3xl sm:text-5xl leading-tight sm:leading-[48px]",
+  lg: "text-3xl sm:text-4xl leading-tight sm:leading-10",
+  md: "text-lg sm:text-[21px] leading-7",
 };
 
 function useCountUp(endValue: string, duration: number = 1500, shouldRun: boolean = false) {
@@ -92,7 +92,7 @@ export default function Stats() {
             <article
               key={label}
               style={{ animationDelay: `${(index + 1) * 120}ms` }}
-              className={`flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-[25px] opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
+              className={`flex min-h-[170px] flex-col rounded-lg border border-line bg-surface p-5 sm:p-[25px] opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
                 isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
               }`}
             >
