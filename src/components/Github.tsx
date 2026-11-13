@@ -8,9 +8,35 @@ interface ContributionDay {
   level: number;
 }
 
-const MONTH_NAMES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+const MONTH_NAMES = [
+  "jan",
+  "fev",
+  "mar",
+  "abr",
+  "mai",
+  "jun",
+  "jul",
+  "ago",
+  "set",
+  "out",
+  "nov",
+  "dez",
+];
 
-const fallbackMonths = ["dez/25", "jan/26", "fev/26", "mar/26", "abr/26", "mai/26", "jun/26", "jul/26", "ago/26", "set/26", "out/26", "nov/26"];
+const fallbackMonths = [
+  "dez/25",
+  "jan/26",
+  "fev/26",
+  "mar/26",
+  "abr/26",
+  "mai/26",
+  "jun/26",
+  "jul/26",
+  "ago/26",
+  "set/26",
+  "out/26",
+  "nov/26",
+];
 const fallbackMonthlyTotals = [58, 38, 52, 71, 27, 21, 39, 57, 34, 214, 48, 26];
 
 function useCountUp(endValue: string, duration: number = 1500) {
@@ -32,7 +58,9 @@ function useCountUp(endValue: string, duration: number = 1500) {
     }
 
     const prefix = endValue.substring(0, numericMatch.index);
-    const suffix = endValue.substring((numericMatch.index || 0) + numericMatch[0].length);
+    const suffix = endValue.substring(
+      (numericMatch.index || 0) + numericMatch[0].length,
+    );
 
     let startTime: number | null = null;
 
@@ -66,7 +94,9 @@ export default function Github() {
   const [totalContributions, setTotalContributions] = useState<number>(665);
   const [days, setDays] = useState<ContributionDay[]>([]);
   const [months, setMonths] = useState<string[]>(fallbackMonths);
-  const [monthlyTotals, setMonthlyTotals] = useState<number[]>(fallbackMonthlyTotals);
+  const [monthlyTotals, setMonthlyTotals] = useState<number[]>(
+    fallbackMonthlyTotals,
+  );
   const [activeDaysCount, setActiveDaysCount] = useState<number>(171);
   const [maxStreak, setMaxStreak] = useState<string>("13 d");
   const [bestDay, setBestDay] = useState<{ count: number; date: string }>({
@@ -88,7 +118,7 @@ export default function Github() {
           observer.unobserve(element);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(element);
@@ -98,11 +128,17 @@ export default function Github() {
   useEffect(() => {
     async function fetchGitHubData() {
       try {
-        const response = await fetch("https://github-contributions-api.jogruber.de/v4/Pablo-M-Santos?y=last");
+        const response = await fetch(
+          "https://github-contributions-api.jogruber.de/v4/Pablo-M-Santos?y=last",
+        );
         if (!response.ok) throw new Error("Falha ao buscar dados do GitHub");
 
         const data = await response.json();
-        const rawContributions: ContributionDay[] = Array.isArray(data?.contributions) ? data.contributions : [];
+        const rawContributions: ContributionDay[] = Array.isArray(
+          data?.contributions,
+        )
+          ? data.contributions
+          : [];
         const contributions = rawContributions.slice(-365);
 
         if (contributions.length > 0) {
@@ -128,10 +164,12 @@ export default function Github() {
 
           const best = contributions.reduce(
             (max, current) => (current.count > max.count ? current : max),
-            contributions[0]
+            contributions[0],
           );
           if (best && best.count > 0) {
-            const formattedDate = new Date(`${best.date}T12:00:00`).toLocaleDateString("pt-BR", {
+            const formattedDate = new Date(
+              `${best.date}T12:00:00`,
+            ).toLocaleDateString("pt-BR", {
               day: "numeric",
               month: "long",
               year: "numeric",
@@ -175,7 +213,8 @@ export default function Github() {
   const animatedActiveDays = useCountUp(activeDaysCount.toString(), 1600);
   const animatedBestDayCount = useCountUp(bestDay.count.toString(), 1600);
 
-  const firstDayOffset = days.length > 0 ? new Date(`${days[0].date}T12:00:00`).getDay() : 0;
+  const firstDayOffset =
+    days.length > 0 ? new Date(`${days[0].date}T12:00:00`).getDay() : 0;
 
   return (
     <Section
@@ -192,13 +231,14 @@ export default function Github() {
       <div
         ref={containerRef}
         style={{ animationDelay: "120ms" }}
-        className={`rounded-lg border border-line bg-surface p-6 sm:p-8 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
+        className={`rounded-lg border border-line bg-surface p-5 sm:p-8 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
           isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
         }`}
       >
         <div className="flex flex-wrap items-start justify-between gap-4">
-          <h3 className="text-2xl font-medium leading-8 sm:text-3xl">
-            <span className="text-accent">{animatedTotal}</span> contribuições no último ano
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-medium leading-8">
+            <span className="text-accent">{animatedTotal}</span> contribuições
+            no último ano
           </h3>
           <a
             href="https://github.com/Pablo-M-Santos"
@@ -211,10 +251,10 @@ export default function Github() {
           </a>
         </div>
 
-        <div className="mt-7 w-full pb-2">
-          <div className="w-full">
+        <div className="mt-7 w-full pb-2 overflow-x-auto">
+          <div className="min-w-[650px] sm:min-w-full">
             <div className="mb-2 ml-7 grid grid-cols-12 font-mono text-[10px] text-muted">
-              {months.map((month) => (
+              {months.map((month: string) => (
                 <span key={month}>{month.split("/")[0]}</span>
               ))}
             </div>
@@ -228,10 +268,15 @@ export default function Github() {
                 {days.length > 0 ? (
                   <>
                     {Array.from({ length: firstDayOffset }, (_, i) => (
-                      <span key={`empty-${i}`} className="aspect-square w-full rounded-[2px] opacity-0" />
+                      <span
+                        key={`empty-${i}`}
+                        className="aspect-square w-full rounded-[2px] opacity-0"
+                      />
                     ))}
-                    {days.map((day) => {
-                      const formattedDate = new Date(`${day.date}T12:00:00`).toLocaleDateString("pt-BR", {
+                    {days.map((day: any) => {
+                      const formattedDate = new Date(
+                        `${day.date}T12:00:00`,
+                      ).toLocaleDateString("pt-BR", {
                         day: "numeric",
                         month: "short",
                         year: "numeric",
@@ -255,11 +300,23 @@ export default function Github() {
                   </>
                 ) : (
                   Array.from({ length: 364 }, (_, index) => {
-                    const fallbackLevel = loading ? 0 : (index * 17 + Math.floor(index / 7) * 11) % 5;
+                    const fallbackLevel = loading
+                      ? 0
+                      : (index * 17 + Math.floor(index / 7) * 11) % 5;
                     return (
                       <span
                         key={index}
-                        className={`aspect-square w-full rounded-[2px] ${loading ? "animate-pulse bg-raised" : ["bg-raised", "bg-accent/30", "bg-accent/50", "bg-accent/75", "bg-accent"][fallbackLevel]}`}
+                        className={`aspect-square w-full rounded-[2px] ${
+                          loading
+                            ? "animate-pulse bg-raised"
+                            : [
+                                "bg-raised",
+                                "bg-accent/30",
+                                "bg-accent/50",
+                                "bg-accent/75",
+                                "bg-accent",
+                              ][fallbackLevel]
+                        }`}
                       />
                     );
                   })
@@ -271,7 +328,15 @@ export default function Github() {
               {[0, 1, 2, 3, 4].map((level) => (
                 <span
                   key={level}
-                  className={`size-3 rounded-[2px] ${["bg-raised", "bg-accent/30", "bg-accent/50", "bg-accent/75", "bg-accent"][level]}`}
+                  className={`size-3 rounded-[2px] ${
+                    [
+                      "bg-raised",
+                      "bg-accent/30",
+                      "bg-accent/50",
+                      "bg-accent/75",
+                      "bg-accent",
+                    ][level]
+                  }`}
                 />
               ))}
               mais
@@ -289,18 +354,30 @@ export default function Github() {
             ].map(([icon, label, value], index) => (
               <article key={label} className="rounded-md bg-raised p-3">
                 <p className="flex items-center gap-2 font-mono text-[10px] tracking-[0.1em] text-muted">
-                  <Icon name={icon as "calendar"} size={12} className="text-accent" />
+                  <Icon
+                    name={icon as "calendar"}
+                    size={12}
+                    className="text-accent"
+                  />
                   {label}
                 </p>
-                <strong className="mt-1 block font-mono text-2xl font-medium text-accent">{value}</strong>
-                {index === 2 && <span className="font-mono text-[10px] text-muted">{bestDay.date}</span>}
+                <strong className="mt-1 block font-mono text-2xl font-medium text-accent">
+                  {value}
+                </strong>
+                {index === 2 && (
+                  <span className="font-mono text-[10px] text-muted">
+                    {bestDay.date}
+                  </span>
+                )}
               </article>
             ))}
           </div>
-          <div className="rounded-md bg-raised p-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted">Contribuições por mês</p>
-            <div className="mt-4 flex h-32 items-end gap-2">
-              {monthlyTotals.map((value, index) => {
+          <div className="rounded-md bg-raised p-4 overflow-x-auto">
+            <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-muted">
+              Contribuições por mês
+            </p>
+            <div className="mt-4 flex h-32 items-end gap-2 min-w-[500px] sm:min-w-full">
+              {monthlyTotals.map((value: number, index: number) => {
                 const label = months[index] || `mês ${index + 1}`;
                 const maxVal = Math.max(...monthlyTotals, 1);
                 return (
@@ -310,13 +387,19 @@ export default function Github() {
                   >
                     <div className="absolute -top-9 z-10 hidden group-hover:flex flex-col items-center whitespace-nowrap rounded bg-ink px-2 py-1 font-mono text-[10px] text-bg shadow-lg">
                       <span className="font-bold">{value} contribuições</span>
-                      <span className="text-[9px] text-muted-foreground">{label}</span>
+                      <span className="text-[9px] text-muted-foreground">
+                        {label}
+                      </span>
                     </div>
                     <span
                       className="w-full max-w-10 rounded-t-sm bg-accent transition-all duration-500 group-hover:brightness-125"
-                      style={{ height: `${Math.max(4, (value / maxVal) * 100)}%` }}
+                      style={{
+                        height: `${Math.max(4, (value / maxVal) * 100)}%`,
+                      }}
                     />
-                    <span className="whitespace-nowrap font-mono text-[9px] text-muted">{label}</span>
+                    <span className="whitespace-nowrap font-mono text-[9px] text-muted">
+                      {label}
+                    </span>
                   </div>
                 );
               })}
