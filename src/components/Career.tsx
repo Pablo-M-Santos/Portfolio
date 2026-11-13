@@ -11,11 +11,11 @@ function CommitCard({ commit }: { commit: Commit }) {
   const { hash, showHash, period, location, message, roleTitle, company, tags, changes } = commit;
 
   return (
-    <article className="rounded-lg border border-line bg-surface p-[25px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)]">
-      <header className="flex flex-col gap-2 font-mono text-xs leading-4 text-muted">
-        <p className="flex items-center gap-2">
+    <article className="rounded-lg border border-line bg-surface p-4 sm:p-[25px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)]">
+      <header className="flex flex-col gap-1.5 sm:gap-2 font-mono text-xs leading-4 text-muted">
+        <p className="flex flex-wrap items-center gap-x-2 gap-y-1">
           <span>commit</span>
-          <span className="text-accent">{hash}</span>
+          <span className="break-all text-accent">{hash}</span>
           <span className="rounded bg-raised px-1.5 py-0.5 text-[11px] text-accent">(HEAD -&gt; main)</span>
         </p>
         <p>Author: Pablo Moreira Santos</p>
@@ -30,11 +30,11 @@ function CommitCard({ commit }: { commit: Commit }) {
           </span>
         </p>
       </header>
-      <h3 className="mt-6 font-mono text-[15px] font-normal leading-6">{message}</h3>
-      <p className="mt-1.5 text-lg font-semibold leading-7 text-muted">
+      <h3 className="mt-4 sm:mt-6 font-mono text-sm sm:text-[15px] font-normal leading-6">{message}</h3>
+      <p className="mt-1.5 text-base sm:text-lg font-semibold leading-6 sm:leading-7 text-muted">
         <span className="text-ink">{roleTitle}</span> @ {company}
       </p>
-      <TagList items={tags} className="mt-4" />
+      <TagList items={tags} className="mt-3 sm:mt-4" />
       <button
         type="button"
         aria-expanded={expanded}
@@ -47,7 +47,7 @@ function CommitCard({ commit }: { commit: Commit }) {
       {expanded && (
         <ul className="mt-4 flex flex-col gap-2">
           {changes.map((change) => (
-            <li key={change} className="flex gap-2 text-sm leading-[22.75px] text-muted">
+            <li key={change} className="flex gap-2 text-sm leading-relaxed sm:leading-[22.75px] text-muted">
               <span className="font-mono text-accent">+</span>
               <span>
                 <RichText text={change} />
@@ -85,7 +85,7 @@ function CommitItem({ commit }: { commit: Commit }) {
   return (
     <li
       ref={itemRef}
-      className={`relative pl-10 transition-all duration-700 ease-out before:absolute before:left-0 before:top-6 before:size-[11px] before:rounded-full before:border-2 before:border-accent before:bg-bg ${
+      className={`relative pl-6 sm:pl-10 transition-all duration-700 ease-out before:absolute before:left-0 before:top-5 sm:before:top-6 before:size-[11px] before:rounded-full before:border-2 before:border-accent before:bg-bg ${
         isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
       }`}
     >
@@ -132,7 +132,7 @@ export default function Career() {
         monoTitle
         tinted
       >
-        <ol className="relative flex flex-col gap-[46px] pt-2 before:absolute before:bottom-0 before:left-[5px] before:top-7 before:w-px before:bg-line">
+        <ol className="relative flex flex-col gap-8 sm:gap-[46px] pt-2 before:absolute before:bottom-0 before:left-[5px] before:top-6 sm:before:top-7 before:w-px before:bg-line">
           {commits.map((commit) => (
             <CommitItem key={commit.hash} commit={commit} />
           ))}
