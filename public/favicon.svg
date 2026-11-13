@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>PS — Portfólio de Pablo Santos</title>
+  <rect width="64" height="64" rx="15" fill="#0b0b0b"/>
+  <rect x="8" y="8" width="48" height="48" rx="12" fill="#121212" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="32" y="40" fill="#60a5fa" font-family="monospace" font-size="22" font-weight="700" letter-spacing="-2" text-anchor="middle">PS</text>
+</svg>
