@@ -49,11 +49,11 @@ export default function Contact() {
       <div
         ref={containerRef}
         style={{ animationDelay: "120ms" }}
-        className={`overflow-hidden rounded-lg border border-line bg-surface font-mono text-sm opacity-0 ${
+        className={`overflow-hidden rounded-lg border border-line bg-surface font-mono text-xs sm:text-sm opacity-0 ${
           isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
         }`}
       >
-        <div className="flex h-8 items-center justify-between border-b border-line bg-raised px-4 text-[10px] text-muted">
+        <div className="flex h-8 items-center justify-between border-b border-line bg-raised px-3.5 sm:px-4 text-[10px] text-muted">
           <span className="flex gap-1.5">
             <i className="size-2 rounded-full bg-line" />
             <i className="size-2 rounded-full bg-line" />
@@ -61,31 +61,37 @@ export default function Contact() {
           </span>
           <span>pablo@portfolio: ~</span>
         </div>
-        <div className="space-y-5 p-6 sm:p-8">
+        <div className="space-y-5 p-4 sm:p-8">
           <div>
-            <button type="button" onClick={copyEmail} className="flex items-center gap-3 text-left transition hover:text-accent">
-              <span className="text-accent">$</span>
-              <span>contact --email</span>
-              <span className="ml-auto hidden items-center gap-2 text-xs text-muted sm:flex">
+            <button
+              type="button"
+              onClick={copyEmail}
+              className="flex w-full cursor-pointer flex-wrap items-center justify-between gap-2 text-left transition hover:text-accent"
+            >
+              <span className="flex items-center gap-2.5 sm:gap-3">
+                <span className="text-accent">$</span>
+                <span>contact --email</span>
+              </span>
+              <span className="flex items-center gap-1.5 text-[11px] sm:text-xs text-muted">
                 <Icon name="copy" size={14} />
-                {copied ? "copiado" : "clique para copiar"}
+                {copied ? "copiado" : "copiar"}
               </span>
             </button>
-            <p className="mt-2 flex items-center gap-3 text-muted">
+            <p className="mt-2 flex items-center gap-2.5 sm:gap-3 break-all text-muted">
               <Icon name="mail" size={14} />
               {EMAIL}
             </p>
           </div>
           {contactCommands.map(({ command, icon, text, href, external, isLink }) => (
             <div key={command}>
-              <p className="flex items-center gap-3">
+              <p className="flex items-center gap-2.5 sm:gap-3">
                 <span className="text-accent">$</span>
-                {command}
+                <span className="break-all">{command}</span>
               </p>
               <a
                 href={href}
                 {...(external && { target: "_blank", rel: "noopener noreferrer" })}
-                className={`mt-2 flex items-center gap-3 text-muted ${isLink ? "underline decoration-line underline-offset-4 transition hover:text-accent" : ""}`}
+                className={`mt-2 flex items-center gap-2.5 sm:gap-3 break-all text-muted ${isLink ? "underline decoration-line underline-offset-4 transition hover:text-accent" : ""}`}
               >
                 <Icon name={icon} size={14} />
                 {text}
