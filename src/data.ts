@@ -8,6 +8,8 @@ import type {
   Stat,
   TrainingItem,
 } from "./types";
+import agendaProImage from "./assets/projects/agendaPro.png";
+import DevScout from "./assets/projects/devScout.png";
 
 export const EMAIL = "pablomoreirasantos.hp@gmail.com";
 
@@ -245,7 +247,78 @@ export const commits: Commit[] = [
 ];
 
 export const projects: Project[] = [
-
+  {
+    number: "01",
+    icon: "calendar",
+    title: "Agendamento de Serviços",
+    description:
+      "Sistema web mobile-first de agendamento para profissionais autônomos e pequenas empresas organizarem horários e serviços. Conta com gestão de agenda, histórico, relatórios gráficos, exportação em PDF e notificações por e-mail.",
+    primaryLabel: "módulos principais",
+    primaryTags: [
+      "Autenticação",
+      "Agendamentos",
+      "Agenda",
+      "Histórico",
+      "Relatórios",
+      "PDF",
+      "E-mail",
+      "Tema & i18n",
+    ],
+    stack: [
+      "Nuxt 4",
+      "Vue 3",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "Resend",
+      "ApexCharts",
+    ],
+    cta: "Ver ao vivo",
+    href: "https://agendamento-servico.vercel.app/",
+    image: {
+      src: agendaProImage,
+      alt: "Sistema de Agendamento de Serviços: tela mobile-first com gestão de horários, agenda e relatórios",
+    },
+    mediaClassName: "bg-raised",
+    mediaFirst: true,
+  },
+  {
+    number: "02",
+    icon: "compass",
+    title: "DevScout",
+    description:
+      "Radar autônomo que coleta vagas reais de tecnologia para Júnior e Estágio em portais e ATS corporativas antes que virem spam. Conta com filtro semântico contra falsas vagas júnior, deduplicação por hash, catálogo web e alertas instantâneos no Telegram.",
+    primaryLabel: "pipeline & filtros",
+    primaryTags: [
+      "Web Scraping",
+      "Filtro NLP",
+      "Anti-Spam",
+      "Deduplicação",
+      "Telegram Bot",
+      "Radar em Tempo Real",
+      "React",
+      "Node.js",
+      "Java",
+      "Python",
+    ],
+    stack: [
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "Prisma",
+      "SQLite",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    cta: "Ver ao vivo",
+    href: "https://devscout.vercel.app/",
+    image: {
+      src: DevScout,
+      alt: "DevScout: radar autônomo de vagas júnior e estágio com filtros por stack e catálogo em tempo real",
+    },
+    mediaClassName: "bg-raised",
+    mediaFirst: false,
+  },
 ];
 
 export const linkCards: LinkCardData[] = [
