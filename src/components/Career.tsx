@@ -90,7 +90,7 @@ function CommitItem({ commit }: { commit: Commit }) {
     <li
       ref={itemRef}
       className={`relative pl-6 sm:pl-10 transition-all duration-700 ease-out before:absolute before:left-0 before:top-5 sm:before:top-6 before:size-[11px] before:rounded-full before:border-2 before:border-accent before:bg-bg ${
-        isVisible ? "translate-x-0 opacity-100" : ""
+        isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
       }`}
     >
       <CommitCard commit={commit} />
@@ -99,49 +99,21 @@ function CommitItem({ commit }: { commit: Commit }) {
 }
 
 export default function Career() {
-  const [headerVisible, setHeaderVisible] = useState(false);
-  const headerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const element = headerRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHeaderVisible(true);
-          observer.unobserve(element);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(element);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div
-      ref={headerRef}
-      className={`overflow-x-hidden transition-all duration-700 ease-out ${
-        headerVisible ? "animate-[fadeInLeft_0.7s_ease-out_forwards]" : ""
-      }`}
+    <Section
+      id="carreira"
+      index="03"
+      icon="crosshair"
+      title="$ git log --career"
+      subtitle="Cada emprego é um commit. Do mais recente para o primeiro."
+      monoTitle
+      tinted
     >
-      <Section
-        id="carreira"
-        index="03"
-        icon="crosshair"
-        title="$ git log --career"
-        subtitle="Cada emprego é um commit. Do mais recente para o primeiro."
-        monoTitle
-        tinted
-      >
-        <ol className="relative flex flex-col gap-8 sm:gap-[46px] pt-2 before:absolute before:bottom-0 before:left-[5px] before:top-6 sm:before:top-7 before:w-px before:bg-line">
-          {commits.map((commit) => (
-            <CommitItem key={commit.hash} commit={commit} />
-          ))}
-        </ol>
-      </Section>
-    </div>
+      <ol className="relative flex flex-col gap-8 sm:gap-[46px] pt-2 before:absolute before:bottom-0 before:left-[5px] before:top-6 sm:before:top-7 before:w-px before:bg-line">
+        {commits.map((commit) => (
+          <CommitItem key={commit.hash} commit={commit} />
+        ))}
+      </ol>
+    </Section>
   );
 }

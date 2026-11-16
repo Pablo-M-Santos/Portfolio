@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import LinkButton from "./LinkButton";
 import Section from "./Section";
@@ -7,11 +8,16 @@ import type { Project } from "../types";
 
 const label = "mt-[22px] font-mono text-[11px] uppercase leading-[16.5px] tracking-[0.1em] text-muted";
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, isVisible, index }: { project: Project; isVisible: boolean; index: number }) {
   const { number, icon, title, description, primaryLabel, primaryTags, stack, cta, href, image, mediaClassName, mediaFirst } = project;
 
   return (
-    <article className="grid overflow-hidden rounded-lg border border-line bg-surface md:grid-cols-[5fr_4fr]">
+    <article
+      style={{ animationDelay: `${index * 140}ms` }}
+      className={`grid overflow-hidden rounded-lg border border-line bg-surface opacity-0 md:grid-cols-[5fr_4fr] ${
+        isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
+      }`}
+    >
       <div className="flex flex-col items-start p-5 sm:p-8">
         <p className="flex items-center gap-3 text-muted">
           <span className="font-mono text-3xl sm:text-4xl font-semibold leading-10 text-accent">{number}</span>
@@ -38,6 +44,27 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function Projects() {
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Section
       id="projetos"
@@ -46,9 +73,9 @@ export default function Projects() {
       title="Coisas que eu coloquei no ar"
       subtitle="Projetos pessoais e da AceleraDev, do globo 3D ao controle de finanças por áudio."
     >
-      <div className="flex flex-col gap-4">
-        {projects.map((project) => (
-          <ProjectCard key={project.number} project={project} />
+      <div ref={containerRef} className="flex flex-col gap-4">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.number} project={project} index={index} isVisible={isVisible} />
         ))}
       </div>
     </Section>

@@ -38,11 +38,10 @@ export default function About() {
       icon="shield"
       title="Ficha de personagem"
       subtitle="Resumo profissional, como está no CV — só que com um pouco mais de personalidade."
-      animateHeader
     >
       <div ref={containerRef} className="flex flex-col gap-6 py-2">
         <article
-          className={`${panel} p-5 sm:p-8 ${
+          className={`${panel} p-5 sm:p-8 opacity-0 ${
             isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:100ms]" : ""
           }`}
         >
@@ -59,7 +58,7 @@ export default function About() {
         </article>
 
         <article
-          className={`${panel} flex flex-col gap-6 p-5 sm:p-[25px] ${
+          className={`${panel} flex flex-col gap-6 p-5 sm:p-[25px] opacity-0 ${
             isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards] [animation-delay:200ms]" : ""
           }`}
         >
@@ -85,7 +84,7 @@ export default function About() {
               <div
                 key={label}
                 style={{ animationDelay: `${300 + groupIndex * 80}ms` }}
-                className={`grid items-start gap-2.5 md:grid-cols-[158px_1fr] ${
+                className={`grid items-start gap-2.5 md:grid-cols-[158px_1fr] opacity-0 ${
                   isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
                 }`}
               >
@@ -100,7 +99,7 @@ export default function About() {
 
           <div
             style={{ animationDelay: "600ms" }}
-            className={`flex flex-col gap-4 sm:gap-5 pt-6 border-t border-line ${
+            className={`flex flex-col gap-4 sm:gap-5 pt-6 border-t border-line opacity-0 ${
               isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
             }`}
           >
