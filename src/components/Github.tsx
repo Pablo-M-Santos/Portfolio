@@ -231,7 +231,7 @@ export default function Github() {
       <div
         ref={containerRef}
         style={{ animationDelay: "120ms" }}
-        className={`rounded-lg border border-line bg-surface p-5 sm:p-8 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
+        className={`rounded-lg border border-line bg-surface p-5 sm:p-8 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
           isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
         }`}
       >

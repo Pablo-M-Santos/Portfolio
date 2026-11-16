@@ -7,7 +7,11 @@ import { commits } from "../data";
 import type { Commit } from "../types";
 
 function CommitCard({ commit }: { commit: Commit }) {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(() =>
+    typeof window === "undefined"
+      ? true
+      : window.matchMedia("(min-width: 640px)").matches
+  );
   const { hash, showHash, period, location, message, roleTitle, company, tags, changes } = commit;
 
   return (
@@ -86,7 +90,7 @@ function CommitItem({ commit }: { commit: Commit }) {
     <li
       ref={itemRef}
       className={`relative pl-6 sm:pl-10 transition-all duration-700 ease-out before:absolute before:left-0 before:top-5 sm:before:top-6 before:size-[11px] before:rounded-full before:border-2 before:border-accent before:bg-bg ${
-        isVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+        isVisible ? "translate-x-0 opacity-100" : ""
       }`}
     >
       <CommitCard commit={commit} />
@@ -120,7 +124,7 @@ export default function Career() {
     <div
       ref={headerRef}
       className={`overflow-x-hidden transition-all duration-700 ease-out ${
-        headerVisible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+        headerVisible ? "animate-[fadeInLeft_0.7s_ease-out_forwards]" : ""
       }`}
     >
       <Section

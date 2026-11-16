@@ -42,7 +42,7 @@ export default function Creator() {
             target="_blank"
             rel="noopener noreferrer"
             style={{ animationDelay: `${(index + 1) * 120}ms` }}
-            className={`group flex min-h-[228px] flex-col rounded-lg border border-line bg-surface p-5 opacity-0 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
+            className={`group flex min-h-[228px] flex-col rounded-lg border border-line bg-surface p-5 transition-all duration-300 ease-out hover:border-accent hover:shadow-[0_10px_30px_-12px_color-mix(in_srgb,var(--color-accent)_35%,transparent)] ${
               isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
             }`}
           >

@@ -49,7 +49,7 @@ export default function Contact() {
       <div
         ref={containerRef}
         style={{ animationDelay: "120ms" }}
-        className={`overflow-hidden rounded-lg border border-line bg-surface font-mono text-xs sm:text-sm opacity-0 ${
+        className={`overflow-hidden rounded-lg border border-line bg-surface font-mono text-xs sm:text-sm ${
           isVisible ? "animate-[fadeInUp_0.7s_ease-out_forwards]" : ""
         }`}
       >
