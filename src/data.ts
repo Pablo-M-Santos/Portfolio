@@ -311,7 +311,7 @@ export const projects: Project[] = [
       "Framer Motion",
     ],
     cta: "Ver ao vivo",
-    href: "https://devscout.vercel.app/",
+    href: "https://scout-vacancyt.vercel.app/",
     image: {
       src: DevScout,
       alt: "DevScout: radar autônomo de vagas júnior e estágio com filtros por stack e catálogo em tempo real",
