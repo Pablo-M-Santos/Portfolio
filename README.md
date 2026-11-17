@@ -388,7 +388,7 @@ Para imagens importadas pelo Vite, adicione o import no início de `src/data.ts`
 
 ### Alterar o favicon
 
-O favicon está em `public/favicon.svg` e é referenciado pelo `index.html`. O arquivo atual utiliza as iniciais `PS`, representando Pablo Santos.
+Os arquivos `public/favicon.png` e `public/favicon.svg` são referenciados pelo `index.html`, com PNG como fallback compatível com buscadores e SVG para navegadores. O `public/apple-touch-icon.png` atende dispositivos Apple e `public/site.webmanifest` centraliza os ícones da instalação. O desenho utiliza as iniciais `PS`, representando Pablo Santos.
 
 ## Roadmap
 
@@ -400,7 +400,7 @@ O favicon está em `public/favicon.svg` e é referenciado pelo `index.html`. O a
 - [ ] Avaliar PWA e instalação como aplicativo.
 - [ ] Melhorar o tratamento visual de indisponibilidade da API do GitHub.
 - [ ] Adicionar metadados Open Graph e Twitter Card.
-- [ ] Adicionar favicon em formatos complementares para maior compatibilidade.
+- [x] Adicionar favicon em formatos complementares para maior compatibilidade.
 
 ## Contato
 
